@@ -48,6 +48,9 @@
       "pitch": "field_149473_f:F",
       "yaw": "field_149476_e:F"
     },
+    "me/dev/putahacknn/mixin/mixins/MixinRenderPlayer": {
+      "renderEntityName": "Lnet/minecraft/client/renderer/entity/RenderPlayer;func_188296_a(Lnet/minecraft/client/entity/AbstractClientPlayer;DDDLjava/lang/String;D)V"
+    },
     "me/dev/putahacknn/mixin/mixins/MixinBlockLiquid": {
       "canCollideCheck": "Lnet/minecraft/block/BlockLiquid;func_176209_a(Lnet/minecraft/block/state/IBlockState;Z)Z"
     },
@@ -138,6 +141,9 @@
         "pitch": "e:F",
         "yaw": "d:F"
       },
+      "me/dev/putahacknn/mixin/mixins/MixinRenderPlayer": {
+        "renderEntityName": "Lcct;a(Lbua;DDDLjava/lang/String;D)V"
+      },
       "me/dev/putahacknn/mixin/mixins/MixinBlockLiquid": {
         "canCollideCheck": "Laru;a(Lawt;Z)Z"
       },
@@ -226,6 +232,9 @@
       "me/dev/putahacknn/mixin/mixins/accessors/ICPacketPlayer": {
         "pitch": "field_149473_f:F",
         "yaw": "field_149476_e:F"
+      },
+      "me/dev/putahacknn/mixin/mixins/MixinRenderPlayer": {
+        "renderEntityName": "Lnet/minecraft/client/renderer/entity/RenderPlayer;func_188296_a(Lnet/minecraft/client/entity/AbstractClientPlayer;DDDLjava/lang/String;D)V"
       },
       "me/dev/putahacknn/mixin/mixins/MixinBlockLiquid": {
         "canCollideCheck": "Lnet/minecraft/block/BlockLiquid;func_176209_a(Lnet/minecraft/block/state/IBlockState;Z)Z"
