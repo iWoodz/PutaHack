@@ -40,6 +40,7 @@ public class ModuleManager
     public Animation animationThread;
 
     public void init() {
+        this.modules.add(new NameTags());
         this.modules.add(new AutoDickSuck());
         this.modules.add(new Sprite());
         this.modules.add(new StrictLimbs());
