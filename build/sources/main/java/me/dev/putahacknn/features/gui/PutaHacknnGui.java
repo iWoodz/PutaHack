@@ -17,7 +17,6 @@ import org.lwjgl.input.Mouse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
-
 public class PutaHacknnGui extends GuiScreen
 {
     private static PutaHacknnGui PutaHacknnGui;
