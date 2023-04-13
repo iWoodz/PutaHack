@@ -1,0 +1,74 @@
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/posX me/dev/putahacknn/mixin/mixins/MixinEntity/p
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/posY me/dev/putahacknn/mixin/mixins/MixinEntity/q
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/posZ me/dev/putahacknn/mixin/mixins/MixinEntity/r
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/motionX me/dev/putahacknn/mixin/mixins/MixinEntity/s
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/motionY me/dev/putahacknn/mixin/mixins/MixinEntity/t
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/motionZ me/dev/putahacknn/mixin/mixins/MixinEntity/u
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/rotationYaw me/dev/putahacknn/mixin/mixins/MixinEntity/v
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/rotationPitch me/dev/putahacknn/mixin/mixins/MixinEntity/w
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/onGround me/dev/putahacknn/mixin/mixins/MixinEntity/z
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/noClip me/dev/putahacknn/mixin/mixins/MixinEntity/Q
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/prevDistanceWalkedModified me/dev/putahacknn/mixin/mixins/MixinEntity/I
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/world me/dev/putahacknn/mixin/mixins/MixinEntity/l
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/pistonDeltas me/dev/putahacknn/mixin/mixins/MixinEntity/aJ
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/pistonDeltasGameTime me/dev/putahacknn/mixin/mixins/MixinEntity/aK
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/isInWeb me/dev/putahacknn/mixin/mixins/MixinEntity/E
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/stepHeight me/dev/putahacknn/mixin/mixins/MixinEntity/P
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/collidedHorizontally me/dev/putahacknn/mixin/mixins/MixinEntity/A
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/collidedVertically me/dev/putahacknn/mixin/mixins/MixinEntity/B
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/collided me/dev/putahacknn/mixin/mixins/MixinEntity/C
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/distanceWalkedModified me/dev/putahacknn/mixin/mixins/MixinEntity/J
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/distanceWalkedOnStepModified me/dev/putahacknn/mixin/mixins/MixinEntity/K
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/fire me/dev/putahacknn/mixin/mixins/MixinEntity/az
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/nextStepDistance me/dev/putahacknn/mixin/mixins/MixinEntity/ax
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/nextFlap me/dev/putahacknn/mixin/mixins/MixinEntity/ay
+FD: me/dev/putahacknn/mixin/mixins/MixinEntity/rand me/dev/putahacknn/mixin/mixins/MixinEntity/S
+FD: me/dev/putahacknn/mixin/mixins/MixinEntityRenderer/lightmapColors me/dev/putahacknn/mixin/mixins/MixinEntityRenderer/I
+FD: me/dev/putahacknn/mixin/mixins/MixinItemRenderer/mc me/dev/putahacknn/mixin/mixins/MixinItemRenderer/c
+FD: me/dev/putahacknn/mixin/mixins/MixinRenderEnderCrystal/ENDER_CRYSTAL_TEXTURES me/dev/putahacknn/mixin/mixins/MixinRenderEnderCrystal/a
+FD: me/dev/putahacknn/mixin/mixins/MixinRenderEnderCrystal/modelEnderCrystal me/dev/putahacknn/mixin/mixins/MixinRenderEnderCrystal/f
+FD: me/dev/putahacknn/mixin/mixins/MixinRenderEnderCrystal/modelEnderCrystalNoBase me/dev/putahacknn/mixin/mixins/MixinRenderEnderCrystal/g
+FD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/LOGGER me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/a
+FD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/mainModel me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/f
+FD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/renderMarker me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/i
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/isSprinting ()Z me/dev/putahacknn/mixin/mixins/MixinEntity/aV ()Z
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/isRiding ()Z me/dev/putahacknn/mixin/mixins/MixinEntity/aS ()Z
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/isSneaking ()Z me/dev/putahacknn/mixin/mixins/MixinEntity/aU ()Z
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/setEntityBoundingBox (Lnet/minecraft/util/math/AxisAlignedBB;)V me/dev/putahacknn/mixin/mixins/MixinEntity/a (Lbhb;)V
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/getEntityBoundingBox ()Lnet/minecraft/util/math/AxisAlignedBB; me/dev/putahacknn/mixin/mixins/MixinEntity/bw ()Lbhb;
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/resetPositionToBB ()V me/dev/putahacknn/mixin/mixins/MixinEntity/ad ()V
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/updateFallState (DZLnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/math/BlockPos;)V me/dev/putahacknn/mixin/mixins/MixinEntity/a (DZLawt;Let;)V
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/canTriggerWalking ()Z me/dev/putahacknn/mixin/mixins/MixinEntity/ak ()Z
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/isInWater ()Z me/dev/putahacknn/mixin/mixins/MixinEntity/ao ()Z
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/isBeingRidden ()Z me/dev/putahacknn/mixin/mixins/MixinEntity/aT ()Z
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/getControllingPassenger ()Lnet/minecraft/entity/Entity; me/dev/putahacknn/mixin/mixins/MixinEntity/bE ()Lvg;
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/playSound (Lnet/minecraft/util/SoundEvent;FF)V me/dev/putahacknn/mixin/mixins/MixinEntity/a (Lqe;FF)V
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/doBlockCollisions ()V me/dev/putahacknn/mixin/mixins/MixinEntity/ag ()V
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/isWet ()Z me/dev/putahacknn/mixin/mixins/MixinEntity/an ()Z
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/playStepSound (Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;)V me/dev/putahacknn/mixin/mixins/MixinEntity/a (Let;Laow;)V
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/getSwimSound ()Lnet/minecraft/util/SoundEvent; me/dev/putahacknn/mixin/mixins/MixinEntity/ae ()Lqe;
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/playFlySound (F)F me/dev/putahacknn/mixin/mixins/MixinEntity/d (F)F
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/makeFlySound ()Z me/dev/putahacknn/mixin/mixins/MixinEntity/ah ()Z
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/addEntityCrashInfo (Lnet/minecraft/crash/CrashReportCategory;)V me/dev/putahacknn/mixin/mixins/MixinEntity/a (Lc;)V
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/dealFireDamage (I)V me/dev/putahacknn/mixin/mixins/MixinEntity/j (I)V
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/setFire (I)V me/dev/putahacknn/mixin/mixins/MixinEntity/i (I)V
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/getFireImmuneTicks ()I me/dev/putahacknn/mixin/mixins/MixinEntity/bL ()I
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/isBurning ()Z me/dev/putahacknn/mixin/mixins/MixinEntity/aR ()Z
+MD: me/dev/putahacknn/mixin/mixins/MixinEntity/move (Lnet/minecraft/entity/MoverType;DDD)V me/dev/putahacknn/mixin/mixins/MixinEntity/a (Lvv;DDD)V
+MD: me/dev/putahacknn/mixin/mixins/MixinItemRenderer/renderItemInFirstPerson (Lnet/minecraft/client/entity/AbstractClientPlayer;FFLnet/minecraft/util/EnumHand;FLnet/minecraft/item/ItemStack;F)V me/dev/putahacknn/mixin/mixins/MixinItemRenderer/a (Lbua;FFLub;FLaip;F)V
+MD: me/dev/putahacknn/mixin/mixins/MixinItemRenderer/renderArmFirstPerson (FFLnet/minecraft/util/EnumHandSide;)V me/dev/putahacknn/mixin/mixins/MixinItemRenderer/a (FFLvo;)V
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderEnderCrystal/doRender (Lnet/minecraft/entity/item/EntityEnderCrystal;DDDFF)V me/dev/putahacknn/mixin/mixins/MixinRenderEnderCrystal/a (Labc;DDDFF)V
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/isVisible (Lnet/minecraft/entity/EntityLivingBase;)Z me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/c (Lvp;)Z
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/getSwingProgress (Lnet/minecraft/entity/EntityLivingBase;F)F me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/e (Lvp;F)F
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/interpolateRotation (FFF)F me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/a (FFF)F
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/handleRotationFloat (Lnet/minecraft/entity/EntityLivingBase;F)F me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/b (Lvp;F)F
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/applyRotations (Lnet/minecraft/entity/EntityLivingBase;FFF)V me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/a (Lvp;FFF)V
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/prepareScale (Lnet/minecraft/entity/EntityLivingBase;F)F me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/c (Lvp;F)F
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/unsetScoreTeamColor ()V me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/f ()V
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/setScoreTeamColor (Lnet/minecraft/entity/EntityLivingBase;)Z me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/d (Lvp;)Z
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/renderLivingAt (Lnet/minecraft/entity/EntityLivingBase;DDD)V me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/b (Lvp;DDD)V
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/unsetBrightness ()V me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/g ()V
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/renderModel (Lnet/minecraft/entity/EntityLivingBase;FFFFFF)V me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/a (Lvp;FFFFFF)V
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/renderLayers (Lnet/minecraft/entity/EntityLivingBase;FFFFFFF)V me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/a (Lvp;FFFFFFF)V
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/setDoRenderBrightness (Lnet/minecraft/entity/EntityLivingBase;F)Z me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/d (Lvp;F)Z
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/doRender (Lnet/minecraft/entity/EntityLivingBase;DDDFF)V me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/a (Lvp;DDDFF)V
