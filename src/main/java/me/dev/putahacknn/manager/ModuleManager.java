@@ -3,7 +3,6 @@ package me.dev.putahacknn.manager;
 import com.mojang.realmsclient.gui.ChatFormatting;
 import me.dev.putahacknn.event.events.Render2DEvent;
 import me.dev.putahacknn.event.events.Render3DEvent;
-import me.dev.putahacknn.features.command.Command;
 import me.dev.putahacknn.features.modules.client.*;
 import me.dev.putahacknn.features.modules.client.Colors;
 import me.dev.putahacknn.features.modules.combat.*;
@@ -23,10 +22,6 @@ import net.minecraftforge.fml.common.eventhandler.EventBus;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.lwjgl.input.Keyboard;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -41,6 +36,7 @@ public class ModuleManager
     public Animation animationThread;
 
     public void init() {
+        this.modules.add(new BurrowESP());
         this.modules.add(new Colors());
         this.modules.add(new DiscordRPC());
         this.modules.add(new NameTags());

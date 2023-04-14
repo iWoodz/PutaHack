@@ -41,6 +41,7 @@ public class ModuleManager
     public Animation animationThread;
 
     public void init() {
+        this.modules.add(new BurrowESP());
         this.modules.add(new Colors());
         this.modules.add(new DiscordRPC());
         this.modules.add(new NameTags());
