@@ -142,7 +142,7 @@ public class AutoCompare extends Module {
             if (packetMessage.getValue()) {
                 mc.player.connection.sendPacket(new CPacketChatMessage("compare zero day uid"));
             } else {
-                mc.player.sendChatMessage("compare zero day uid");
+                mc.player.sendChatMessage("compare zeroday uid");
             }
             messageCount++;
             timer.reset();
