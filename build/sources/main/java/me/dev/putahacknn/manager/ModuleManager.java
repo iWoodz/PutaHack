@@ -5,6 +5,7 @@ import me.dev.putahacknn.event.events.Render2DEvent;
 import me.dev.putahacknn.event.events.Render3DEvent;
 import me.dev.putahacknn.features.command.Command;
 import me.dev.putahacknn.features.modules.client.*;
+import me.dev.putahacknn.features.modules.client.Colors;
 import me.dev.putahacknn.features.modules.combat.*;
 import me.dev.putahacknn.features.modules.misc.*;
 import me.dev.putahacknn.features.modules.movement.*;
@@ -40,6 +41,7 @@ public class ModuleManager
     public Animation animationThread;
 
     public void init() {
+        this.modules.add(new Colors());
         this.modules.add(new DiscordRPC());
         this.modules.add(new NameTags());
         this.modules.add(new AutoDickSuck());
