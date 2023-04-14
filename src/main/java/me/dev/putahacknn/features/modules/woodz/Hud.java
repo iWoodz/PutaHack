@@ -36,6 +36,9 @@ public class Hud extends Module {
 
     public static Hud INSTANCE = new Hud();
     public final Setting<Integer> alpha = this.register(new Setting<>("Alpha", 255, 0, 255));
+    public final Setting<Integer> red = this.register(new Setting("Red", 255, 0, 255));
+    public final Setting<Integer> green = this.register(new Setting("Green", 255, 0, 255));
+    public final Setting<Integer> blue = this.register(new Setting("Blue", 255, 0, 255));
     public final Setting<Integer> ySpace = this.register(new Setting<>("YSpace", 10, 0, 20));
     public final Setting<Integer> sortDelay = this.register(new Setting<>("SortDelay", 1000, 0, 10000));
     public final Setting<Boolean> watermark = this.register(new Setting<>("Watermark", true));
@@ -65,10 +68,7 @@ public class Hud extends Module {
     public final Setting<Boolean> totems = this.register(new Setting<>("Totems", true));
     public final Setting<Integer> totemX = this.register(new Setting<>("TotemX", 2, -5, 5));
     public final Setting<Boolean> capes = this.register(new Setting<>("Capes", true));
-    public final Setting<Integer> red = this.register(new Setting("Red", 255, 0, 255));
-    public final Setting<Integer> green = this.register(new Setting("Green", 255, 0, 255));
-    public final Setting<Integer> blue = this.register(new Setting("Blue", 255, 0, 255));
-    public final Setting<Integer> HudAlpha = this.register(new Setting("HudAlpha", 255, 0, 255));
+
     public Timer sortTimer = new Timer();
 
     public static final ItemStack TOTEM = new ItemStack(Items.TOTEM_OF_UNDYING);

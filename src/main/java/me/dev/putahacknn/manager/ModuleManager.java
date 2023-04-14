@@ -114,7 +114,6 @@ public class ModuleManager
         this.modules.add(new AutoWeb());
         this.modules.add(new AutoCrystal());
         this.modules.add(new HoleFiller());
-        this.modules.add(new AutoArmor());
         this.modules.add(new Speed());
         this.modules.add(new Step());
         this.modules.add(new PacketFly());

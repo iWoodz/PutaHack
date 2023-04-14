@@ -7,7 +7,7 @@ import org.apache.commons.lang3.SystemUtils;
 public class Sprite extends Module {
 
     public Sprite() {
-        super("Sprite", "just for you shelly (u pc brick now)", Category.RENDER, true, false, false);
+        super("Sprite", "just for you shelly (u pc brick now)", Category.MISC, true, false, false);
     }
 
     public enum Mode {
