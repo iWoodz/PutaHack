@@ -7,11 +7,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.opengl.Display;
 
-@Mod(modid = "putahack.nn", name = "PutaHack.nn", version = "0.1.1")
+@Mod(modid = "putahack.nn", name = "PutaHack.nn", version = "0.1.2")
 public class PutaHacknn {
     public static final String MODID = "putahack.nn";
     public static final String MODNAME = "PutaHack.nn";
-    public static final String MODVER = "0.1.1";
+    public static final String MODVER = "0.1.2";
     public static final Logger LOGGER = LogManager.getLogger("PutaHack.nn");
     public static TimerManager timerManager;
     public static CommandManager commandManager;
@@ -117,7 +117,7 @@ public class PutaHacknn {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-        Display.setTitle("PutaHack.nn v0.1.1");
+        Display.setTitle("PutaHack.nn v0.1.2");
         PutaHacknn.load();
     }
 }

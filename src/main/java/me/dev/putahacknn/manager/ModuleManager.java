@@ -94,11 +94,9 @@ public class ModuleManager
         this.modules.add(new ClickGui());
         this.modules.add(new FontMod());
         this.modules.add(new HUD());
-        this.modules.add(new BlockHighlight());
         this.modules.add(new HoleESP());
         this.modules.add(new Replenish());
         this.modules.add(new SmallShield());
-        this.modules.add(new HandChams());
         this.modules.add(new Trajectories());
         this.modules.add(new FakePlayer());
         this.modules.add(new MCP());
@@ -113,12 +111,10 @@ public class ModuleManager
         this.modules.add(new AutoTrap());
         this.modules.add(new AutoWeb());
         this.modules.add(new AutoCrystal());
-        this.modules.add(new Criticals());
         this.modules.add(new HoleFiller());
         this.modules.add(new AutoArmor());
         this.modules.add(new Speed());
         this.modules.add(new Step());
-        this.modules.add(new Scaffold());
         this.modules.add(new PacketFly());
         this.modules.add(new FastPlace());
         this.modules.add(new ESP());
