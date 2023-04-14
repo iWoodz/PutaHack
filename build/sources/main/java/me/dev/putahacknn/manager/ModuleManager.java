@@ -73,7 +73,6 @@ public class ModuleManager
         this.modules.add(new LifeSaver());
         this.modules.add(new AntiLog());
         this.modules.add(new RealPlayer());
-        this.modules.add(new RPC());
         this.modules.add(new LogAura());
         this.modules.add(new Ambience());
         this.modules.add(new Spawns());

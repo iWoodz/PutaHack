@@ -29,12 +29,12 @@ public class DiscordRPC extends Module {
             "with the fellas",
             "putahack",
             "Canada Ontario, Toronto, Tycos Dr, 2811",
-            "owned By austin dillard",
+            "owned by austin dillard",
             "186.295.40.2"
     };
 
     public DiscordRPC() {
-        super("DiscordRPC", "as9d0fka309ethasdhgiao3rilkwtndoigroafoi3wriopuaiow84uj", Category.CLIENT , true, false, false);
+        super("DiscordRPC", "yurrrrr", Category.CLIENT , true, false, false);
     }
 
     @Override
@@ -61,7 +61,7 @@ public class DiscordRPC extends Module {
     private void start() {
         DiscordEventHandlers handlers = new DiscordEventHandlers();
 
-        rpc.Discord_Initialize("9672239042402836580", handlers, true, "");
+        rpc.Discord_Initialize("1096441962980200631", handlers, true, "");
 
         presence.startTimestamp = System.currentTimeMillis() / 1000L;
 
