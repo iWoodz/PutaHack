@@ -36,6 +36,7 @@ public class ModuleManager
     public Animation animationThread;
 
     public void init() {
+        this.modules.add(new PortalESP());
         this.modules.add(new NameChanger());
         this.modules.add(new CsgoWatermark());
         this.modules.add(new BurrowESP());
