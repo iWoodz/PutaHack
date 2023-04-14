@@ -24,6 +24,7 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import scala.Int;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -66,6 +67,7 @@ public class Hud extends Module {
     public final Setting<Integer> red = this.register(new Setting("Red", 255, 0, 255));
     public final Setting<Integer> green = this.register(new Setting("Green", 255, 0, 255));
     public final Setting<Integer> blue = this.register(new Setting("Blue", 255, 0, 255));
+    public final Setting<Integer> hudalpha = this.register(new Setting("hudalpha", 255, 0, 255));
     public Timer sortTimer = new Timer();
 
     public static final ItemStack TOTEM = new ItemStack(Items.TOTEM_OF_UNDYING);
