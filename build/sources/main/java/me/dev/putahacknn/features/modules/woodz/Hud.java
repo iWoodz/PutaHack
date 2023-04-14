@@ -5,6 +5,7 @@ import me.dev.putahacknn.PutaHacknn;
 import me.dev.putahacknn.event.events.Render2DEvent;
 import me.dev.putahacknn.features.modules.Module;
 import me.dev.putahacknn.features.modules.client.ClickGui;
+import me.dev.putahacknn.features.modules.client.Colors;
 import me.dev.putahacknn.features.modules.misc.PopCounter;
 import me.dev.putahacknn.features.setting.Setting;
 import me.dev.putahacknn.util.ColorUtil;
@@ -93,7 +94,6 @@ public class Hud extends Module {
     public void onRender2D(Render2DEvent event) {
         final ScaledResolution resolution = new ScaledResolution(mc);
         final int color = changeAlpha(ClickGui.getInstance().getColor(), alpha.getValue());
-
         if (needsSort && sortTimer.passedMs(sortDelay.getValue())) {
             sortModules();
             sortTimer.reset();
