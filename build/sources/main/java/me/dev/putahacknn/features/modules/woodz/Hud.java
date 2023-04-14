@@ -67,7 +67,7 @@ public class Hud extends Module {
     public final Setting<Integer> red = this.register(new Setting("Red", 255, 0, 255));
     public final Setting<Integer> green = this.register(new Setting("Green", 255, 0, 255));
     public final Setting<Integer> blue = this.register(new Setting("Blue", 255, 0, 255));
-    public final Setting<Integer> hudalpha = this.register(new Setting("hudalpha", 255, 0, 255));
+    public final Setting<Integer> HudAlpha = this.register(new Setting("HudAlpha", 255, 0, 255));
     public Timer sortTimer = new Timer();
 
     public static final ItemStack TOTEM = new ItemStack(Items.TOTEM_OF_UNDYING);
