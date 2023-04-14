@@ -35,7 +35,7 @@ public class BurrowESP extends Module {
     private final RenderUtill renderUtill = new RenderUtill();
 
     public BurrowESP() {
-        super("BurrowESP", "BURROWESP", Category.RENDER, true, false, false);
+        super("BurrowESP", "renders a cube in the foot hitbox of the opp", Category.RENDER, true, false, false);
         this.setInstance();
     }
 
