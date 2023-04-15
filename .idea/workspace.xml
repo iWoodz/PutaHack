@@ -18,15 +18,24 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/player/Sprite.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/player/Sprite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/Colors.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/Colors.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/HUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/HUD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/NameChanger.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/woodz/Hud.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/woodz/Hud.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/manager/ModuleManager$Animation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/manager/ModuleManager$Animation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/manager/ModuleManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/manager/ModuleManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/putahack.nn-0.1.2-release.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/putahack.nn-0.1.2-release.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/putahack.nn-0.1.2-release.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/putahack.nn-0.1.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/putahack.nn-0.1.2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/mcmod.info" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/mcmod.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/client/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/client/HUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/client/NameChanger.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/woodz/Hud.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/woodz/Hud.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/manager/ModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/manager/ModuleManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/render/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/render/Sprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileJava-refmap.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileJava-refmap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/mixins.putahacknn.refmap.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/mixins.putahacknn.refmap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/Colors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/Colors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/HUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/NameChanger.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/woodz/Hud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/woodz/Hud.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/manager/ModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/manager/ModuleManager.java" afterDir="false" />
     </list>
@@ -100,18 +109,24 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/forre/Downloads/Xulu-_Buildable_Source-main"
+    "last_opened_file_path": "C:/Users/forre/Documents/GitHub/PutaHack/src/main/java/me/dev/putahacknn/mixin/mixins/accessors"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\forre\Documents\GitHub\PutaHack\src\main\java\me\dev\putahacknn\mixin\mixins\accessors" />
+      <recent name="C:\Users\forre\Documents\GitHub\PutaHack\src\main\java\me\dev\putahacknn\util" />
       <recent name="C:\Users\forre\Documents\GitHub\PutaHack\src\main\resources" />
       <recent name="C:\Users\forre\Documents\GitHub\PutaHack\src\main\java\me\dev\putahacknn\features\modules\render" />
       <recent name="C:\Users\forre\Documents\GitHub\PutaHack\src\main\java\me\dev\putahacknn\mixin\mixins" />
-      <recent name="C:\Users\forre\Documents\GitHub\PutaHack" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\forre\Documents\GitHub\PutaHack" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="me.dev.putahacknn.util" />
+      <recent name="me.dev.putahacknn.features.setting" />
+      <recent name="me.dev.putahacknn.util.shader" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.PutaHack [build]">

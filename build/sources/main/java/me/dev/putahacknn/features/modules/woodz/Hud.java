@@ -62,19 +62,13 @@ public class Hud extends Module {
     public final Setting<Boolean> tpsAvg = this.register(new Setting<>("TPS-Average", true));
     public final Setting<Boolean> fps = this.register(new Setting<>("FPS", true));
     public final Setting<Rendering> rendering = this.register(new Setting<>("Rendering", Rendering.UP));
-    public final Setting<Boolean> hideEffects = this.register(new Setting<>("HideEffects", true));
     public final Setting<Boolean> welcomer = this.register(new Setting<>("Welcomer", true));
     public final Setting<String> welcomerText = this.register(new Setting<>("WelcomerText", "Hello %s :^)"));
     public final Setting<Boolean> totems = this.register(new Setting<>("Totems", true));
     public final Setting<Integer> totemX = this.register(new Setting<>("TotemX", 2, -5, 5));
-    public final Setting<Boolean> capes = this.register(new Setting<>("Capes", true));
-
     public Timer sortTimer = new Timer();
-
     public static final ItemStack TOTEM = new ItemStack(Items.TOTEM_OF_UNDYING);
-
     public boolean needsSort;
-
     public List<Module> modules = new ArrayList<>();
 
     public Hud() {
@@ -93,7 +87,7 @@ public class Hud extends Module {
     @SubscribeEvent
     public void onRender2D(Render2DEvent event) {
         final ScaledResolution resolution = new ScaledResolution(mc);
-        final int color = changeAlpha(ClickGui.getInstance().getColor(), alpha.getValue());
+        final int color = changeAlpha(getColor().getRGB(), alpha.getValue());
         if (needsSort && sortTimer.passedMs(sortDelay.getValue())) {
             sortModules();
             sortTimer.reset();
@@ -179,7 +173,7 @@ public class Hud extends Module {
                     index++;
                     fag = true;
                 }
-                int potionColor = fag ? color(i, size, false) : effect.getPotion().getLiquidColor();
+                int potionColor = fag ? color(i, size) : effect.getPotion().getLiquidColor();
                 PutaHacknn.textManager.drawStringWithShadow(potionString, resolution.getScaledWidth() - PutaHacknn.textManager.getStringWidth(potionString) - 2, renderingUp ? resolution.getScaledHeight() - offset : offset, changeAlpha(potionColor, alpha.getValue()));
                 offset += ySpace.getValue();
             }
@@ -231,9 +225,9 @@ public class Hud extends Module {
         }
     }
 
-    public int color(int index, int count, boolean yeah) {
+    public int flowingColor(int index, int count) {
         float[] hsb = new float[3];
-        int color = ClickGui.getInstance().getColor();
+        int color = getColor().getRGB();
         Color.RGBtoHSB(color >> 16 & 0xFF, color >> 8 & 0xFF, color & 0xFF, hsb);
         float brightness = Math.abs(((getOffset() + (index / (float) count) * 2) % 2) - 1);
         brightness = 0.5f + (0.4f * brightness);
@@ -242,11 +236,15 @@ public class Hud extends Module {
     }
 
     public int color(int index, int count) {
-        int color = ClickGui.getInstance().getColor();
-        if (retardMode.getValue()) {
-            return color(index, count, false);
+        int color = getColor().getRGB();
+        if (retardMode.getValue()) {// why?
+            return flowingColor(index, count);
         }
         return changeAlpha(color, alpha.getValue());
+    }
+
+    public Color getColor() {
+        return new Color(red.getValue(), green.getValue(), blue.getValue(), alpha.getValue());
     }
 
     public float getOffset() {
@@ -302,14 +300,9 @@ public class Hud extends Module {
         return String.format("%.2f", pos);
     }
 
-    public void setNeedsSort(boolean needsSort) {
-        this.needsSort = needsSort;
-    }
-
     public enum Rendering {
         UP,
         DOWN
     }
 
 }
-

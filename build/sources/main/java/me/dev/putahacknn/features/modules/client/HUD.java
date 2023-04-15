@@ -94,7 +94,7 @@ public class HUD extends Module {
         this.color = ColorUtil.toRGBA((ClickGui.getInstance()).red.getValue(), (ClickGui.getInstance()).green.getValue(), (ClickGui.getInstance()).blue.getValue());
         Color color1 = new Color((ClickGui.getInstance()).red.getValue(), (ClickGui.getInstance()).green.getValue(), (ClickGui.getInstance()).blue.getValue());
         if (this.waterMark.getValue()) {
-            String string = this.command.getPlannedValue() + " v0.1.1";
+            String string = this.command.getPlannedValue() + " v0.1.2";
             if ((ClickGui.getInstance()).rainbow.getValue()) {
                 if ((ClickGui.getInstance()).rainbowModeHud.getValue() == ClickGui.rainbowMode.Static) {
                     this.renderer.drawString(string, 2.0F, this.waterMarkY.getValue(), ColorUtil.rainbow((ClickGui.getInstance()).rainbowHue.getValue()).getRGB(), true);
