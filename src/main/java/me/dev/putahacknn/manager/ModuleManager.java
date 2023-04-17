@@ -36,6 +36,8 @@ public class ModuleManager
     public Animation animationThread;
 
     public void init() {
+        this.modules.add(new AutoReply());
+        this.modules.add(new AutoGG());
         this.modules.add(new Ink());
         this.modules.add(new PortalESP());
         this.modules.add(new CsgoWatermark());
