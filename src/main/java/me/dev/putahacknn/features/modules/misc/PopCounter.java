@@ -68,9 +68,9 @@ public class PopCounter
             TotemPopContainer.put(player.getName(), l_Count);
         }
         if (l_Count == 1) {
-            sendMessage(black.getValue() ? ChatFormatting.LIGHT_PURPLE + player.getName() + ChatFormatting.WHITE + " just popped " + ChatFormatting.BLUE + l_Count + ChatFormatting.WHITE + "totem." : ChatFormatting.RESET + "naw bruh dis nigga " + ChatFormatting.LIGHT_PURPLE + player.getName() + ChatFormatting.WHITE + " really just popped " + ChatFormatting.BLUE + l_Count + ChatFormatting.WHITE + " totem? LOL no fuckin way what a loser.", player.getName().hashCode());
+            sendMessage(black.getValue() ? ChatFormatting.LIGHT_PURPLE + player.getName() + ChatFormatting.WHITE + " just popped " + ChatFormatting.BLUE + l_Count + ChatFormatting.WHITE + " totem." : ChatFormatting.RESET + "naw bruh dis nigga " + ChatFormatting.LIGHT_PURPLE + player.getName() + ChatFormatting.WHITE + " really just popped " + ChatFormatting.BLUE + l_Count + ChatFormatting.WHITE + " totem? LOL no fuckin way what a loser.", player.getName().hashCode());
         } else {
-            sendMessage(black.getValue() ? ChatFormatting.LIGHT_PURPLE + player.getName() + ChatFormatting.WHITE + " just popped " + ChatFormatting.BLUE + l_Count + ChatFormatting.WHITE + "totems." : ChatFormatting.RESET + "LOL BRO WTF DID " + ChatFormatting.LIGHT_PURPLE + player.getName() + ChatFormatting.WHITE + " JUST POP " + ChatFormatting.BLUE + l_Count + ChatFormatting.WHITE + " totems? LMAOOOO bro how bad can you be", player.getName().hashCode());
+            sendMessage(black.getValue() ? ChatFormatting.LIGHT_PURPLE + player.getName() + ChatFormatting.WHITE + " just popped " + ChatFormatting.BLUE + l_Count + ChatFormatting.WHITE + " totems." : ChatFormatting.RESET + "LOL BRO WTF DID " + ChatFormatting.LIGHT_PURPLE + player.getName() + ChatFormatting.WHITE + " JUST POP " + ChatFormatting.BLUE + l_Count + ChatFormatting.WHITE + " totems? LMAOOOO bro how bad can you be", player.getName().hashCode());
         }
     }
 

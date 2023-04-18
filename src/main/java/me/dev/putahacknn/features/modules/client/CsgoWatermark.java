@@ -33,7 +33,7 @@ public class CsgoWatermark
 
     public void drawCsgoWatermark() {
         int padding = 5;
-        this.message = "PutaHack 0.1.2 | " + CsgoWatermark.mc.player.getName() + " | " + PutaHacknn.serverManager.getPing() + "Ms";
+        this.message = "PutaHack 0.1.3 | " + CsgoWatermark.mc.player.getName() + " | " + PutaHacknn.serverManager.getPing() + "Ms";
         Integer textWidth = CsgoWatermark.mc.fontRenderer.getStringWidth(this.message);
         Integer textHeight = CsgoWatermark.mc.fontRenderer.FONT_HEIGHT;
         RenderUtil.drawRectangleCorrectly(this.X.getValue(), this.Y.getValue(), textWidth + 8, textHeight + 4, ColorUtil.toRGBA(0, 0, 0, 150));

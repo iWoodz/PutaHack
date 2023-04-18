@@ -15,12 +15,11 @@ import java.util.concurrent.ConcurrentHashMap;
 public class AutoGG
         extends Module {
     private static AutoGG INSTANCE = new AutoGG();
-    public Setting<String> custom = this.register(new Setting<String>("Custom", "Nigga-Hack.me"));
-    public Setting<String> test = this.register(new Setting<String>("Test", "null"));
+    public Setting<String> custom = this.register(new Setting<>("Custom", "putahack owns u nn dog"));
     private ConcurrentHashMap<String, Integer> targetedPlayers = null;
 
     public AutoGG() {
-        super("AutoGG", "Sends msg after you kill someone", Module.Category.MISC, true, false, false);
+        super("AutoGG", "copium", Module.Category.MISC, true, false, false);
         this.setInstance();
     }
 
@@ -37,7 +36,7 @@ public class AutoGG
 
     @Override
     public void onEnable() {
-        this.targetedPlayers = new ConcurrentHashMap();
+        this.targetedPlayers = new ConcurrentHashMap<>();
     }
 
     @Override
@@ -51,7 +50,7 @@ public class AutoGG
             return;
         }
         if (this.targetedPlayers == null) {
-            this.targetedPlayers = new ConcurrentHashMap();
+            this.targetedPlayers = new ConcurrentHashMap<>();
         }
         for (Entity entity : AutoGG.mc.world.getLoadedEntityList()) {
             String name2;
@@ -77,7 +76,7 @@ public class AutoGG
             return;
         }
         if (this.targetedPlayers == null) {
-            this.targetedPlayers = new ConcurrentHashMap();
+            this.targetedPlayers = new ConcurrentHashMap<>();
         }
         if ((entity = event.getEntityLiving()) == null) {
             return;
@@ -101,13 +100,10 @@ public class AutoGG
 
     private void doAnnounce(String name) {
         this.targetedPlayers.remove(name);
-        AutoGG.mc.player.connection.sendPacket(new CPacketChatMessage(this.custom.getValue()));
         int u = 0;
         for (int i = 0; i < 10; ++i) {
+            AutoGG.mc.player.connection.sendPacket(new CPacketChatMessage(this.custom.getValue().replaceAll("{name}", name)));
             ++u;
-        }
-        if (!this.test.getValue().equalsIgnoreCase("null")) {
-            AutoGG.mc.player.connection.sendPacket(new CPacketChatMessage(this.test.getValue()));
         }
     }
 
@@ -116,9 +112,8 @@ public class AutoGG
             return;
         }
         if (this.targetedPlayers == null) {
-            this.targetedPlayers = new ConcurrentHashMap();
+            this.targetedPlayers = new ConcurrentHashMap<>();
         }
         this.targetedPlayers.put(name, 20);
     }
 }
-
