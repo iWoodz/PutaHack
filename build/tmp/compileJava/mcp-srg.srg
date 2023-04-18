@@ -28,6 +28,10 @@ FD: me/dev/putahacknn/mixin/mixins/MixinItemRenderer/mc me/dev/putahacknn/mixin/
 FD: me/dev/putahacknn/mixin/mixins/MixinRenderEnderCrystal/ENDER_CRYSTAL_TEXTURES me/dev/putahacknn/mixin/mixins/MixinRenderEnderCrystal/field_110787_a
 FD: me/dev/putahacknn/mixin/mixins/MixinRenderEnderCrystal/modelEnderCrystal me/dev/putahacknn/mixin/mixins/MixinRenderEnderCrystal/field_76995_b
 FD: me/dev/putahacknn/mixin/mixins/MixinRenderEnderCrystal/modelEnderCrystalNoBase me/dev/putahacknn/mixin/mixins/MixinRenderEnderCrystal/field_188316_g
+FD: me/dev/putahacknn/mixin/mixins/MixinRenderEntityItem/itemRenderer me/dev/putahacknn/mixin/mixins/MixinRenderEntityItem/field_177080_a
+FD: me/dev/putahacknn/mixin/mixins/MixinRenderEntityItem/random me/dev/putahacknn/mixin/mixins/MixinRenderEntityItem/field_177079_e
+FD: me/dev/putahacknn/mixin/mixins/MixinRenderer/renderOutlines me/dev/putahacknn/mixin/mixins/MixinRenderer/field_188301_f
+FD: me/dev/putahacknn/mixin/mixins/MixinRenderer/renderManager me/dev/putahacknn/mixin/mixins/MixinRenderer/field_76990_c
 FD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/LOGGER me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/field_147923_a
 FD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/mainModel me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/field_77045_g
 FD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/renderMarker me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/field_188323_j
@@ -58,6 +62,12 @@ MD: me/dev/putahacknn/mixin/mixins/MixinEntity/move (Lnet/minecraft/entity/Mover
 MD: me/dev/putahacknn/mixin/mixins/MixinItemRenderer/renderItemInFirstPerson (Lnet/minecraft/client/entity/AbstractClientPlayer;FFLnet/minecraft/util/EnumHand;FLnet/minecraft/item/ItemStack;F)V me/dev/putahacknn/mixin/mixins/MixinItemRenderer/func_187457_a (Lnet/minecraft/client/entity/AbstractClientPlayer;FFLnet/minecraft/util/EnumHand;FLnet/minecraft/item/ItemStack;F)V
 MD: me/dev/putahacknn/mixin/mixins/MixinItemRenderer/renderArmFirstPerson (FFLnet/minecraft/util/EnumHandSide;)V me/dev/putahacknn/mixin/mixins/MixinItemRenderer/func_187456_a (FFLnet/minecraft/util/EnumHandSide;)V
 MD: me/dev/putahacknn/mixin/mixins/MixinRenderEnderCrystal/doRender (Lnet/minecraft/entity/item/EntityEnderCrystal;DDDFF)V me/dev/putahacknn/mixin/mixins/MixinRenderEnderCrystal/func_76986_a (Lnet/minecraft/entity/item/EntityEnderCrystal;DDDFF)V
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderEntityItem/getModelCount (Lnet/minecraft/item/ItemStack;)I me/dev/putahacknn/mixin/mixins/MixinRenderEntityItem/func_177078_a (Lnet/minecraft/item/ItemStack;)I
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderEntityItem/getEntityTexture (Lnet/minecraft/entity/item/EntityItem;)Lnet/minecraft/util/ResourceLocation; me/dev/putahacknn/mixin/mixins/MixinRenderEntityItem/func_110775_a (Lnet/minecraft/entity/item/EntityItem;)Lnet/minecraft/util/ResourceLocation;
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderEntityItem/transformModelCount (Lnet/minecraft/entity/item/EntityItem;DDDFLnet/minecraft/client/renderer/block/model/IBakedModel;)I me/dev/putahacknn/mixin/mixins/MixinRenderEntityItem/func_177077_a (Lnet/minecraft/entity/item/EntityItem;DDDFLnet/minecraft/client/renderer/block/model/IBakedModel;)I
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderEntityItem/doRender (Lnet/minecraft/entity/item/EntityItem;DDDFF)V me/dev/putahacknn/mixin/mixins/MixinRenderEntityItem/func_76986_a (Lnet/minecraft/entity/item/EntityItem;DDDFF)V
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderer/bindEntityTexture (Lnet/minecraft/entity/Entity;)Z me/dev/putahacknn/mixin/mixins/MixinRenderer/func_180548_c (Lnet/minecraft/entity/Entity;)Z
+MD: me/dev/putahacknn/mixin/mixins/MixinRenderer/getTeamColor (Lnet/minecraft/entity/Entity;)I me/dev/putahacknn/mixin/mixins/MixinRenderer/func_188298_c (Lnet/minecraft/entity/Entity;)I
 MD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/isVisible (Lnet/minecraft/entity/EntityLivingBase;)Z me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/func_193115_c (Lnet/minecraft/entity/EntityLivingBase;)Z
 MD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/getSwingProgress (Lnet/minecraft/entity/EntityLivingBase;F)F me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/func_77040_d (Lnet/minecraft/entity/EntityLivingBase;F)F
 MD: me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/interpolateRotation (FFF)F me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase/func_77034_a (FFF)F

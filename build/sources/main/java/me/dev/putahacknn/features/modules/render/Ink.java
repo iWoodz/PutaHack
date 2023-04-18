@@ -17,7 +17,7 @@ public class Ink
     public int increaseAmount = 1;
 
     public Ink() {
-        super("Ink", "Splatters ink all over your screen", Module.Category.RENDER, true, false, false);
+        super("Ink", "cums all over ur screen", Module.Category.RENDER, true, false, false);
     }
 
     @Override
