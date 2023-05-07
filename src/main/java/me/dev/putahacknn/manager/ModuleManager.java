@@ -36,7 +36,7 @@ public class ModuleManager
     public Animation animationThread;
 
     public void init() {
-        this.modules.add(new KillEffects());
+        this.modules.add(new KillEffects()); 
         this.modules.add(new TrapHead());
         this.modules.add(new AutoReply());
         this.modules.add(new AutoGG());
