@@ -51,6 +51,7 @@ public class ClickGui extends Module
     public Setting<Integer> gb_red;
     public Setting<Integer> gb_green;
     public Setting<Integer> gb_blue;
+    public Setting<Boolean> cross = register(new Setting("Cross", true));
     private int color;
 
     public ClickGui() {
@@ -169,6 +170,10 @@ public class ClickGui extends Module
 
     public final int getColor() {
         return this.color;
+    }
+
+    public final Color getColor2() {
+        return new Color(this.color);
     }
 
     static {

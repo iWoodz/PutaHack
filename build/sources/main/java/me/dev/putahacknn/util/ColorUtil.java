@@ -27,6 +27,15 @@ public class ColorUtil {
         return MathHelper.hsvToRGB(Math.max(0.0F, (float) (1.0F - (double)stack.getItemDamage() / (double)stack.getMaxDamage())) / 3.0F, 1.0F, 1.0F);
     }
 
+    public static Color thehahafunny(Color color, int index, int count) {
+        float[] hsb = new float[3];
+        Color.RGBtoHSB(color.getRed(), color.getGreen(), color.getBlue(), hsb);
+        float brightness = Math.abs((System.currentTimeMillis() % ((long)1230675006 ^ 0x495A9BEEL) / Float.intBitsToFloat(Float.floatToIntBits(0.0013786979f) ^ 0x7ECEB56D) + index / (float)count * Float.intBitsToFloat(Float.floatToIntBits(0.09192204f) ^ 0x7DBC419F)) % Float.intBitsToFloat(Float.floatToIntBits(0.7858098f) ^ 0x7F492AD5) - Float.intBitsToFloat(Float.floatToIntBits(6.46708f) ^ 0x7F4EF252));
+        brightness = Float.intBitsToFloat(Float.floatToIntBits(18.996923f) ^ 0x7E97F9B3) + Float.intBitsToFloat(Float.floatToIntBits(2.7958195f) ^ 0x7F32EEB5) * brightness;
+        hsb[2] = brightness % Float.intBitsToFloat(Float.floatToIntBits(0.8992331f) ^ 0x7F663424);
+        return new Color(Color.HSBtoRGB(hsb[0], hsb[1], hsb[2]));
+    }
+
     public static int staticRainbow(float offset, Color color) {
         double timer = System.currentTimeMillis() % 1750.0 / 850.0;
         float[] hsb = new float[3];
@@ -89,5 +98,8 @@ public class ColorUtil {
     public static int toRGBA(Color color) {
         return ColorUtil.toRGBA(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha());
     }
-}
 
+    public static int newAlpha(int color, int alpha) {
+        return toRGBA(new Color(color).getRed(), new Color(color).getGreen(), new Color(color).getBlue(), alpha);
+    }
+}

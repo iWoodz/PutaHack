@@ -4,13 +4,11 @@ import me.dev.putahacknn.PutaHacknn;
 import me.dev.putahacknn.features.gui.PutaHacknnGui;
 import me.dev.putahacknn.features.gui.components.Component;
 import me.dev.putahacknn.features.gui.components.items.Item;
-import me.dev.putahacknn.features.modules.client.ClickGui;
-import me.dev.putahacknn.features.modules.client.HUD;
-import me.dev.putahacknn.util.RenderUtil;
-import me.dev.putahacknn.util.Util;
 import me.dev.putahacknn.features.modules.Module;
+import me.dev.putahacknn.features.modules.client.ClickGui;
 import me.dev.putahacknn.features.setting.Bind;
 import me.dev.putahacknn.features.setting.Setting;
+import me.dev.putahacknn.util.Util;
 import net.minecraft.client.audio.PositionedSoundRecord;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.util.ResourceLocation;
@@ -78,10 +76,10 @@ public class ModuleButton
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         super.drawScreen(mouseX, mouseY, partialTicks);
         if (!this.items.isEmpty()) {
-            if (HUD.getInstance().cross.getValue() && !subOpen) {
+            if (ClickGui.getInstance().cross.getValue() && !subOpen) {
                 Util.mc.getTextureManager().bindTexture(this.cross);
                 ModuleButton.drawCompleteImage(this.x - 1.5f + (float) this.width - 7.4f, this.y - 4.4f - (float) PutaHacknnGui.getClickGui().getTextOffset(), 8, 11);
-            } else if (HUD.getInstance().cross.getValue() && subOpen) {
+            } else if (ClickGui.getInstance().cross.getValue() && subOpen) {
                 Util.mc.getTextureManager().bindTexture(this.cross2);
                 ModuleButton.drawCompleteImage(this.x - 1.5f + (float) this.width - 7.4f, this.y - 4.4f - (float) PutaHacknnGui.getClickGui().getTextOffset(), 8, 11);
             }

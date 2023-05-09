@@ -2,15 +2,13 @@ package me.dev.putahacknn.manager;
 
 import com.google.common.base.Strings;
 import com.mojang.realmsclient.gui.ChatFormatting;
-import me.dev.putahacknn.event.events.*;
-import me.dev.putahacknn.features.Feature;
-import me.dev.putahacknn.features.modules.client.HUD;
-import me.dev.putahacknn.util.Timer;
-import me.dev.putahacknn.util.Util;
 import me.dev.putahacknn.PutaHacknn;
 import me.dev.putahacknn.event.events.*;
+import me.dev.putahacknn.features.Feature;
 import me.dev.putahacknn.features.command.Command;
 import me.dev.putahacknn.features.modules.misc.PopCounter;
+import me.dev.putahacknn.util.Timer;
+import me.dev.putahacknn.util.Util;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.EntityPlayer;
@@ -31,8 +29,6 @@ import org.json.simple.JSONObject;
 import org.lwjgl.input.Keyboard;
 
 import javax.net.ssl.HttpsURLConnection;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
@@ -56,11 +52,7 @@ public class EventManager extends Feature {
         if (!fullNullCheck() && (event.getEntity().getEntityWorld()).isRemote && event.getEntityLiving().equals(Util.mc.player)) {
             PutaHacknn.inventoryManager.update();
             PutaHacknn.moduleManager.onUpdate();
-            if ((HUD.getInstance()).renderingMode.getValue() == HUD.RenderingMode.Length) {
-                PutaHacknn.moduleManager.sortModules(true);
-            } else {
-                PutaHacknn.moduleManager.sortModulesABC();
-            }
+            PutaHacknn.moduleManager.sortModules(true);
         }
         if (mc.player != null && !hasChecked) {
             List<String> names = Arrays.asList("iWoodz", "__NZ", "Fundfull", "Primooctopus33", "DuelDodger");

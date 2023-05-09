@@ -1,8 +1,8 @@
 package me.dev.putahacknn.manager;
 
-import me.dev.putahacknn.util.ColorUtil;
 import me.dev.putahacknn.features.gui.components.Component;
 import me.dev.putahacknn.features.modules.client.ClickGui;
+import me.dev.putahacknn.util.ColorUtil;
 
 import java.awt.*;
 
@@ -27,6 +27,10 @@ public class ColorManager {
 
     public int getColorAsIntFullAlpha() {
         return ColorUtil.toRGBA(new Color(this.color.getRed(), this.color.getGreen(), this.color.getBlue(), 255));
+    }
+
+    public Color getRainbow() {
+        return ColorUtil.rainbow(ClickGui.getInstance().rainbowHue.getValue());
     }
 
     public int getColorWithAlpha(int alpha) {
@@ -76,4 +80,3 @@ public class ColorManager {
         this.updateColor();
     }
 }
-

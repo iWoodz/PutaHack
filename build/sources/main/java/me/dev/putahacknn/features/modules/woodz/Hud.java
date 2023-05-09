@@ -4,9 +4,6 @@ import com.mojang.realmsclient.gui.ChatFormatting;
 import me.dev.putahacknn.PutaHacknn;
 import me.dev.putahacknn.event.events.Render2DEvent;
 import me.dev.putahacknn.features.modules.Module;
-import me.dev.putahacknn.features.modules.client.ClickGui;
-import me.dev.putahacknn.features.modules.client.Colors;
-import me.dev.putahacknn.features.modules.misc.PopCounter;
 import me.dev.putahacknn.features.setting.Setting;
 import me.dev.putahacknn.util.ColorUtil;
 import me.dev.putahacknn.util.EntityUtil;
@@ -18,23 +15,20 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import scala.Int;
 
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class Hud extends Module {
+public class HUD extends Module {
 
-    public static Hud INSTANCE = new Hud();
+    public static HUD INSTANCE = new HUD();
     public final Setting<Integer> alpha = this.register(new Setting<>("Alpha", 255, 0, 255));
     public final Setting<Integer> red = this.register(new Setting("Red", 255, 0, 255));
     public final Setting<Integer> green = this.register(new Setting("Green", 255, 0, 255));
@@ -71,7 +65,7 @@ public class Hud extends Module {
     public boolean needsSort;
     public List<Module> modules = new ArrayList<>();
 
-    public Hud() {
+    public HUD() {
         super("HUD", "as9d0fka309ethasdhgiao3rilkwtndoigroafoi3wriopuaiow84uj", Category.WOODZ, true, false, false);
     }
 

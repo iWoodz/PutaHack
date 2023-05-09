@@ -1,15 +1,18 @@
 package me.dev.putahacknn.manager;
 
+import me.dev.putahacknn.PutaHacknn;
 import me.dev.putahacknn.features.Feature;
+import me.dev.putahacknn.features.gui.font.CustomFont;
+import me.dev.putahacknn.features.modules.client.ClickGui;
+import me.dev.putahacknn.features.modules.client.FontMod;
+import me.dev.putahacknn.util.ColorUtil;
 import me.dev.putahacknn.util.Timer;
 import me.dev.putahacknn.util.Util;
-import me.dev.putahacknn.PutaHacknn;
-import me.dev.putahacknn.features.gui.font.CustomFont;
-import me.dev.putahacknn.features.modules.client.FontMod;
 import net.minecraft.util.math.MathHelper;
 
 import java.awt.*;
 import java.io.InputStream;
+import java.util.regex.Pattern;
 
 public class TextManager
         extends Feature {
@@ -64,6 +67,19 @@ public class TextManager
             return;
         }
         TextManager.mc.fontRenderer.drawString(text, x, y, color, shadow);
+    }
+
+    public void drawRollingRainbowString(String text, float x, float y, boolean shadow) {
+        Pattern.compile("(?i)\u00a7[0-9A-FK-OR]").matcher(text).replaceAll("");
+        int[] arrayOfInt = {1};
+        char[] stringToCharArray = (text).toCharArray();
+        float f = 0.0f + x;
+        for (char c : stringToCharArray) {
+            drawString(String.valueOf(c), f,
+                    y, ColorUtil.rainbow(arrayOfInt[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getRGB(), shadow);
+            f += getStringWidth(String.valueOf(c));
+            arrayOfInt[0] = arrayOfInt[0] + 1;
+        }
     }
 
     public int getStringWidth(String text) {

@@ -6,7 +6,7 @@ import me.dev.putahacknn.event.events.Render2DEvent;
 import me.dev.putahacknn.event.events.Render3DEvent;
 import me.dev.putahacknn.features.Feature;
 import me.dev.putahacknn.features.command.Command;
-import me.dev.putahacknn.features.modules.client.HUD;
+import me.dev.putahacknn.features.modules.client.Management;
 import me.dev.putahacknn.features.setting.Bind;
 import me.dev.putahacknn.features.setting.Setting;
 import me.dev.putahacknn.PutaHacknn;
@@ -105,7 +105,7 @@ public class Module
         this.enabled.setValue(Boolean.TRUE);
         this.onToggle();
         this.onEnable();
-        if (HUD.getInstance().notifyToggles.getValue() && message) {
+        if (Management.INSTANCE.notifyToggles.getValue() && message) {
             TextComponentString text = new TextComponentString(PutaHacknn.commandManager.getClientMessage() + " " + this.getDisplayName() + "" + ChatFormatting.GREEN + "" + ChatFormatting.BOLD + " Enabled!");
             Module.mc.ingameGUI.getChatGUI().printChatMessageWithOptionalDeletion(text, 1);
         }
@@ -123,7 +123,7 @@ public class Module
             MinecraftForge.EVENT_BUS.unregister(this);
         }
         this.enabled.setValue(false);
-        if (HUD.getInstance().notifyToggles.getValue() && message) {
+        if (Management.INSTANCE.notifyToggles.getValue() && message) {
             TextComponentString text = new TextComponentString(PutaHacknn.commandManager.getClientMessage() + " " + this.getDisplayName() + "" + ChatFormatting.RED + "" + ChatFormatting.BOLD + " Disabled!");
             Module.mc.ingameGUI.getChatGUI().printChatMessageWithOptionalDeletion(text, 1);
         }

@@ -1,8 +1,7 @@
 package me.dev.putahacknn.manager;
 
-import me.dev.putahacknn.features.modules.client.HUD;
-import me.dev.putahacknn.util.Timer;
 import me.dev.putahacknn.features.Feature;
+import me.dev.putahacknn.util.Timer;
 
 import java.text.DecimalFormat;
 import java.util.Arrays;
@@ -22,7 +21,7 @@ public class ServerManager
     }
 
     public boolean isServerNotResponding() {
-        return this.timer.passedMs(HUD.getInstance().lagTime.getValue().intValue());
+        return this.timer.passedMs(900);
     }
 
     public long serverRespondingTime() {
@@ -90,4 +89,3 @@ public class ServerManager
         }
     }
 }
-

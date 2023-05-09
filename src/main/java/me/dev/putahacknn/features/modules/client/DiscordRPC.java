@@ -72,10 +72,10 @@ public class DiscordRPC extends Module {
         presence.largeImageKey = "big";
         presence.largeImageText = "PutaHack " + PutaHacknn.MODVER;
 
-        presence.smallImageKey = ((mc.currentScreen instanceof GuiMainMenu ? "idling" :
+        presence.largeImageKey = ((mc.currentScreen instanceof GuiMainMenu ? "idling" :
                 (mc.currentServerData != null ? "multiplayer" : "singleplayer")));
 
-        presence.smallImageText = ((mc.currentScreen instanceof GuiMainMenu ? "Idling." :
+        presence.largeImageText = ((mc.currentScreen instanceof GuiMainMenu ? "Idling." :
                 (mc.currentServerData != null ? "Playing multiplayer." : "Playing singleplayer.")));
 
         rpc.Discord_UpdatePresence(presence);
@@ -88,10 +88,10 @@ public class DiscordRPC extends Module {
 
                 presence.state = state[new Random().nextInt(state.length)];
 
-                presence.smallImageKey = ((mc.currentScreen instanceof GuiMainMenu ? "iding" :
+                presence.largeImageKey = ((mc.currentScreen instanceof GuiMainMenu ? "iding" :
                         (mc.currentServerData != null ? "multiplayer" : "singleplayer")));
 
-                presence.smallImageText = ((mc.currentScreen instanceof GuiMainMenu ? "Iding." :
+                presence.largeImageText = ((mc.currentScreen instanceof GuiMainMenu ? "Iding." :
                         (mc.currentServerData != null ? "Playing multiplayer." : "Playing singleplayer.")));
 
                 rpc.Discord_UpdatePresence(presence);

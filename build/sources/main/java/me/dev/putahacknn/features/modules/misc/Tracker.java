@@ -2,10 +2,10 @@ package me.dev.putahacknn.features.modules.misc;
 
 import me.dev.putahacknn.event.events.DeathEvent;
 import me.dev.putahacknn.features.command.Command;
-import me.dev.putahacknn.features.modules.client.HUD;
+import me.dev.putahacknn.features.modules.Module;
+import me.dev.putahacknn.features.modules.client.Management;
 import me.dev.putahacknn.util.EntityUtil;
 import me.dev.putahacknn.util.TextUtil;
-import me.dev.putahacknn.features.modules.Module;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityExpBottle;
 import net.minecraft.entity.player.EntityPlayer;
@@ -38,7 +38,7 @@ public class Tracker
             this.trackedPlayer = EntityUtil.getClosestEnemy(1000.0);
         } else if (this.usedStacks != this.usedExp / 64) {
             this.usedStacks = this.usedExp / 64;
-            Command.sendMessage(TextUtil.coloredString(this.trackedPlayer.getName() + " has used " + this.usedStacks + " stacks of XP!", HUD.getInstance().commandColor.getValue()));
+            Command.sendMessage(TextUtil.coloredString(this.trackedPlayer.getName() + " has used " + this.usedStacks + " stacks of XP!", Management.INSTANCE.commandColor.getValue()));
         }
     }
 
@@ -71,4 +71,3 @@ public class Tracker
         return null;
     }
 }
-

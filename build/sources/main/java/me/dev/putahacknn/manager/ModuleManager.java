@@ -1,31 +1,28 @@
 package me.dev.putahacknn.manager;
 
-import com.mojang.realmsclient.gui.ChatFormatting;
 import me.dev.putahacknn.event.events.Render2DEvent;
 import me.dev.putahacknn.event.events.Render3DEvent;
-import me.dev.putahacknn.features.modules.client.*;
-import me.dev.putahacknn.features.modules.client.Colors;
-import me.dev.putahacknn.features.modules.combat.*;
-import me.dev.putahacknn.features.modules.misc.*;
-import me.dev.putahacknn.features.modules.movement.*;
-import me.dev.putahacknn.features.modules.player.*;
-import me.dev.putahacknn.features.modules.player.Sprite;
-import me.dev.putahacknn.features.modules.render.*;
-import me.dev.putahacknn.features.modules.woodz.*;
-import me.dev.putahacknn.util.Util;
-import me.dev.putahacknn.PutaHacknn;
 import me.dev.putahacknn.features.Feature;
 import me.dev.putahacknn.features.gui.PutaHacknnGui;
 import me.dev.putahacknn.features.modules.Module;
+import me.dev.putahacknn.features.modules.client.*;
+import me.dev.putahacknn.features.modules.client.Hud;
+import me.dev.putahacknn.features.modules.combat.*;
+import me.dev.putahacknn.features.modules.misc.*;
+import me.dev.putahacknn.features.modules.movement.*;
+import me.dev.putahacknn.features.modules.player.Shutdown;
+import me.dev.putahacknn.features.modules.player.*;
+import me.dev.putahacknn.features.modules.render.*;
+import me.dev.putahacknn.features.modules.woodz.*;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.EventBus;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.lwjgl.input.Keyboard;
 
-import java.util.*;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class ModuleManager
@@ -33,30 +30,25 @@ public class ModuleManager
     public ArrayList<Module> modules = new ArrayList();
     public List<Module> sortedModules = new ArrayList<Module>();
     public List<String> sortedModulesABC = new ArrayList<String>();
-    public Animation animationThread;
 
     public void init() {
-        this.modules.add(new KillEffects());
-        this.modules.add(new TrapHead());
-        this.modules.add(new AutoReply());
-        this.modules.add(new AutoGG());
-        this.modules.add(new Ink());
-        this.modules.add(new PortalESP());
-        this.modules.add(new CsgoWatermark());
-        this.modules.add(new BurrowESP());
-        this.modules.add(new Colors());
-        this.modules.add(new DiscordRPC());
-        this.modules.add(new NameTags());
-        this.modules.add(new AutoDickSuck());
-        this.modules.add(new Sprite());
         this.modules.add(new StrictLimbs());
+        this.modules.add(new AutoDickSuck());
+        this.modules.add(new HUD());
+        this.modules.add(new NameTags());
+        this.modules.add(new BurrowESP());
+        this.modules.add(new KillEffects());
+        this.modules.add(new PortalESP());
+        this.modules.add(new Ink());
+        this.modules.add(new Colors());
+        this.modules.add(new CsgoWatermark());
+        this.modules.add(new Hud());
+        this.modules.add(new Management());
         this.modules.add(new Black());
         this.modules.add(new AntiRegear());
-        this.modules.add(new ViewModel());
         this.modules.add(new HoleCampFix());
         this.modules.add(new AutoCenter());
         this.modules.add(new PvpInfo());
-        this.modules.add(new Hud());
         this.modules.add(new DotGodSpammer());
         this.modules.add(new FPSFucker3000());
         this.modules.add(new AutoCrystalRewrite());
@@ -78,6 +70,7 @@ public class ModuleManager
         this.modules.add(new LifeSaver());
         this.modules.add(new AntiLog());
         this.modules.add(new RealPlayer());
+        this.modules.add(new DiscordRPC());
         this.modules.add(new LogAura());
         this.modules.add(new Ambience());
         this.modules.add(new Spawns());
@@ -100,17 +93,16 @@ public class ModuleManager
         this.modules.add(new Strafe());
         this.modules.add(new ClickGui());
         this.modules.add(new FontMod());
-        this.modules.add(new HUD());
         this.modules.add(new HoleESP());
         this.modules.add(new Replenish());
         this.modules.add(new SmallShield());
+        this.modules.add(new HandChams());
         this.modules.add(new Trajectories());
         this.modules.add(new FakePlayer());
-        this.modules.add(new MCP());
         this.modules.add(new ReverseStep());
+        this.modules.add(new ChatModifier());
         this.modules.add(new MCF());
         this.modules.add(new PearlNotify());
-        this.modules.add(new ToolTips());
         this.modules.add(new Tracker());
         this.modules.add(new PopCounter());
         this.modules.add(new Offhand());
@@ -118,13 +110,19 @@ public class ModuleManager
         this.modules.add(new AutoTrap());
         this.modules.add(new AutoWeb());
         this.modules.add(new AutoCrystal());
+        this.modules.add(new Killaura());
+        this.modules.add(new Criticals());
         this.modules.add(new HoleFiller());
-        this.modules.add(new Speed());
+        this.modules.add(new AutoArmor());
+        this.modules.add(new InstantSpeed());
         this.modules.add(new Step());
+        this.modules.add(new Flight());
+        this.modules.add(new Scaffold());
         this.modules.add(new PacketFly());
         this.modules.add(new FastPlace());
         this.modules.add(new ESP());
         this.modules.add(new Selftrap());
+        this.modules.add(new AutoMinecart());
         this.modules.add(new SelfFill());
         this.modules.add(new ArrowESP());
     }
@@ -285,69 +283,6 @@ public class ModuleManager
                 module.toggle();
             }
         });
-    }
-
-    private class Animation
-            extends Thread {
-        public Module module;
-        public float offset;
-        public float vOffset;
-        ScheduledExecutorService service;
-
-        public Animation() {
-            super("Animation");
-            this.service = Executors.newSingleThreadScheduledExecutor();
-        }
-
-        @Override
-        public void run() {
-            if (HUD.getInstance().renderingMode.getValue() == HUD.RenderingMode.Length) {
-                for (Module module : ModuleManager.this.sortedModules) {
-                    String text = module.getDisplayName() + ChatFormatting.GRAY + (module.getDisplayInfo() != null ? " [" + ChatFormatting.WHITE + module.getDisplayInfo() + ChatFormatting.GRAY + "]" : "");
-                    module.offset = (float) ModuleManager.this.renderer.getStringWidth(text) / HUD.getInstance().animationHorizontalTime.getValue().floatValue();
-                    module.vOffset = (float) ModuleManager.this.renderer.getFontHeight() / HUD.getInstance().animationVerticalTime.getValue().floatValue();
-                    if (module.isEnabled() && HUD.getInstance().animationHorizontalTime.getValue() != 1) {
-                        if (!(module.arrayListOffset > module.offset) || Util.mc.world == null) continue;
-                        module.arrayListOffset -= module.offset;
-                        module.sliding = true;
-                        continue;
-                    }
-                    if (!module.isDisabled() || HUD.getInstance().animationHorizontalTime.getValue() == 1) continue;
-                    if (module.arrayListOffset < (float) ModuleManager.this.renderer.getStringWidth(text) && Util.mc.world != null) {
-                        module.arrayListOffset += module.offset;
-                        module.sliding = true;
-                        continue;
-                    }
-                    module.sliding = false;
-                }
-            } else {
-                for (String e : ModuleManager.this.sortedModulesABC) {
-                    Module module = PutaHacknn.moduleManager.getModuleByName(e);
-                    String text = module.getDisplayName() + ChatFormatting.GRAY + (module.getDisplayInfo() != null ? " [" + ChatFormatting.WHITE + module.getDisplayInfo() + ChatFormatting.GRAY + "]" : "");
-                    module.offset = (float) ModuleManager.this.renderer.getStringWidth(text) / HUD.getInstance().animationHorizontalTime.getValue().floatValue();
-                    module.vOffset = (float) ModuleManager.this.renderer.getFontHeight() / HUD.getInstance().animationVerticalTime.getValue().floatValue();
-                    if (module.isEnabled() && HUD.getInstance().animationHorizontalTime.getValue() != 1) {
-                        if (!(module.arrayListOffset > module.offset) || Util.mc.world == null) continue;
-                        module.arrayListOffset -= module.offset;
-                        module.sliding = true;
-                        continue;
-                    }
-                    if (!module.isDisabled() || HUD.getInstance().animationHorizontalTime.getValue() == 1) continue;
-                    if (module.arrayListOffset < (float) ModuleManager.this.renderer.getStringWidth(text) && Util.mc.world != null) {
-                        module.arrayListOffset += module.offset;
-                        module.sliding = true;
-                        continue;
-                    }
-                    module.sliding = false;
-                }
-            }
-        }
-
-        @Override
-        public void start() {
-            System.out.println("Starting animation thread.");
-            this.service.scheduleAtFixedRate(this, 0L, 1L, TimeUnit.MILLISECONDS);
-        }
     }
 }
 
