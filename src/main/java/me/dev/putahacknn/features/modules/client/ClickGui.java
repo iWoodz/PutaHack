@@ -173,7 +173,7 @@ public class ClickGui extends Module
     }
 
     public final Color getColor2() {
-        return new Color(this.color);
+        return new Color(red.getValue(), green.getValue(), blue.getValue(), alpha.getValue());
     }
 
     static {

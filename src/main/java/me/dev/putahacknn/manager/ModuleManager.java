@@ -54,7 +54,7 @@ public class ModuleManager
         this.modules.add(new AutoCrystalRewrite());
         this.modules.add(new TimeChanger());
         this.modules.add(new HealthBar());
-        this.modules.add(new CrystalChams());
+        this.modules.add(new CrystalScale());
         this.modules.add(new AutoCompare());
         this.modules.add(new PopLag());
         this.modules.add(new PistonCrystal());
@@ -89,7 +89,7 @@ public class ModuleManager
         this.modules.add(new ElytraSwap());
         this.modules.add(new AutoDupe());
         this.modules.add(new Woodz());
-        this.modules.add(new SilentXP());
+        this.modules.add(new SilentEXP());
         this.modules.add(new Strafe());
         this.modules.add(new ClickGui());
         this.modules.add(new FontMod());

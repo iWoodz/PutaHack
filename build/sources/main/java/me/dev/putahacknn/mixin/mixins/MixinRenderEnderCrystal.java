@@ -1,6 +1,6 @@
 package me.dev.putahacknn.mixin.mixins;
 
-import me.dev.putahacknn.features.modules.render.CrystalChams;
+import me.dev.putahacknn.features.modules.render.CrystalScale;
 import me.dev.putahacknn.util.ColorUtil;
 import me.dev.putahacknn.features.modules.client.ClickGui;
 import me.dev.putahacknn.features.modules.render.Wireframe;
@@ -113,9 +113,9 @@ public class MixinRenderEnderCrystal extends Render<EntityEnderCrystal> {
 
     @Redirect(method = {"doRender"}, at = @At(value = "INVOKE", target = "Lnet/minecraft/client/model/ModelBase;render(Lnet/minecraft/entity/Entity;FFFFFF)V"))
     public void renderModelBaseHook(final ModelBase modelBase, final Entity entityIn, final float limbSwing, final float limbSwingAmount, float ageInTicks, final float netHeadYaw, final float headPitch, final float scale) {
-        if (CrystalChams.INSTANCE.isEnabled()) {
-            GlStateManager.scale(CrystalChams.INSTANCE.scale.getValue(), CrystalChams.INSTANCE.scale.getValue(), CrystalChams.INSTANCE.scale.getValue());
-            modelBase.render(entityIn, limbSwing, limbSwingAmount * CrystalChams.INSTANCE.spin.getValue(), ageInTicks * CrystalChams.INSTANCE.bounce.getValue(), netHeadYaw, headPitch, scale);
+        if (CrystalScale.INSTANCE.isEnabled()) {
+            GlStateManager.scale(CrystalScale.INSTANCE.scale.getValue(), CrystalScale.INSTANCE.scale.getValue(), CrystalScale.INSTANCE.scale.getValue());
+            modelBase.render(entityIn, limbSwing, limbSwingAmount * CrystalScale.INSTANCE.spin.getValue(), ageInTicks * CrystalScale.INSTANCE.bounce.getValue(), netHeadYaw, headPitch, scale);
         } else {
             modelBase.render(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
         }
