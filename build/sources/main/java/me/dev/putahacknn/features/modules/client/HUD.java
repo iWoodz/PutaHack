@@ -53,7 +53,7 @@ public class Hud extends Module {
     private final Setting<Boolean> greeter = this.register(new Setting<>("Welcomer", false, v -> page.getValue() == Page.ELEMENTS));
     private final Setting<GreeterMode> greeterMode = this.register(new Setting<>("Mode", GreeterMode.PLAYER, v -> page.getValue() == Page.ELEMENTS && greeter.getValue()));
     private final Setting<Boolean> greeterNameColor = this.register(new Setting<>("NameColor", true, v -> greeter.getValue() && greeterMode.getValue() == GreeterMode.PLAYER && page.getValue() == Page.ELEMENTS));
-    private final Setting<String> greeterText = this.register(new Setting<>("WelcomerText", "my funds> yours", v -> greeter.getValue() && greeterMode.getValue() == GreeterMode.CUSTOM && page.getValue() == Page.ELEMENTS));
+    private final Setting<String> greeterText = this.register(new Setting<>("WelcomerText", "tu mama es gordo puta", v -> greeter.getValue() && greeterMode.getValue() == GreeterMode.CUSTOM && page.getValue() == Page.ELEMENTS));
     private final Setting<Boolean> arrayList = this.register(new Setting<>("ArrayList", false, v -> page.getValue() == Page.ELEMENTS));
     private final Setting<Boolean> black = this.register(new Setting<>("black", false, v -> page.getValue() == Page.ELEMENTS && arrayList.getValue()));
     private final Setting<Boolean> forgeHax = this.register(new Setting<>("ForgeHax", false, v -> page.getValue() == Page.ELEMENTS && arrayList.getValue()));
@@ -117,22 +117,22 @@ public class Hud extends Module {
         color = ClickGui.getInstance().getColor();
 
         if (watermark.getValue()) {
-            String mioString = watermarkString.getValue() + " ";
+            String putaString = watermarkString.getValue() + " ";
             String verColor = watermarkVerColor.getValue() ? "" + ChatFormatting.WHITE : "";
             String verString = verColor + (watermarkShort.getValue() ? PutaHacknn.MODVER.substring(0, 4) : PutaHacknn.MODVER);
 
             if ((ClickGui.getInstance()).rainbow.getValue()) {
                 if ((ClickGui.getInstance()).rainbowModeHud.getValue() == ClickGui.rainbowMode.Static) {
-                    PutaHacknn.textManager.drawString((lowerCase.getValue() ? mioString.toLowerCase() : mioString) + verString, 2.0F, waterMarkY.getValue(), PutaHacknn.colorManager.getRainbow().getRGB(), true);
+                    PutaHacknn.textManager.drawString((lowerCase.getValue() ? putaString.toLowerCase() : putaString) + verString, 2.0F, waterMarkY.getValue(), PutaHacknn.colorManager.getRainbow().getRGB(), true);
                 } else {
                     if (watermarkVerColor.getValue()) {
-                        drawDoubleRainbowRollingString((lowerCase.getValue() ? mioString.toLowerCase() : mioString), verString, 2.0f, waterMarkY.getValue(), true);
+                        drawDoubleRainbowRollingString((lowerCase.getValue() ? putaString.toLowerCase() : putaString), verString, 2.0f, waterMarkY.getValue(), true);
                     } else {
-                        PutaHacknn.textManager.drawRollingRainbowString((lowerCase.getValue() ? mioString.toLowerCase() : mioString) + verString, 2.0f, waterMarkY.getValue(), true);
+                        PutaHacknn.textManager.drawRollingRainbowString((lowerCase.getValue() ? putaString.toLowerCase() : putaString) + verString, 2.0f, waterMarkY.getValue(), true);
                     }
                 }
             } else {
-                PutaHacknn.textManager.drawString((lowerCase.getValue() ? mioString.toLowerCase() : mioString) + verString, 2.0F, waterMarkY.getValue(), ClickGui.getInstance().getColor2().hashCode(), true);
+                PutaHacknn.textManager.drawString((lowerCase.getValue() ? putaString.toLowerCase() : putaString) + verString, 2.0F, waterMarkY.getValue(), ClickGui.getInstance().getColor2().hashCode(), true);
             }
         }
 
@@ -165,18 +165,18 @@ public class Hud extends Module {
 
         this.color = ColorUtil.toRGBA(ClickGui.getInstance().getColor2().getRed(), ClickGui.getInstance().getColor2().getGreen(), ClickGui.getInstance().getColor2().getBlue());
         if (idWatermark.getValue()) {
-            String mioString = "putahack";
+            String putaString = "putahack";
             String domainString = ChatFormatting.GRAY + ".nn";
             float offset = PutaHacknn.textManager.scaledHeight / 2.0f - 30.0f;
             if ((ClickGui.getInstance()).rainbow.getValue()) {
                 if ((ClickGui.getInstance()).rainbowModeHud.getValue() == ClickGui.rainbowMode.Static) {
-                    PutaHacknn.textManager.drawString(mioString + domainString, 2.0f, offset, PutaHacknn.colorManager.getRainbow().getRGB(), true);
+                    PutaHacknn.textManager.drawString(putaString + domainString, 2.0f, offset, PutaHacknn.colorManager.getRainbow().getRGB(), true);
                 } else {
-                    PutaHacknn.textManager.drawRollingRainbowString(mioString, 2.0f, offset, true);
-                    PutaHacknn.textManager.drawString(domainString, PutaHacknn.textManager.getStringWidth(mioString) + (FontMod.getInstance().isOn() ? -1.0f : 1.4f), offset, -1, true);
+                    PutaHacknn.textManager.drawRollingRainbowString(putaString, 2.0f, offset, true);
+                    PutaHacknn.textManager.drawString(domainString, PutaHacknn.textManager.getStringWidth(putaString) + (FontMod.getInstance().isOn() ? -1.0f : 1.4f), offset, -1, true);
                 }
             } else {
-                PutaHacknn.textManager.drawString(mioString + domainString, 2.0f, offset, this.color, true);
+                PutaHacknn.textManager.drawString(putaString + domainString, 2.0f, offset, this.color, true);
             }
         }
         int[] counter1 = {1};
@@ -524,14 +524,14 @@ public class Hud extends Module {
             if ((ClickGui.getInstance()).rainbow.getValue()) {
 
                 if ((ClickGui.getInstance()).rainbowModeHud.getValue() == ClickGui.rainbowMode.Static) {
-                    PutaHacknn.textManager.drawString(text + ChatFormatting.RESET + " :^)", width / 2.0F - PutaHacknn.textManager.getStringWidth(text) / 2.0F + 2.0F, 2.0F, PutaHacknn.colorManager.getRainbow().getRGB(), true);
+                    PutaHacknn.textManager.drawString(text + ChatFormatting.RESET + " :')", width / 2.0F - PutaHacknn.textManager.getStringWidth(text) / 2.0F + 2.0F, 2.0F, PutaHacknn.colorManager.getRainbow().getRGB(), true);
                 } else {
 
                     if (greeterNameColor.getValue()) {
                         drawDoubleRainbowRollingString((lowerCase.getValue() ? "Welcome,".toLowerCase() : "Welcome,"), ((FontMod.getInstance().isOn() ? "" : " ")) + ChatFormatting.WHITE + mc.player.getDisplayNameString(), width / 2.0F - PutaHacknn.textManager.getStringWidth(text) / 2.0F + 2.0F, 2.0F, true);
                         PutaHacknn.textManager.drawRollingRainbowString(" :^)", width / 2.0F - PutaHacknn.textManager.getStringWidth(text) / 2.0F + 1.5f + PutaHacknn.textManager.getStringWidth(text) - (FontMod.getInstance().isOn() ? 1.5f : 0.0f), 2.0f, true);
                     } else {
-                        PutaHacknn.textManager.drawRollingRainbowString((lowerCase.getValue() ? "Welcome,".toLowerCase() : "Welcome, ") + mc.player.getDisplayNameString() + " :')", width / 2.0F - PutaHacknn.textManager.getStringWidth(text) / 2.0F + 2.0F, 2.0F, true);
+                        PutaHacknn.textManager.drawRollingRainbowString((lowerCase.getValue() ? "Welcome,".toLowerCase() : "Welcome, ") + mc.player.getDisplayNameString() + " :^)", width / 2.0F - PutaHacknn.textManager.getStringWidth(text) / 2.0F + 2.0F, 2.0F, true);
                     }
                 }
             } else {
@@ -611,7 +611,7 @@ public class Hud extends Module {
 
         int pingCount = PutaHacknn.serverManager.getPing();
 
-        EntityPlayer target = EntityUtil.getClosestEnemy(7);
+        EntityPlayer target = EntityUtil.getClosestEnemy(12);
 
         //Strings
 
@@ -620,7 +620,7 @@ public class Hud extends Module {
         String safetyColor;
 
         String htrColor = String.valueOf(
-                (target != null && mc.player.getDistance(target) <= 12 && PutaHacknn.moduleManager.getModuleByClass(AutoCrystalRewrite.class).isEnabled())
+                (target != null && mc.player.getDistance(target) <= 12 &&PutaHacknn.moduleManager.getModuleByClass(AutoCrystalRewrite.class).isEnabled())
                         ? ChatFormatting.GREEN
                         : ChatFormatting.DARK_RED);
 
@@ -634,19 +634,19 @@ public class Hud extends Module {
 
         //Stuff
 
-        if (pingCount < 40) {
+        if (pingCount < 55) {
             pingColor = String.valueOf(ChatFormatting.GREEN);
 
-        } else if (pingCount < 65) {
+        } else if (pingCount < 75) {
             pingColor = String.valueOf(ChatFormatting.DARK_GREEN);
 
-        } else if (pingCount < 80) {
+        } else if (pingCount < 90) {
             pingColor = String.valueOf(ChatFormatting.YELLOW);
 
-        } else if (pingCount < 110) {
+        } else if (pingCount < 120) {
             pingColor = String.valueOf(ChatFormatting.RED);
 
-        } else if (pingCount < 160) {
+        } else if (pingCount < 175) {
             pingColor = String.valueOf(ChatFormatting.DARK_RED);
 
         } else {
@@ -735,7 +735,7 @@ public class Hud extends Module {
                     }
 
                 } else {
-                    PutaHacknn.textManager.drawString(text, 2.0F, (float) y, color, true);
+                    PutaHacknn.textManager.drawString(text, 2.0F, (float) y, ClickGui.getInstance().getColor(), true);
                     y += textHeight;
                 }
             }

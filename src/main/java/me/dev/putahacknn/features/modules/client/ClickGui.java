@@ -169,11 +169,11 @@ public class ClickGui extends Module
     }
 
     public final int getColor() {
-        return this.color;
+        return getColor2().hashCode();
     }
 
     public final Color getColor2() {
-        return new Color(red.getValue(), green.getValue(), blue.getValue(), alpha.getValue());
+        return new Color(red.getValue(), green.getValue(), blue.getValue());
     }
 
     static {

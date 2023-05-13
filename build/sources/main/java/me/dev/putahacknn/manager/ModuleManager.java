@@ -32,6 +32,7 @@ public class ModuleManager
     public List<String> sortedModulesABC = new ArrayList<String>();
 
     public void init() {
+        this.modules.add(new ViewModel());
         this.modules.add(new StrictLimbs());
         this.modules.add(new AutoDickSuck());
         this.modules.add(new HUD());
