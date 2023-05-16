@@ -32,6 +32,10 @@ public class ModuleManager
     public List<String> sortedModulesABC = new ArrayList<String>();
 
     public void init() {
+        this.modules.add(new SkyColor());
+        this.modules.add(new NickHider());
+        this.modules.add(new PotionAlert());
+        this.modules.add(new VisualRange());
         this.modules.add(new ViewModel());
         this.modules.add(new StrictLimbs());
         this.modules.add(new AutoDickSuck());
@@ -111,7 +115,6 @@ public class ModuleManager
         this.modules.add(new AutoTrap());
         this.modules.add(new AutoWeb());
         this.modules.add(new AutoCrystal());
-        this.modules.add(new Killaura());
         this.modules.add(new Criticals());
         this.modules.add(new HoleFiller());
         this.modules.add(new AutoArmor());

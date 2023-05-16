@@ -55,6 +55,8 @@ MD: me/dev/putahacknn/mixin/mixins/MixinEntity/setFire (I)V me/dev/putahacknn/mi
 MD: me/dev/putahacknn/mixin/mixins/MixinEntity/getFireImmuneTicks ()I me/dev/putahacknn/mixin/mixins/MixinEntity/func_190531_bD ()I
 MD: me/dev/putahacknn/mixin/mixins/MixinEntity/isBurning ()Z me/dev/putahacknn/mixin/mixins/MixinEntity/func_70027_ad ()Z
 MD: me/dev/putahacknn/mixin/mixins/MixinEntity/move (Lnet/minecraft/entity/MoverType;DDD)V me/dev/putahacknn/mixin/mixins/MixinEntity/func_70091_d (Lnet/minecraft/entity/MoverType;DDD)V
+MD: me/dev/putahacknn/mixin/mixins/MixinFontRenderer/renderString (Ljava/lang/String;FFIZ)I me/dev/putahacknn/mixin/mixins/MixinFontRenderer/func_180455_b (Ljava/lang/String;FFIZ)I
+MD: me/dev/putahacknn/mixin/mixins/MixinFontRenderer/renderStringAtPos (Ljava/lang/String;Z)V me/dev/putahacknn/mixin/mixins/MixinFontRenderer/func_78255_a (Ljava/lang/String;Z)V
 MD: me/dev/putahacknn/mixin/mixins/MixinItemRenderer/renderItemInFirstPerson (Lnet/minecraft/client/entity/AbstractClientPlayer;FFLnet/minecraft/util/EnumHand;FLnet/minecraft/item/ItemStack;F)V me/dev/putahacknn/mixin/mixins/MixinItemRenderer/func_187457_a (Lnet/minecraft/client/entity/AbstractClientPlayer;FFLnet/minecraft/util/EnumHand;FLnet/minecraft/item/ItemStack;F)V
 MD: me/dev/putahacknn/mixin/mixins/MixinItemRenderer/renderArmFirstPerson (FFLnet/minecraft/util/EnumHandSide;)V me/dev/putahacknn/mixin/mixins/MixinItemRenderer/func_187456_a (FFLnet/minecraft/util/EnumHandSide;)V
 MD: me/dev/putahacknn/mixin/mixins/MixinRenderEnderCrystal/doRender (Lnet/minecraft/entity/item/EntityEnderCrystal;DDDFF)V me/dev/putahacknn/mixin/mixins/MixinRenderEnderCrystal/func_76986_a (Lnet/minecraft/entity/item/EntityEnderCrystal;DDDFF)V

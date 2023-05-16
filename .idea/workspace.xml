@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ce4a602-80fc-439e-8b8c-1107e56e4653" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/NickHider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/misc/PotionAlert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/misc/VisualRange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/render/SkyColor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/mixin/mixins/MixinFontRenderer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileContent/annotation-processors.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
@@ -18,63 +23,32 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/Ambience.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/ArrowESP$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/ArrowESP$EntityListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/ArrowESP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/AspectRatio.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/BlockHighlight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/BurrowESP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/CritRender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/CrystalScale.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/ESP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/HandChams$RenderMode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/HandChams.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/HealthBar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/HoleESP$ColorType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/HoleESP$HoleMode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/HoleESP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/Ink.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/KillEffects.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/NameTags.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/NoRender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/PortalESP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/Skeleton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/SmallShield.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/Spawns$Thingering.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/Spawns.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/StrictLimbs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/TimeChanger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/Trajectories.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/ViewModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/Wireframe$RenderMode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/Wireframe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/PutaHacknn.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/PutaHacknn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/ClickGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/ClickGui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/DiscordRPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/DiscordRPC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/HUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/HUD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/Hud$GreeterMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/Hud$GreeterMode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/Hud$Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/Hud$Page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/combat/Killaura.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/woodz/Hud.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/woodz/Hud.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/manager/CommandManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/manager/CommandManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/manager/ModuleManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/manager/ModuleManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/PutaHacknnLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinBlockLiquid.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinEntityPlayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinEntityPlayerSP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinEntityRenderer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinGuiNewChat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinGuiPlayerTabOverlay.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinGuiScreen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinGuiToast.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinItemRenderer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinLayerArmorBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinMinecraft.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinModelPlayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinNetworkManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinPlayerControllerMP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinRenderEnderCrystal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinRenderItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinRenderLivingBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinRenderPlayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/MixinWorld.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/mixin/mixins/accessors/ICPacketPlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/putahack.nn-0.1.4.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/putahack.nn-0.1.4.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/PutaHacknn.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/PutaHacknn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/client/ClickGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/client/ClickGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/client/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/client/HUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/combat/Killaura.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/manager/ModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/manager/ModuleManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/util/RenderUtill.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/util/RenderUtill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/PutaHacknn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/PutaHacknn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/ClickGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/ClickGui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/Hud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/Hud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/Management.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/Management.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/combat/Killaura.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/manager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/manager/CommandManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/manager/ModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/manager/ModuleManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mcmod.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mcmod.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +120,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/forre/Documents/GitHub/TrollHack&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/forre/Documents/GitHub/PutaHack&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -226,5 +200,16 @@
       <updated>1681420946278</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/gui/PutaHacknnGui.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

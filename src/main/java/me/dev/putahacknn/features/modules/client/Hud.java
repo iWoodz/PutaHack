@@ -6,7 +6,6 @@ import me.dev.putahacknn.event.events.Render2DEvent;
 import me.dev.putahacknn.features.modules.Module;
 import me.dev.putahacknn.features.modules.combat.AutoCrystalRewrite;
 import me.dev.putahacknn.features.modules.combat.AutoTrap;
-import me.dev.putahacknn.features.modules.combat.Killaura;
 import me.dev.putahacknn.features.setting.Setting;
 import me.dev.putahacknn.util.*;
 import me.dev.putahacknn.util.Timer;
@@ -55,7 +54,7 @@ public class Hud extends Module {
     private final Setting<Boolean> greeterNameColor = this.register(new Setting<>("NameColor", true, v -> greeter.getValue() && greeterMode.getValue() == GreeterMode.PLAYER && page.getValue() == Page.ELEMENTS));
     private final Setting<String> greeterText = this.register(new Setting<>("WelcomerText", "tu mama es gordo puta", v -> greeter.getValue() && greeterMode.getValue() == GreeterMode.CUSTOM && page.getValue() == Page.ELEMENTS));
     private final Setting<Boolean> arrayList = this.register(new Setting<>("ArrayList", false, v -> page.getValue() == Page.ELEMENTS));
-    private final Setting<Boolean> black = this.register(new Setting<>("black", false, v -> page.getValue() == Page.ELEMENTS && arrayList.getValue()));
+    private final Setting<Boolean> white = this.register(new Setting<>("White", false, v -> page.getValue() == Page.ELEMENTS && arrayList.getValue()));
     private final Setting<Boolean> forgeHax = this.register(new Setting<>("ForgeHax", false, v -> page.getValue() == Page.ELEMENTS && arrayList.getValue()));
     private final Setting<Boolean> arrayListLine = this.register(new Setting<>("Outline", false, v -> page.getValue() == Page.ELEMENTS && arrayList.getValue()));
     private final Setting<Boolean> arrayListRect = this.register(new Setting<>("Rect", false, v -> page.getValue() == Page.ELEMENTS && arrayList.getValue()));
@@ -183,8 +182,8 @@ public class Hud extends Module {
         boolean inChat = mc.currentScreen instanceof GuiChat;
         long enabledMods = PutaHacknn.moduleManager.modules.stream().filter(module -> module.isOn() && module.isDrawn()).count();
         int j = (inChat && !renderingUp.getValue()) ? 14 : 0;
-        int rectColor = black.getValue() ? ColorUtil.newAlpha(getPutaColor(counter1[0] + 1), 60) : arrayListRectColor.getValue() ? (ClickGui.getInstance()).rainbow.getValue() ? (((ClickGui.getInstance()).rainbowModeHud.getValue() == ClickGui.rainbowMode.Sideway) ? ColorUtil.toRGBA(ColorUtil.rainbow(counter1[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getRed(), ColorUtil.rainbow(counter1[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getGreen(), ColorUtil.rainbow(counter1[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getBlue(), 60) : ColorUtil.toRGBA(PutaHacknn.colorManager.getRainbow().getRed(), PutaHacknn.colorManager.getRainbow().getGreen(), PutaHacknn.colorManager.getRainbow().getBlue(), 60)) : ColorUtil.toRGBA((ColorUtil.thehahafunny(color, 50, counter1[0]).getRed()), (ColorUtil.thehahafunny(color, 50, counter1[0]).getGreen()), (ColorUtil.thehahafunny(color, 50, counter1[0]).getBlue()), 60) : ClickGui.getInstance().getColor();
-        int glowColor = black.getValue() ? ColorUtil.newAlpha(getPutaColor(counter1[0] + 1), 60) : (ClickGui.getInstance()).rainbow.getValue() ? (((ClickGui.getInstance()).rainbowModeHud.getValue() == ClickGui.rainbowMode.Sideway) ? ColorUtil.toRGBA(ColorUtil.rainbow(counter1[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getRed(), ColorUtil.rainbow(counter1[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getGreen(), ColorUtil.rainbow(counter1[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getBlue(), 60) : ColorUtil.toRGBA(PutaHacknn.colorManager.getRainbow().getRed(), PutaHacknn.colorManager.getRainbow().getGreen(), PutaHacknn.colorManager.getRainbow().getBlue(), 60)) : ColorUtil.toRGBA((ColorUtil.thehahafunny(color, 50, counter1[0]).getRed()), (ColorUtil.thehahafunny(color, 50, counter1[0]).getGreen()), (ColorUtil.thehahafunny(color, 50, counter1[0]).getBlue()), 60);
+        int rectColor = white.getValue() ? ColorUtil.newAlpha(getPutaColor(counter1[0] + 1), 60) : arrayListRectColor.getValue() ? (ClickGui.getInstance()).rainbow.getValue() ? (((ClickGui.getInstance()).rainbowModeHud.getValue() == ClickGui.rainbowMode.Sideway) ? ColorUtil.toRGBA(ColorUtil.rainbow(counter1[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getRed(), ColorUtil.rainbow(counter1[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getGreen(), ColorUtil.rainbow(counter1[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getBlue(), 60) : ColorUtil.toRGBA(PutaHacknn.colorManager.getRainbow().getRed(), PutaHacknn.colorManager.getRainbow().getGreen(), PutaHacknn.colorManager.getRainbow().getBlue(), 60)) : ColorUtil.toRGBA((ColorUtil.thehahafunny(color, 50, counter1[0]).getRed()), (ColorUtil.thehahafunny(color, 50, counter1[0]).getGreen()), (ColorUtil.thehahafunny(color, 50, counter1[0]).getBlue()), 60) : ClickGui.getInstance().getColor();
+        int glowColor = white.getValue() ? ColorUtil.newAlpha(getPutaColor(counter1[0] + 1), 60) : (ClickGui.getInstance()).rainbow.getValue() ? (((ClickGui.getInstance()).rainbowModeHud.getValue() == ClickGui.rainbowMode.Sideway) ? ColorUtil.toRGBA(ColorUtil.rainbow(counter1[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getRed(), ColorUtil.rainbow(counter1[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getGreen(), ColorUtil.rainbow(counter1[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getBlue(), 60) : ColorUtil.toRGBA(PutaHacknn.colorManager.getRainbow().getRed(), PutaHacknn.colorManager.getRainbow().getGreen(), PutaHacknn.colorManager.getRainbow().getBlue(), 60)) : ColorUtil.toRGBA((ColorUtil.thehahafunny(color, 50, counter1[0]).getRed()), (ColorUtil.thehahafunny(color, 50, counter1[0]).getGreen()), (ColorUtil.thehahafunny(color, 50, counter1[0]).getBlue()), 60);
         if (arrayList.getValue()) {
             if (renderingUp.getValue()) {
                 if (inChat && hideInChat.getValue()) {
@@ -218,7 +217,7 @@ public class Hud extends Module {
                         if (arrayListLine.getValue()) {
                             Gui.drawRect((width - 2 - (lowerCase.getValue() ? PutaHacknn.textManager.getStringWidth(str.toLowerCase()) : PutaHacknn.textManager.getStringWidth(str))) - 2, j == 0 ? 0 : (2 + j * 10),
                                     (width - 2 - (lowerCase.getValue() ? PutaHacknn.textManager.getStringWidth(str.toLowerCase()) : PutaHacknn.textManager.getStringWidth(str))) - 1, (2 + j * 10) + 10,
-                                    black.getValue() ? getPutaColor(counter1[0] - 2) :
+                                    white.getValue() ? getPutaColor(counter1[0] - 2) :
                                             (ClickGui.getInstance()).rainbow.getValue() ? (((ClickGui.getInstance()).rainbowModeHud.getValue() == ClickGui.rainbowMode.Sideway) ? ColorUtil.rainbow(counter1[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getRGB() : PutaHacknn.colorManager.getRainbow().getRGB()) : ColorUtil.thehahafunny(color, 50, counter1[0]).getRGB());
 
                             int a = k + 1;
@@ -234,13 +233,13 @@ public class Hud extends Module {
                                             (((lowerCase.getValue() ? PutaHacknn.textManager.getStringWidth(str.toLowerCase()) : PutaHacknn.textManager.getStringWidth(str)) -
                                                     (lowerCase.getValue() ? PutaHacknn.textManager.getStringWidth(nextStr.toLowerCase()) : PutaHacknn.textManager.getStringWidth(nextStr))))) - 1,
                                     (2 + (j + 1) * 10) + 1,
-                                    black.getValue() ? getPutaColor(counter1[0] - 2) :
+                                    white.getValue() ? getPutaColor(counter1[0] - 2) :
                                             (ClickGui.getInstance()).rainbow.getValue() ? (((ClickGui.getInstance()).rainbowModeHud.getValue() == ClickGui.rainbowMode.Sideway) ? ColorUtil.rainbow(counter1[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getRGB() : PutaHacknn.colorManager.getRainbow().getRGB()) : ColorUtil.thehahafunny(color, 50, counter1[0]).getRGB());
                         }
 
                         PutaHacknn.textManager.drawString(lowerCase.getValue() ? str.toLowerCase() : str,
                                 (width - 2 - (lowerCase.getValue() ? PutaHacknn.textManager.getStringWidth(str.toLowerCase()) : PutaHacknn.textManager.getStringWidth(str))), (2 + j * 10),
-                                black.getValue() ? getPutaColor(counter1[0] - 2) :
+                                white.getValue() ? getPutaColor(counter1[0] - 2) :
                                         (ClickGui.getInstance()).rainbow.getValue() ? (((ClickGui.getInstance()).rainbowModeHud.getValue() == ClickGui.rainbowMode.Sideway) ? ColorUtil.rainbow(counter1[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getRGB() : PutaHacknn.colorManager.getRainbow().getRGB()) : ColorUtil.thehahafunny(color, 50, counter1[0]).getRGB(), true);
                         j++;
                         counter1[0] = counter1[0] + 1;
@@ -279,7 +278,7 @@ public class Hud extends Module {
                         if (arrayListLine.getValue()) {
                             Gui.drawRect((width - 2 - (lowerCase.getValue() ? PutaHacknn.textManager.getStringWidth(str.toLowerCase()) : PutaHacknn.textManager.getStringWidth(str))) - 2, (height - j),
                                     (width - 2 - (lowerCase.getValue() ? PutaHacknn.textManager.getStringWidth(str.toLowerCase()) : PutaHacknn.textManager.getStringWidth(str))) - 1, j == 1 ? height : (height - j) + 10,
-                                    black.getValue() ? getPutaColor(counter1[0] - 2) :
+                                    white.getValue() ? getPutaColor(counter1[0] - 2) :
                                             (ClickGui.getInstance()).rainbow.getValue() ? (((ClickGui.getInstance()).rainbowModeHud.getValue() == ClickGui.rainbowMode.Sideway) ? ColorUtil.rainbow(counter1[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getRGB() : PutaHacknn.colorManager.getRainbow().getRGB()) : ColorUtil.thehahafunny(color, 50, counter1[0]).getRGB());
 
                             int a = k + 1;
@@ -295,13 +294,13 @@ public class Hud extends Module {
                                             (((lowerCase.getValue() ? PutaHacknn.textManager.getStringWidth(str.toLowerCase()) : PutaHacknn.textManager.getStringWidth(str)) -
                                                     (lowerCase.getValue() ? PutaHacknn.textManager.getStringWidth(nextStr.toLowerCase()) : PutaHacknn.textManager.getStringWidth(nextStr))))) - 1,
                                     (height - j),
-                                    black.getValue() ? getPutaColor(counter1[0] - 2) :
+                                    white.getValue() ? getPutaColor(counter1[0] - 2) :
                                             (ClickGui.getInstance()).rainbow.getValue() ? (((ClickGui.getInstance()).rainbowModeHud.getValue() == ClickGui.rainbowMode.Sideway) ? ColorUtil.rainbow(counter1[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getRGB() : PutaHacknn.colorManager.getRainbow().getRGB()) : ColorUtil.thehahafunny(color, 50, counter1[0]).getRGB());
                         }
 
                         PutaHacknn.textManager.drawString(lowerCase.getValue() ? str.toLowerCase() : str,
                                 (width - 2 - (lowerCase.getValue() ? PutaHacknn.textManager.getStringWidth(str.toLowerCase()) : PutaHacknn.textManager.getStringWidth(str))), (height - j),
-                                black.getValue() ? getPutaColor(counter1[0] - 2) :
+                                white.getValue() ? getPutaColor(counter1[0] - 2) :
                                         (ClickGui.getInstance()).rainbow.getValue() ? (((ClickGui.getInstance()).rainbowModeHud.getValue() == ClickGui.rainbowMode.Sideway) ? ColorUtil.rainbow(counter1[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getRGB() : PutaHacknn.colorManager.getRainbow().getRGB()) : ColorUtil.thehahafunny(color, 50, counter1[0]).getRGB(), true);
                         counter1[0] = counter1[0] + 1;
 
@@ -452,6 +451,7 @@ public class Hud extends Module {
                             (width - (lowerCase.getValue() ? PutaHacknn.textManager.getStringWidth(str1.toLowerCase()) : PutaHacknn.textManager.getStringWidth(str1)) - 2),
                             (2 + i++ * 10), (ClickGui.getInstance()).rainbow.getValue() ? (((ClickGui.getInstance()).rainbowModeHud.getValue() == ClickGui.rainbowMode.Sideway) ? ColorUtil.rainbow(counter1[0] * (ClickGui.getInstance()).rainbowHue.getValue()).getRGB() : PutaHacknn.colorManager.getRainbow().getRGB()) : ColorUtil.thehahafunny(color, 50, counter1[0]).getRGB(), true);
                     counter1[0] = counter1[0] + 1;
+
                 }
             }
         }
