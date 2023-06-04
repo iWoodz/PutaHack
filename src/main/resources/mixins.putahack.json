@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "compatibilityLevel": "JAVA_8",
+  "package": "dev.putahack.mixin",
+  "refmap": "mixins.putahack.refmap.json",
+  "client": [
+    "client.MixinMinecraft",
+    "entity.MixinEntityPlayerSP",
+    "render.gui.MixinGuiIngameForge"
+  ]
+}
