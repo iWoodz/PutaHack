@@ -1,6 +1,5 @@
 package me.dev.putahacknn.util;
 
-import javafx.scene.shape.Sphere;
 import me.dev.putahacknn.PutaHacknn;
 import me.dev.putahacknn.features.gui.font.CustomFont;
 import net.minecraft.block.material.Material;
@@ -1449,24 +1448,6 @@ public class RenderUtill implements Util {
         GlStateManager.enableTexture2D();
         GlStateManager.disableBlend();
         GlStateManager.popMatrix();
-    }
-
-    public static void drawSphere(final double x, final double y, final double z, final float size, final int slices, final int stacks) {
-        final Sphere s = new Sphere();
-        GL11.glPushMatrix();
-        GL11.glBlendFunc(770, 771);
-        GL11.glEnable(3042);
-        GL11.glLineWidth(1.2f);
-        GL11.glDisable(3553);
-        GL11.glDisable(2929);
-        GL11.glDepthMask(false);
-        GL11.glTranslated(x - RenderUtill.mc.renderManager.renderPosX, y - RenderUtill.mc.renderManager.renderPosY, z - RenderUtill.mc.renderManager.renderPosZ);
-        GL11.glLineWidth(2.0f);
-        GL11.glEnable(3553);
-        GL11.glEnable(2929);
-        GL11.glDepthMask(true);
-        GL11.glDisable(3042);
-        GL11.glPopMatrix();
     }
 
 

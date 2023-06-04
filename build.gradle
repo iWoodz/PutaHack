@@ -132,7 +132,8 @@ jar {
                 'TweakOrder': 0,
                 'FMLCorePluginContainsFMLMod': 'true',
                 'FMLCorePlugin': 'me.dev.putahacknn.mixin.PutaHacknnLoader',
-                'ForceLoadAsMod': 'true',
+                // UNCOMMENT THIS FOR WHEN U BUILD
+                //'ForceLoadAsMod': 'true',
                 'FMLAT': 'putahacknn_at.cfg'
         )
     }
