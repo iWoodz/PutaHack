@@ -23,6 +23,11 @@ public abstract class MixinMinecraft {
         this.unload();
     }
 
+    @Inject(method = "init", at = @At("TAIL"))
+    public void hookInit(CallbackInfo info) {
+        PutaHacknn.init();
+    }
+
     @Redirect(method = {"run"}, at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Minecraft;displayCrashReport(Lnet/minecraft/crash/CrashReport;)V"))
     public void displayCrashReport(Minecraft minecraft, CrashReport crashReport) {
         this.unload();

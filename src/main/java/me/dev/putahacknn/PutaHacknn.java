@@ -31,12 +31,15 @@ public class PutaHacknn {
     public static ServerManager serverManager;
     public static EventManager eventManager;
     public static TextManager textManager;
-    @Mod.Instance
-    public static PutaHacknn INSTANCE;
     private static boolean unloaded;
 
     static {
         unloaded = false;
+    }
+
+    public static void init() {
+        Display.setTitle("PutaHack.nn v0.1.5");
+        PutaHacknn.load();
     }
 
     public static void load() {
@@ -113,12 +116,6 @@ public class PutaHacknn {
             moduleManager.onUnloadPost();
             unloaded = true;
         }
-    }
-
-    @Mod.EventHandler
-    public void init(FMLInitializationEvent event) {
-        Display.setTitle("PutaHack.nn v0.1.5");
-        PutaHacknn.load();
     }
 }
 
