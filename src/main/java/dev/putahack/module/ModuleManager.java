@@ -1,11 +1,14 @@
 package dev.putahack.module;
 
+import dev.putahack.module.combat.Criticals;
+import dev.putahack.module.render.ClickUI;
 import dev.putahack.module.render.Fullbright;
 import dev.putahack.module.render.HUD;
-import dev.putahack.util.time.DateUtil;
+import dev.putahack.util.timing.DateUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -29,7 +32,11 @@ public class ModuleManager {
     public ModuleManager() {
 
         register(
+                // Combat
+                new Criticals(),
+
                 // Render modules
+                new ClickUI(),
                 new Fullbright(),
                 new HUD()
         );
@@ -45,5 +52,13 @@ public class ModuleManager {
             moduleClassMap.put(module.getClass(), module);
             module.registerAllSettings();
         }
+    }
+
+    public Collection<Module> get() {
+        return moduleClassMap.values();
+    }
+
+    public <T extends Module> T get(Class<T> clazz) {
+        return (T) moduleClassMap.getOrDefault(clazz, null);
     }
 }

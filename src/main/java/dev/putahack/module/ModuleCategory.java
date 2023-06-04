@@ -5,5 +5,21 @@ package dev.putahack.module;
  * @since 06/04/23
  */
 public enum ModuleCategory {
-    RENDER
+    COMBAT("Combat", null),
+    RENDER("Render", null);
+
+    private final String displayName, icon;
+
+    ModuleCategory(String displayName, String icon) {
+        this.displayName = displayName;
+        this.icon = icon;
+    }
+
+    public String getDisplayName() {
+        return displayName;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
 }

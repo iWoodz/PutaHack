@@ -1,4 +1,4 @@
-package dev.putahack.util.time;
+package dev.putahack.util.timing;
 
 /**
  * @author aesthetical

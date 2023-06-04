@@ -7,5 +7,8 @@
     "client.MixinMinecraft",
     "entity.MixinEntityPlayerSP",
     "render.gui.MixinGuiIngameForge"
+  ],
+  "mixins": [
+    "network.MixinNetworkManager"
   ]
 }

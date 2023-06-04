@@ -77,6 +77,10 @@ public class Module extends SettingContainer implements INameable, IToggleable {
         return category;
     }
 
+    public Bind getBind() {
+        return bind.getValue();
+    }
+
     @Override
     public void onEnable() {
         PutaHack.getBus().subscribe(this);

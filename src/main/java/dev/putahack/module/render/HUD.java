@@ -15,8 +15,8 @@ import java.awt.*;
  * @since 06/04/23
  */
 public class HUD extends Module {
-    public final Setting<Color> primaryColor = new Setting<>(new Color(120, 105, 225), "Primary Color");
-    public final Setting<Color> secondaryColor = new Setting<>(new Color(95, 145, 255), "Secondary Color");
+    public static final Setting<Color> primaryColor = new Setting<>(new Color(120, 105, 225), "Primary Color");
+    public static final Setting<Color> secondaryColor = new Setting<>(new Color(95, 145, 255), "Secondary Color");
 
     public HUD() {
         super("HUD", "what do u think this is retard", ModuleCategory.RENDER);
