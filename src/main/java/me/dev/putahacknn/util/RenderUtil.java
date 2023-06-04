@@ -23,7 +23,6 @@ import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.EXTFramebufferObject;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.glu.GLU;
-import org.lwjgl.util.glu.Sphere;
 
 import java.awt.*;
 import java.nio.FloatBuffer;
@@ -904,26 +903,6 @@ public class RenderUtil
         GlStateManager.enableTexture2D();
         GlStateManager.disableBlend();
         GlStateManager.popMatrix();
-    }
-
-    public static void drawSphere(double x, double y, double z, float size, int slices, int stacks) {
-        Sphere s = new Sphere();
-        GL11.glPushMatrix();
-        GL11.glBlendFunc(770, 771);
-        GL11.glEnable(3042);
-        GL11.glLineWidth(1.2f);
-        GL11.glDisable(3553);
-        GL11.glDisable(2929);
-        GL11.glDepthMask(false);
-        s.setDrawStyle(100013);
-        GL11.glTranslated(x - mc.renderManager.renderPosX, y - mc.renderManager.renderPosY, z - mc.renderManager.renderPosZ);
-        s.draw(size, slices, stacks);
-        GL11.glLineWidth(2.0f);
-        GL11.glEnable(3553);
-        GL11.glEnable(2929);
-        GL11.glDepthMask(true);
-        GL11.glDisable(3042);
-        GL11.glPopMatrix();
     }
 
     public static void GLPre(float lineWidth) {
