@@ -21,14 +21,14 @@ public class BurrowESP extends Module {
 
     public Setting<Integer> range = register(new Setting("Range", 20, 5, 50));
     public Setting<Boolean> self = register(new Setting("Self", true));
-    public Setting<Boolean> text = register(new Setting("Text", true));
+    public Setting<Boolean> text = register(new Setting("Text", false));
     public Setting<String> textString = register(new Setting("TextString", "BURROW", v -> this.text.getValue()));
     public Setting<Boolean> rainbow = register(new Setting("Rainbow", false));
-    public Setting<Integer> red = register(new Setting("Red", 0, 0, 255, v -> !this.rainbow.getValue()));
-    public Setting<Integer> green = register(new Setting("Green", 255, 0, 255, v -> !this.rainbow.getValue()));
-    public Setting<Integer> blue = register(new Setting("Blue", 0, 0, 255, v -> !this.rainbow.getValue()));
-    public Setting<Integer> alpha = register(new Setting("Alpha", 0, 0, 255));
-    public Setting<Integer> outlineAlpha = register(new Setting("OL-Alpha", 0, 0, 255));
+    public Setting<Integer> red = register(new Setting("Red", 145, 0, 255, v -> !this.rainbow.getValue()));
+    public Setting<Integer> green = register(new Setting("Green", 120, 0, 255, v -> !this.rainbow.getValue()));
+    public Setting<Integer> blue = register(new Setting("Blue", 225, 0, 255, v -> !this.rainbow.getValue()));
+    public Setting<Integer> alpha = register(new Setting("Alpha", 30, 0, 255));
+    public Setting<Integer> outlineAlpha = register(new Setting("OL-Alpha", 120, 0, 255));
 
     private final List<BlockPos> posList = new ArrayList<>();
 

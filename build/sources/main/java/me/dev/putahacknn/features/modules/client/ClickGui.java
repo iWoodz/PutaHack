@@ -59,9 +59,9 @@ public class ClickGui extends Module
         this.setting = (Setting<Settings>)this.register(new Setting("Settings", Settings.Gui));
         this.prefix = (Setting<String>)this.register(new Setting("Prefix", "-", v -> this.setting.getValue() == Settings.Gui));
         this.customFov = (Setting<Boolean>)this.register(new Setting("CustomFov", false, v -> this.setting.getValue() == Settings.Gui));
-        this.fov = (Setting<Float>)this.register(new Setting("Fov", 150.0f, (-180.0f), 180.0f, v -> this.setting.getValue() == Settings.Gui && this.customFov.getValue()));
+        this.fov = (Setting<Float>)this.register(new Setting("Fov", 147.0f, (-180.0f), 180.0f, v -> this.setting.getValue() == Settings.Gui && this.customFov.getValue()));
         this.red = (Setting<Integer>)this.register(new Setting("Red", 145, 0, 255, v -> this.setting.getValue() == Settings.Gui));
-        this.green = (Setting<Integer>)this.register(new Setting("Green", 255, 0, 255, v -> this.setting.getValue() == Settings.Gui));
+        this.green = (Setting<Integer>)this.register(new Setting("Green", 120, 0, 255, v -> this.setting.getValue() == Settings.Gui));
         this.blue = (Setting<Integer>)this.register(new Setting("Blue", 225, 0, 255, v -> this.setting.getValue() == Settings.Gui));
         this.hoverAlpha = (Setting<Integer>)this.register(new Setting("Alpha", 170, 0, 255, v -> this.setting.getValue() == Settings.Gui));
         this.alphaBox = (Setting<Integer>)this.register(new Setting("AlphaBox", 120, 0, 255, v -> this.setting.getValue() == Settings.Gui));
@@ -74,7 +74,7 @@ public class ClickGui extends Module
         this.rainbowSaturation = (Setting<Float>)this.register(new Setting("Saturation", 100.0f, 1.0f, 255.0f, v -> this.rainbow.getValue() && this.setting.getValue() == Settings.Gui));
         this.rainbowg = (Setting<Boolean>)this.register(new Setting("Rainbow", false, v -> this.setting.getValue() == Settings.Gradient));
         this.g_red = (Setting<Integer>)this.register(new Setting("RedL", 145, 0, 255, v -> this.setting.getValue() == Settings.Gradient));
-        this.g_green = (Setting<Integer>)this.register(new Setting("GreenL", 255, 0, 255, v -> this.setting.getValue() == Settings.Gradient));
+        this.g_green = (Setting<Integer>)this.register(new Setting("GreenL", 120, 0, 255, v -> this.setting.getValue() == Settings.Gradient));
         this.g_blue = (Setting<Integer>)this.register(new Setting("BlueL", 225, 0, 255, v -> this.setting.getValue() == Settings.Gradient));
         this.g_red1 = (Setting<Integer>)this.register(new Setting("RedR", 120, 0, 255, v -> this.setting.getValue() == Settings.Gradient));
         this.g_green1 = (Setting<Integer>)this.register(new Setting("GreenR", 120, 0, 255, v -> this.setting.getValue() == Settings.Gradient));
@@ -84,7 +84,7 @@ public class ClickGui extends Module
         this.mode = (Setting<Mode>)this.register(new Setting("Mode", Mode.COLOR, v -> this.setting.getValue() == Settings.Background));
         this.backgroundAlpha = (Setting<Integer>)this.register(new Setting("Background Alpha", 80, 0, 255, v -> this.mode.getValue() == Mode.COLOR && this.setting.getValue() == Settings.Background));
         this.gb_red = (Setting<Integer>)this.register(new Setting("RedBG", 145, 0, 255, v -> this.mode.getValue() == Mode.COLOR && this.setting.getValue() == Settings.Background));
-        this.gb_green = (Setting<Integer>)this.register(new Setting("GreenBG", 255, 0, 255, v -> this.mode.getValue() == Mode.COLOR && this.setting.getValue() == Settings.Background));
+        this.gb_green = (Setting<Integer>)this.register(new Setting("GreenBG", 120, 0, 255, v -> this.mode.getValue() == Mode.COLOR && this.setting.getValue() == Settings.Background));
         this.gb_blue = (Setting<Integer>)this.register(new Setting("BlueBG", 225, 0, 255, v -> this.mode.getValue() == Mode.COLOR && this.setting.getValue() == Settings.Background));
         this.setInstance();
     }

@@ -31,7 +31,7 @@ public class VisualRange
             for (Entity e2 : this.players) {
                 if (!(e2 instanceof EntityPlayer) || e2.getName().equalsIgnoreCase(VisualRange.mc.player.getName()) || this.knownPlayers.contains(e2)) continue;
                 this.knownPlayers.add(e2);
-                Command.sendMessage(ChatFormatting.WHITE + "<VisualRange> " + ChatFormatting.GRAY + ChatFormatting.RED + e2.getName() + " entered visual range.");
+                Command.sendMessage(ChatFormatting.WHITE + "<OppNotifier> " + ChatFormatting.GRAY + ChatFormatting.RED + e2.getName() + " entered visual range.");
             }
         }
         catch (Exception exception) {

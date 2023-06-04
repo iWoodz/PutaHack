@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ce4a602-80fc-439e-8b8c-1107e56e4653" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/NickHider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/misc/PotionAlert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/misc/VisualRange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/render/SkyColor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/mixin/mixins/MixinFontRenderer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/AutoBait.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/MyCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/render/RectTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileContent/annotation-processors.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
@@ -22,31 +20,85 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/minecraft/forge-1.12.2-14.23.5.2768-PROJECT(putahack.nn)-decompFixed.jar" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/minecraft/forge-1.12.2-14.23.5.2768-PROJECT(putahack.nn)-decompFixed.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/minecraft/forge-1.12.2-14.23.5.2768-PROJECT(putahack.nn)-decompFixed.jar.md5" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/minecraft/forge-1.12.2-14.23.5.2768-PROJECT(putahack.nn)-decompFixed.jar.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/minecraft/forge-1.12.2-14.23.5.2768-PROJECT(putahack.nn)-patched.jar" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/minecraft/forge-1.12.2-14.23.5.2768-PROJECT(putahack.nn)-patched.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/minecraft/forge-1.12.2-14.23.5.2768-PROJECT(putahack.nn)-patched.jar.md5" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/minecraft/forge-1.12.2-14.23.5.2768-PROJECT(putahack.nn)-patched.jar.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/minecraft/forge-1.12.2-14.23.5.2768-PROJECT(putahack.nn)-srgBin.jar" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/minecraft/forge-1.12.2-14.23.5.2768-PROJECT(putahack.nn)-srgBin.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/minecraft/forge-1.12.2-14.23.5.2768-PROJECT(putahack.nn)-srgBin.jar.md5" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/minecraft/forge-1.12.2-14.23.5.2768-PROJECT(putahack.nn)-srgBin.jar.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/minecraft/forgeSrc-1.12.2-14.23.5.2768-PROJECT(putahack.nn)-sources.jar" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/minecraft/forgeSrc-1.12.2-14.23.5.2768-PROJECT(putahack.nn)-sources.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/minecraft/forgeSrc-1.12.2-14.23.5.2768-PROJECT(putahack.nn)-sources.jar.md5" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/minecraft/forgeSrc-1.12.2-14.23.5.2768-PROJECT(putahack.nn)-sources.jar.md5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/PutaHacknn.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/PutaHacknn.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/ClickGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/ClickGui.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/DiscordRPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/DiscordRPC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/HUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/HUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/Hud$GreeterMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/Hud$GreeterMode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/Hud$Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/Hud$Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/combat/Killaura.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/woodz/Hud.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/woodz/Hud.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/manager/CommandManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/manager/CommandManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/CsgoWatermark.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/CsgoWatermark.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/Management.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/Management.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/TargetHud.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/client/TargetHud.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/combat/Offhand$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/combat/Offhand$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/combat/Offhand$Mode2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/combat/Offhand$Mode2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/combat/Offhand.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/combat/Offhand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/misc/VisualRange.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/misc/VisualRange.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/BurrowESP.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/features/modules/render/BurrowESP.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/manager/ModuleManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/dev/putahacknn/manager/ModuleManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/putahack.nn-0.1.4.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/putahack.nn-0.1.4.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/PutaHacknn.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/PutaHacknn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/putahack.nn-0.1.5-release.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/putahack.nn-0.1.5-release.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/putahack.nn-0.1.5.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/putahack.nn-0.1.5.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/mcmod.info" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/mcmod.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/client/ClickGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/client/ClickGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/client/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/client/HUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/combat/Killaura.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/client/CsgoWatermark.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/client/CsgoWatermark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/client/Management.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/client/Management.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/client/TargetHud.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/client/TargetHud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/combat/Offhand.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/combat/Offhand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/combat/SilentEXP.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/combat/SilentEXP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/misc/VisualRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/misc/VisualRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/render/BurrowESP.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/features/modules/render/BurrowESP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/manager/ModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/manager/ModuleManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/util/RenderUtill.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/me/dev/putahacknn/util/RenderUtill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/PutaHacknn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/PutaHacknn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/deobfMcSRG/deobfed.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/deobfMcSRG/deobfed.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/deobfMcSRG/transformed.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/deobfMcSRG/transformed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/extractAnnotationsJar/input1813555286919448480.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/extractAnnotationsJar/input4074974539100775299.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/extractAnnotationsJar/input4808356634143466586.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/extractAnnotationsJar/input4857243134100820861.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/extractAnnotationsJar/input7721823046896420671.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/extractAnnotationsShadowJar/input3312337734896042375.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/extractAnnotationsShadowJar/input5150095986036980362.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/extractAnnotationsShadowJar/input5447766572293106305.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/extractAnnotationsShadowJar/input7480348717753950241.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/extractAnnotationsShadowJar/input7746078469113397551.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/makeStart/extracted/GradleStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/makeStart/extracted/GradleStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/makeStart/extracted/GradleStartServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/makeStart/extracted/GradleStartServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/makeStart/extracted/net/minecraftforge/gradle/GradleForgeHacks.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/makeStart/extracted/net/minecraftforge/gradle/GradleForgeHacks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/makeStart/extracted/net/minecraftforge/gradle/GradleStartCommon.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/makeStart/extracted/net/minecraftforge/gradle/GradleStartCommon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/makeStart/extracted/net/minecraftforge/gradle/tweakers/AccessTransformerTweaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/makeStart/extracted/net/minecraftforge/gradle/tweakers/AccessTransformerTweaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/makeStart/extracted/net/minecraftforge/gradle/tweakers/CoremodTweaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/makeStart/extracted/net/minecraftforge/gradle/tweakers/CoremodTweaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfJar/reobf-default2969094329453266658.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfJar/reobf-default6369125954274738899.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfJar/reobf-default6623818378758993384.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfJar/reobf-default7551166941084547223.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfJar/reobf-default7602371818529988656.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfJar/reobf-extraLines3933306954372373781.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfJar/reobf-extraLines7400850846058822651.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfJar/reobf-extraLines8216531139909928639.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfJar/reobf-extraLines8513506035678423080.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfJar/reobf-extraLines9150346561482809804.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfShadowJar/reobf-default1831465064299774319.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfShadowJar/reobf-default4675992440226990615.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfShadowJar/reobf-default6191859384583027998.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfShadowJar/reobf-default6890332441181319793.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfShadowJar/reobf-default7911306049651965288.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfShadowJar/reobf-extraLines1319674630193696940.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfShadowJar/reobf-extraLines5050463657043336137.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfShadowJar/reobf-extraLines5218019117073068472.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfShadowJar/reobf-extraLines7473735571680147216.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/reobfShadowJar/reobf-extraLines8309331364119083865.srg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/ClickGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/ClickGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/CsgoWatermark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/CsgoWatermark.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/Hud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/Hud.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/Management.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/Management.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/combat/Killaura.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/manager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/manager/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/TargetHud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/client/TargetHud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/combat/Offhand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/combat/Offhand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/combat/SilentEXP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/combat/SilentEXP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/misc/VisualRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/misc/VisualRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/render/BurrowESP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/features/modules/render/BurrowESP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/manager/ModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dev/putahacknn/manager/ModuleManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mcmod.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mcmod.info" afterDir="false" />
     </list>
@@ -120,7 +172,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/forre/Documents/GitHub/PutaHack&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/forre/Documents/GitHub/TrollHack&quot;
   }
 }</component>
   <component name="RecentsManager">

@@ -16,10 +16,10 @@ public class Management extends Module {
 
     public static Management INSTANCE;
     public Setting<Boolean> notifyToggles = register(new Setting("ChatNotify", false, "hahahahahahaahahahahahahahahahahahahahahahaahaha"));
-    public Setting<TextUtil.Color> bracketColor = register(new Setting("BracketColor", TextUtil.Color.GRAY));
-    public Setting<TextUtil.Color> commandColor = register(new Setting("NameColor", TextUtil.Color.LIGHT_PURPLE));
-    public Setting<String> commandBracket = register(new Setting("Bracket", "<"));
-    public Setting<String> commandBracket2 = register(new Setting("Bracket2", ">"));
+    public Setting<TextUtil.Color> bracketColor = register(new Setting("BracketColor", TextUtil.Color.LIGHT_PURPLE));
+    public Setting<TextUtil.Color> commandColor = register(new Setting("NameColor", TextUtil.Color.DARK_PURPLE));
+    public Setting<String> commandBracket = register(new Setting("Bracket", "["));
+    public Setting<String> commandBracket2 = register(new Setting("Bracket2", "]"));
 
     @SubscribeEvent
     public void onSettingChange(ClientEvent event) {

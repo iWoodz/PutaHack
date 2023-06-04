@@ -11,11 +11,11 @@ import me.dev.putahacknn.util.Timer;
 public class CsgoWatermark
         extends Module {
     Timer delayTimer = new Timer();
-    public Setting<Integer> X = this.register(new Setting<Integer>("watermarkx", 0, 0, 300));
-    public Setting<Integer> Y = this.register(new Setting<Integer>("watermarky", 0, 0, 300));
-    public Setting<Integer> delay = this.register(new Setting<Integer>("delay", 240, 0, 600));
-    public Setting<Integer> saturation = this.register(new Setting<Integer>("saturation", 127, 1, 255));
-    public Setting<Integer> brightness = this.register(new Setting<Integer>("brightness", 100, 0, 255));
+    public Setting<Integer> X = this.register(new Setting<Integer>("WatermarkX", 0, 0, 300));
+    public Setting<Integer> Y = this.register(new Setting<Integer>("WatermarkY", 0, 0, 300));
+    public Setting<Integer> delay = this.register(new Setting<Integer>("Delay", 240, 0, 600));
+    public Setting<Integer> saturation = this.register(new Setting<Integer>("Saturation", 127, 1, 255));
+    public Setting<Integer> brightness = this.register(new Setting<Integer>("Brightness", 100, 0, 255));
     public float hue;
     public int red = 1;
     public int green = 1;

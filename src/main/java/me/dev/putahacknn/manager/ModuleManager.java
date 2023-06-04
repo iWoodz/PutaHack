@@ -32,6 +32,9 @@ public class ModuleManager
     public List<String> sortedModulesABC = new ArrayList<String>();
 
     public void init() {
+        this.modules.add(new MyCode());
+        this.modules.add(new AutoBait());
+        this.modules.add(new RectTest());
         this.modules.add(new SkyColor());
         this.modules.add(new NickHider());
         this.modules.add(new PotionAlert());

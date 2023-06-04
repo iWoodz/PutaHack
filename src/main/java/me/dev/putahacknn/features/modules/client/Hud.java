@@ -36,7 +36,7 @@ public class Hud extends Module {
     public Setting<Boolean> lowerCase = this.register(new Setting<>("LowerCase", false, v -> page.getValue() == Page.GLOBAL));
     private final Setting<Boolean> renderingUp = this.register(new Setting<>("RenderingUp", true, v -> page.getValue() == Page.GLOBAL));
     private final Setting<Boolean> skeetBar = this.register(new Setting<>("SkeetMode", false, v -> page.getValue() == Page.ELEMENTS));
-    private final Setting<Boolean> puta = this.register(new Setting<>("Puta Color", false, v -> page.getValue() == Page.ELEMENTS && skeetBar.getValue()));
+    private final Setting<Boolean> puta = this.register(new Setting<>("PutaColor", false, v -> page.getValue() == Page.ELEMENTS && skeetBar.getValue()));
     private final Setting<Boolean> watermark = this.register(new Setting<>("Watermark", true, v -> page.getValue() == Page.ELEMENTS));
     public Setting<String> watermarkString = this.register(new Setting<>("Text", "Putahacknn"));
     private final Setting<Boolean> watermarkShort = this.register(new Setting<>("Shorten", false, v -> watermark.getValue() && page.getValue() == Page.ELEMENTS));
