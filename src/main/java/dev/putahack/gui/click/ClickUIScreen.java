@@ -5,7 +5,7 @@ import dev.putahack.gui.click.module.ModuleCategoryPanel;
 import dev.putahack.gui.click.module.ModuleComponent;
 import dev.putahack.module.Module;
 import dev.putahack.module.ModuleCategory;
-import dev.putahack.module.render.ClickUI;
+import dev.putahack.module.client.ClickUI;
 import net.minecraft.client.gui.GuiScreen;
 
 import java.io.IOException;

@@ -1,7 +1,9 @@
 package dev.putahack.module;
 
+import dev.putahack.listener.event.network.EventPacket;
 import dev.putahack.module.combat.Criticals;
-import dev.putahack.module.render.ClickUI;
+import dev.putahack.module.client.ClickUI;
+import dev.putahack.module.movement.InstantSpeed;
 import dev.putahack.module.render.Fullbright;
 import dev.putahack.module.render.HUD;
 import dev.putahack.util.timing.DateUtil;
@@ -13,7 +15,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * @author aesthetical
+ * @authors aesthetical and Woodz
  * @since 06/04/23
  */
 public class ModuleManager {
@@ -35,10 +37,15 @@ public class ModuleManager {
                 // Combat
                 new Criticals(),
 
-                // Render modules
-                new ClickUI(),
+                // Render
                 new Fullbright(),
-                new HUD()
+                new HUD(),
+
+                // Client
+                new ClickUI(),
+
+                // Movement
+                new InstantSpeed()
         );
 
         logger.info("Loaded {} modules", moduleClassMap.size());

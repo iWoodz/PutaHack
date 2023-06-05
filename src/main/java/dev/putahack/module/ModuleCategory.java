@@ -5,8 +5,10 @@ package dev.putahack.module;
  * @since 06/04/23
  */
 public enum ModuleCategory {
+    CLIENT("Client", null),
     COMBAT("Combat", null),
-    RENDER("Render", null);
+    RENDER("Render", null),
+    MOVEMENT("Movement", null);
 
     private final String displayName, icon;
 

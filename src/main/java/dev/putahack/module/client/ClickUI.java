@@ -1,4 +1,4 @@
-package dev.putahack.module.render;
+package dev.putahack.module.client;
 
 import dev.putahack.gui.click.ClickUIScreen;
 import dev.putahack.module.Module;
@@ -17,7 +17,7 @@ public class ClickUI extends Module {
     public ClickUI() {
         super("ClickUI",
                 "Displays a configuration screen for the clients' modules",
-                ModuleCategory.RENDER);
+                ModuleCategory.CLIENT);
 
         getBind().setKey(KEY_O);
     }
