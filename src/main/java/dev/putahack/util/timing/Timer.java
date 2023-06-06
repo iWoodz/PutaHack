@@ -29,7 +29,7 @@ public class Timer {
      * @return if the time has passed
      */
     public boolean hasPassed(long ms, boolean reset) {
-        boolean passed = getDurationMS() <= ms;
+        boolean passed = getDurationMS() > ms;
         if (passed && reset) resetTime();
         return passed;
     }
