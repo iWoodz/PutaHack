@@ -1,7 +1,7 @@
 package dev.putahack.gui.animation;
 
 /**
- * @author aesthetical
+ * @author aesthetical, iWoodz
  * @since 04/27/23
  */
 public class Animation {

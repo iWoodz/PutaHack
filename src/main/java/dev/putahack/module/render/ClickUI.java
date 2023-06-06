@@ -1,4 +1,4 @@
-package dev.putahack.module.client;
+package dev.putahack.module.render;
 
 import dev.putahack.gui.click.ClickUIScreen;
 import dev.putahack.module.Module;
@@ -7,7 +7,7 @@ import dev.putahack.module.ModuleCategory;
 import static org.lwjgl.input.Keyboard.KEY_O;
 
 /**
- * @author aesthetical
+ * @author aesthetical, iWoodz
  * @since 06/04/23
  */
 public class ClickUI extends Module {
