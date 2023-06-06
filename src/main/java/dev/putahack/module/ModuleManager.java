@@ -1,5 +1,6 @@
 package dev.putahack.module;
 
+import dev.putahack.module.combat.AutoArmor;
 import dev.putahack.module.combat.Criticals;
 import dev.putahack.module.client.ClickUI;
 import dev.putahack.module.combat.Velocity;
@@ -39,6 +40,7 @@ public class ModuleManager {
                 new ClickUI(),
 
                 // Combat
+                new AutoArmor(),
                 new Criticals(),
                 new Velocity(),
 
