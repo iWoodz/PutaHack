@@ -1,6 +1,5 @@
 package dev.putahack.module;
 
-import dev.putahack.listener.event.network.EventPacket;
 import dev.putahack.module.combat.Criticals;
 import dev.putahack.module.client.ClickUI;
 import dev.putahack.module.movement.InstantSpeed;
@@ -15,7 +14,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * @authors aesthetical and Woodz
+ * @author aesthetical, iWoodz
  * @since 06/04/23
  */
 public class ModuleManager {
