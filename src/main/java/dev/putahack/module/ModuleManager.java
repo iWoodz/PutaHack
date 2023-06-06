@@ -2,6 +2,7 @@ package dev.putahack.module;
 
 import dev.putahack.module.combat.Criticals;
 import dev.putahack.module.client.ClickUI;
+import dev.putahack.module.combat.Velocity;
 import dev.putahack.module.movement.InstantSpeed;
 import dev.putahack.module.render.Fullbright;
 import dev.putahack.module.render.HUD;
@@ -39,6 +40,7 @@ public class ModuleManager {
 
                 // Combat
                 new Criticals(),
+                new Velocity(),
 
                 // Render
                 new Fullbright(),

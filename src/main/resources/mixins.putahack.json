@@ -9,6 +9,8 @@
     "entity.MixinEntityPlayerSP",
     "network.MixinNetworkManager",
     "network.packet.client.ICPacketPlayer",
+    "network.packet.server.ISPacketEntityVelocity",
+    "network.packet.server.ISPacketExplosion",
     "render.gui.MixinGuiIngameForge",
     "render.item.MixinItemRenderer"
   ]
