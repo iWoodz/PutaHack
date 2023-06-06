@@ -2,6 +2,7 @@ package dev.putahack;
 
 import dev.putahack.bind.BindManager;
 import dev.putahack.listener.bus.EventBus;
+import dev.putahack.management.RotationManager;
 import dev.putahack.module.ModuleManager;
 import dev.putahack.util.timing.DateUtil;
 import dev.putahack.util.timing.Timer;
@@ -46,6 +47,7 @@ public class PutaHack {
 
     private final BindManager binds;
     private final ModuleManager modules;
+    private final RotationManager rotations;
 
     private PutaHack() {
         singleton = this;
@@ -59,8 +61,10 @@ public class PutaHack {
 
         binds = new BindManager();
         modules = new ModuleManager();
+        rotations = new RotationManager();
 
         bus.subscribe(binds);
+        bus.subscribe(rotations);
 
         logger.info("Loaded PutaHack.nn successfully in {}ms",
                 timer.getDurationMS());
@@ -83,6 +87,14 @@ public class PutaHack {
      */
     public ModuleManager getModules() {
         return modules;
+    }
+
+    /**
+     * Gets the rotation manager instance
+     * @return the rotation manager instance
+     */
+    public RotationManager getRotations() {
+        return rotations;
     }
 
     /**
