@@ -5,6 +5,7 @@ import dev.putahack.module.client.ClickUI;
 import dev.putahack.module.movement.InstantSpeed;
 import dev.putahack.module.render.Fullbright;
 import dev.putahack.module.render.HUD;
+import dev.putahack.module.render.ViewModel;
 import dev.putahack.util.timing.DateUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -33,15 +34,16 @@ public class ModuleManager {
     public ModuleManager() {
 
         register(
+                // Client
+                new ClickUI(),
+
                 // Combat
                 new Criticals(),
 
                 // Render
                 new Fullbright(),
                 new HUD(),
-
-                // Client
-                new ClickUI(),
+                new ViewModel(),
 
                 // Movement
                 new InstantSpeed()

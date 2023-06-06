@@ -6,9 +6,11 @@
   "client": [
     "client.MixinMinecraft",
     "entity.MixinEntityPlayerSP",
-    "render.gui.MixinGuiIngameForge"
+    "render.gui.MixinGuiIngameForge",
+    "render.item.MixinItemRenderer"
   ],
   "mixins": [
+    "entity.MixinEntityLivingBase",
     "network.MixinNetworkManager"
   ]
 }
