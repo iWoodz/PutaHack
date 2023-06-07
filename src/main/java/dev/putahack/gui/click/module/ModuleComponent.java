@@ -111,6 +111,7 @@ public class ModuleComponent extends Component {
 
         if (!openAnimation.getState()) return;
         for (Component component : getChildren()) {
+            if (!component.isVisible()) continue;
             component.mouseClicked(mouseX, mouseY, mouseButton);
         }
     }
@@ -119,6 +120,7 @@ public class ModuleComponent extends Component {
     public void mouseReleased(int mouseX, int mouseY, int state) {
         if (!openAnimation.getState()) return;
         for (Component component : getChildren()) {
+            if (!component.isVisible()) continue;
             component.mouseReleased(mouseX, mouseY, state);
         }
     }
@@ -127,6 +129,7 @@ public class ModuleComponent extends Component {
     public void keyTyped(char typedChar, int keyCode) {
         if (!openAnimation.getState()) return;
         for (Component component : getChildren()) {
+            if (!component.isVisible()) continue;
             component.keyTyped(typedChar, keyCode);
         }
     }
