@@ -6,6 +6,7 @@ import dev.putahack.config.ConfigManager;
 import dev.putahack.listener.bus.EventBus;
 import dev.putahack.management.RotationManager;
 import dev.putahack.module.ModuleManager;
+import dev.putahack.util.io.FileUtils;
 import dev.putahack.util.timing.DateUtil;
 import dev.putahack.util.timing.Timer;
 import org.apache.logging.log4j.LogManager;
@@ -54,6 +55,13 @@ public class PutaHack {
 
     private PutaHack() {
         singleton = this;
+
+        // create putahack.nn save directory
+        if (!FileUtils.root.exists()) {
+            boolean result = FileUtils.root.mkdir();
+            logger.info("Created {} directory {}",
+                    FileUtils.root, result ? "successfully" : "unsuccessfully");
+        }
 
         Display.setTitle("Loading " + name);
         // Uncomment on release
