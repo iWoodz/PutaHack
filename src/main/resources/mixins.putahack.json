@@ -5,6 +5,7 @@
   "refmap": "mixins.putahack.refmap.json",
   "client": [
     "client.MixinMinecraft",
+    "entity.IEntityLivingBase",
     "entity.MixinEntity",
     "entity.MixinEntityLivingBase",
     "entity.MixinEntityPlayerSP",
