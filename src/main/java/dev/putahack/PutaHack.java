@@ -1,6 +1,8 @@
 package dev.putahack;
 
 import dev.putahack.bind.BindManager;
+import dev.putahack.config.Config;
+import dev.putahack.config.ConfigManager;
 import dev.putahack.listener.bus.EventBus;
 import dev.putahack.management.RotationManager;
 import dev.putahack.module.ModuleManager;
@@ -45,6 +47,7 @@ public class PutaHack {
      */
     private static final EventBus bus = new EventBus();
 
+    private final ConfigManager configs;
     private final BindManager binds;
     private final ModuleManager modules;
     private final RotationManager rotations;
@@ -59,6 +62,7 @@ public class PutaHack {
 
         Timer timer = new Timer();
 
+        configs = new ConfigManager();
         binds = new BindManager();
         modules = new ModuleManager();
         rotations = new RotationManager();
@@ -69,8 +73,21 @@ public class PutaHack {
         logger.info("Loaded PutaHack.nn successfully in {}ms",
                 timer.getDurationMS());
         logger.info("(you are now apart of the botnet) https://www.youtube.com/watch?v=iCjLB2-1ud4");
+
+        logger.info("Loading configs...");
+        configs.get().forEach(Config::load);
+        logger.info("Loaded configs");
+
         Display.setTitle(name);
 
+    }
+
+    /**
+     * Gets the config manager instance
+     * @return the config manager instance
+     */
+    public ConfigManager getConfigs() {
+        return configs;
     }
 
     /**
