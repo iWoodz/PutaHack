@@ -14,7 +14,7 @@ public class ColorUtils {
      * @return
      */
     public static int getColorSwitch(Color firstColor, Color secondColor, float time, int index, long timePerIndex, double speed) {
-        long now = (long) (speed * System.currentTimeMillis() + -index * timePerIndex);
+        long now = (long) ((speed / 10.0) * System.currentTimeMillis() + -index * timePerIndex);
 
         float rd = (firstColor.getRed() - secondColor.getRed()) / time;
         float gd = (firstColor.getGreen() - secondColor.getGreen()) / time;
@@ -40,7 +40,7 @@ public class ColorUtils {
 
     public static int gradientRainbow(Color c, float min, int delay) {
         float[] hsb = Color.RGBtoHSB(c.getRed(), c.getGreen(), c.getBlue(), null);
-        float brightness = Math.abs(((float) (System.currentTimeMillis() % 2000L) / 1000.0f + 50.0F / (float) delay * 2.0f) % 2.0f - 1.0f);
+        float brightness = Math.abs(((float) (System.currentTimeMillis() % 2000L) / 1000.0f + 50.0F / (float) (delay + 100.0) * 2.0f) % 2.0f - 1.0f);
         brightness = (min + (1.0f - min) * brightness) % 2.0f;
         return Color.getHSBColor(hsb[0], hsb[1], brightness).getRGB();
     }

@@ -3,6 +3,8 @@ package dev.putahack.module;
 import dev.putahack.PutaHack;
 import dev.putahack.bind.Bind;
 import dev.putahack.bind.BindDevice;
+import dev.putahack.gui.animation.Animation;
+import dev.putahack.gui.animation.Easing;
 import dev.putahack.setting.Setting;
 import dev.putahack.setting.SettingContainer;
 import dev.putahack.util.trait.INameable;
@@ -27,6 +29,9 @@ public class Module extends SettingContainer implements INameable, IToggleable {
     private final ModuleCategory category;
 
     private final Setting<Bind> bind;
+
+    private final Animation animation = new Animation(
+            Easing.CUBIC_IN_OUT, 250, false);
 
     public Module(String name, String description, ModuleCategory category) {
         this.name = name;
@@ -84,11 +89,13 @@ public class Module extends SettingContainer implements INameable, IToggleable {
     @Override
     public void onEnable() {
         PutaHack.getBus().subscribe(this);
+        animation.setState(true);
     }
 
     @Override
     public void onDisable() {
         PutaHack.getBus().unsubscribe(this);
+        animation.setState(false);
     }
 
     @Override
@@ -99,5 +106,9 @@ public class Module extends SettingContainer implements INameable, IToggleable {
     @Override
     public void setState(boolean state) {
         bind.getValue().setState(state);
+    }
+
+    public Animation getAnimation() {
+        return animation;
     }
 }
