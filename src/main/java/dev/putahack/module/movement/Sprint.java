@@ -22,17 +22,13 @@ public class Sprint extends Module {
         // woah there - calm down partner
         if (mc.player.isSprinting()) return;
 
-        if (mode.getValue() == Mode.RAGE) {
-            mc.player.setSprinting(true);
-            return;
-        }
-
         // vanilla checks and shit this is pretty basic shit
-        mc.player.setSprinting(!mc.player.isSneaking()
-                && !mc.player.isHandActive()
-                && !mc.player.collidedHorizontally
-                && mc.player.getFoodStats().getFoodLevel() > 6
-                && mc.player.movementInput.moveForward > 0.0f);
+        mc.player.setSprinting(mode.getValue() == Mode.RAGE
+                || (!mc.player.isSneaking()
+                    && !mc.player.isHandActive()
+                    && !mc.player.collidedHorizontally
+                    && mc.player.getFoodStats().getFoodLevel() > 6
+                    && mc.player.movementInput.moveForward > 0.0f));
     }
 
     public enum Mode {
