@@ -2,6 +2,7 @@ package dev.putahack.module;
 
 import dev.putahack.module.combat.AutoArmor;
 import dev.putahack.module.combat.Criticals;
+import dev.putahack.module.movement.Sprint;
 import dev.putahack.module.render.ClickUI;
 import dev.putahack.module.combat.Velocity;
 import dev.putahack.module.render.Fullbright;
@@ -35,21 +36,19 @@ public class ModuleManager {
     public ModuleManager() {
 
         register(
-                // Client
-                new ClickUI(),
-
                 // Combat
                 new AutoArmor(),
                 new Criticals(),
                 new Velocity(),
 
+                // Movement
+                new Sprint(),
+
                 // Render
+                new ClickUI(),
                 new Fullbright(),
                 new HUD(),
                 new ViewModel()
-
-                // Movement
-
         );
 
         logger.info("Loaded {} modules", moduleClassMap.size());
