@@ -1,5 +1,7 @@
 package dev.putahack.bind;
 
+import com.google.gson.JsonObject;
+import dev.putahack.setting.IJsonSerializable;
 import dev.putahack.util.trait.INameable;
 import dev.putahack.util.trait.IToggleable;
 
@@ -9,7 +11,7 @@ import java.util.function.Consumer;
  * @author aesthetical
  * @since 04/27/23
  */
-public class Bind implements IToggleable, INameable {
+public class Bind implements IToggleable, INameable, IJsonSerializable {
 
     private final String name;
 
@@ -76,5 +78,22 @@ public class Bind implements IToggleable, INameable {
     @Override
     public String getName() {
         return name;
+    }
+
+    @Override
+    public void fromJson(JsonObject object) {
+        key = object.get("keyCode").getAsInt();
+        device = BindDevice.valueOf(object.get("device").getAsString());
+        setState(object.get("state").getAsBoolean());
+    }
+
+    @Override
+    public JsonObject toJson() {
+        JsonObject object = new JsonObject();
+        object.addProperty("name", name);
+        object.addProperty("keyCode", key);
+        object.addProperty("device", device.name());
+        object.addProperty("state", state);
+        return object;
     }
 }

@@ -1,5 +1,6 @@
 package dev.putahack.bind;
 
+import dev.putahack.PutaHack;
 import dev.putahack.listener.bus.Listener;
 import dev.putahack.listener.event.input.EventKeyInput;
 import dev.putahack.listener.event.input.EventMouseInput;
@@ -20,7 +21,7 @@ public class BindManager {
     private final Map<String, Bind> bindMap = new LinkedHashMap<>();
 
     public BindManager() {
-
+        PutaHack.get().getConfigs().add(new BindConfig(this));
     }
 
     @Listener
