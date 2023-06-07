@@ -3,6 +3,7 @@ package dev.putahack.mixin.entity;
 import com.mojang.authlib.GameProfile;
 import dev.putahack.PutaHack;
 import dev.putahack.listener.event.EventStage;
+import dev.putahack.listener.event.player.EventItemSlowdown;
 import dev.putahack.listener.event.player.EventUpdate;
 import dev.putahack.listener.event.player.EventWalkingUpdate;
 import net.minecraft.client.Minecraft;
@@ -15,7 +16,7 @@ import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.network.play.client.CPacketPlayer.Position;
 import net.minecraft.network.play.client.CPacketPlayer.PositionRotation;
 import net.minecraft.network.play.client.CPacketPlayer.Rotation;
-import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.MovementInput;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -24,6 +25,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.At.Shift;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import static org.spongepowered.asm.lib.Opcodes.PUTFIELD;
 
 /**
  * @author aesthetical
@@ -49,6 +52,8 @@ public abstract class MixinEntityPlayerSP extends AbstractClientPlayer {
     @Shadow private boolean prevOnGround;
     @Shadow private boolean autoJumpEnabled;
 
+    @Shadow public MovementInput movementInput;
+
     @Shadow protected Minecraft mc;
 
     public MixinEntityPlayerSP(World worldIn, GameProfile playerProfile) {
@@ -63,6 +68,16 @@ public abstract class MixinEntityPlayerSP extends AbstractClientPlayer {
             shift = Shift.AFTER))
     public void hookOnUpdate(CallbackInfo info) {
         PutaHack.getBus().dispatch(new EventUpdate());
+    }
+
+    @Inject(method = "onLivingUpdate", at = @At(
+            value = "FIELD",
+            target = "Lnet/minecraft/client/entity/EntityPlayerSP;sprintToggleTimer:I",
+            ordinal = 1,
+            opcode = PUTFIELD,
+            shift = Shift.AFTER))
+    public void hookOnLivingUpdate$sprintToggleTimer(CallbackInfo info) {
+        PutaHack.getBus().dispatch(new EventItemSlowdown(movementInput));
     }
 
     @Inject(method = "onUpdateWalkingPlayer", at = @At("HEAD"), cancellable = true)

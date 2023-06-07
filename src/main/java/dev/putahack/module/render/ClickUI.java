@@ -17,7 +17,7 @@ public class ClickUI extends Module {
     public ClickUI() {
         super("ClickUI",
                 "Displays a configuration screen for the clients' modules",
-                ModuleCategory.CLIENT);
+                ModuleCategory.RENDER);
 
         getBind().setKey(KEY_O);
     }

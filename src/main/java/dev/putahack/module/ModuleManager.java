@@ -2,6 +2,7 @@ package dev.putahack.module;
 
 import dev.putahack.module.combat.AutoArmor;
 import dev.putahack.module.combat.Criticals;
+import dev.putahack.module.movement.NoSlow;
 import dev.putahack.module.movement.Sprint;
 import dev.putahack.module.render.ClickUI;
 import dev.putahack.module.combat.Velocity;
@@ -42,6 +43,7 @@ public class ModuleManager {
                 new Velocity(),
 
                 // Movement
+                new NoSlow(),
                 new Sprint(),
 
                 // Render
