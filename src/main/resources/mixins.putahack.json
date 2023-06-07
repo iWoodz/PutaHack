@@ -5,6 +5,7 @@
   "refmap": "mixins.putahack.refmap.json",
   "client": [
     "client.MixinMinecraft",
+    "entity.MixinEntity",
     "entity.MixinEntityLivingBase",
     "entity.MixinEntityPlayerSP",
     "network.MixinNetworkManager",
@@ -12,6 +13,7 @@
     "network.packet.server.ISPacketEntityVelocity",
     "network.packet.server.ISPacketExplosion",
     "render.gui.MixinGuiIngameForge",
-    "render.item.MixinItemRenderer"
+    "render.item.MixinItemRenderer",
+    "world.MixinWorld"
   ]
 }
