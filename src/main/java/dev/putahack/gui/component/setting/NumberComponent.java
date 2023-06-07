@@ -72,6 +72,11 @@ public class NumberComponent extends Component {
 
     }
 
+    @Override
+    public boolean isVisible() {
+        return setting.isVisible();
+    }
+
     private void setValue(double mouseX) {
         double value = setting.getMin().doubleValue() + difference * (mouseX - getX()) / getWidth();
         double percision = 1.0 / setting.getScale().doubleValue();
