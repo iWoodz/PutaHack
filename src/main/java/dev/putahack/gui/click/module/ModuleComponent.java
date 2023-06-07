@@ -4,10 +4,7 @@ import dev.putahack.bind.Bind;
 import dev.putahack.gui.animation.Animation;
 import dev.putahack.gui.animation.Easing;
 import dev.putahack.gui.component.Component;
-import dev.putahack.gui.component.setting.BindComponent;
-import dev.putahack.gui.component.setting.ColorComponent;
-import dev.putahack.gui.component.setting.EnumComponent;
-import dev.putahack.gui.component.setting.NumberComponent;
+import dev.putahack.gui.component.setting.*;
 import dev.putahack.module.Module;
 import dev.putahack.module.render.HUD;
 import dev.putahack.setting.Setting;
@@ -47,7 +44,7 @@ public class ModuleComponent extends Component {
             } else if (setting.getValue() instanceof Number) {
                 getChildren().add(new NumberComponent((Setting<Number>) setting));
             } else if (setting.getValue() instanceof Boolean) {
-
+                getChildren().add(new BooleanComponent((Setting<Boolean>) setting));
             }
         }
     }
