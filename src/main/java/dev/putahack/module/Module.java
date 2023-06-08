@@ -1,10 +1,12 @@
 package dev.putahack.module;
 
+import com.google.gson.JsonObject;
 import dev.putahack.PutaHack;
 import dev.putahack.bind.Bind;
 import dev.putahack.bind.BindDevice;
 import dev.putahack.gui.animation.Animation;
 import dev.putahack.gui.animation.Easing;
+import dev.putahack.setting.IJsonSerializable;
 import dev.putahack.setting.Setting;
 import dev.putahack.setting.SettingContainer;
 import dev.putahack.util.trait.INameable;
@@ -19,7 +21,7 @@ import static org.lwjgl.input.Keyboard.KEY_NONE;
  * @author aesthetical
  * @since 06/04/23
  */
-public class Module extends SettingContainer implements INameable, IToggleable {
+public class Module extends SettingContainer implements INameable, IToggleable, IJsonSerializable {
     /**
      * The minecraft game instance
      */
@@ -29,6 +31,7 @@ public class Module extends SettingContainer implements INameable, IToggleable {
     private final ModuleCategory category;
 
     private final Setting<Bind> bind;
+    private boolean drawn = false;
 
     private final Animation animation = new Animation(
             Easing.CUBIC_IN_OUT, 250, false);
@@ -106,6 +109,27 @@ public class Module extends SettingContainer implements INameable, IToggleable {
     @Override
     public void setState(boolean state) {
         bind.getValue().setState(state);
+    }
+
+    public boolean isDrawn() {
+        return drawn;
+    }
+
+    public void setDrawn(boolean drawn) {
+        this.drawn = drawn;
+    }
+
+    @Override
+    public void fromJson(JsonObject object) {
+        super.fromJson(object);
+        setDrawn(object.get("drawn").getAsBoolean());
+    }
+
+    @Override
+    public JsonObject toJson() {
+        JsonObject object = super.toJson();
+        object.addProperty("drawn", drawn);
+        return object;
     }
 
     public Animation getAnimation() {

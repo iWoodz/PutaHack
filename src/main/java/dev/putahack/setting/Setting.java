@@ -154,6 +154,7 @@ public class Setting<T> implements INameable, IJsonSerializable {
             colorObject.addProperty("g", color.getGreen());
             colorObject.addProperty("b", color.getBlue());
             colorObject.addProperty("a", color.getAlpha());
+            settingObject.add("value", colorObject);
         } else if (value instanceof Number) {
             if (value instanceof Double) {
                 settingObject.addProperty("value", ((Double) value));

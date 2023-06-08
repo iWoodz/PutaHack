@@ -1,6 +1,7 @@
 package dev.putahack.setting;
 
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import java.util.Collection;
@@ -17,7 +18,14 @@ public class SettingContainer implements IJsonSerializable {
 
     @Override
     public void fromJson(JsonObject object) {
+        for (String id : settingNameMap.keySet()) {
+            if (object.has(id)) {
+                JsonElement element = object.get(id);
+                if (!element.isJsonObject()) continue;
 
+                settingNameMap.get(id).fromJson(element.getAsJsonObject());
+            }
+        }
     }
 
     @Override

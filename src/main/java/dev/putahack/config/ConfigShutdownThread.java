@@ -1,5 +1,6 @@
 package dev.putahack.config;
 
+import dev.putahack.PutaHack;
 import dev.putahack.util.timing.Timer;
 
 import java.util.List;
@@ -34,5 +35,8 @@ public class ConfigShutdownThread extends Thread {
             long passedMS = timer.getDurationMS();
             System.out.println("Saved " + config.getFile() + " in " + passedMS + "ms");
         }
+
+        System.out.println(PutaHack.get().getModules()
+                .save("default"));
     }
 }
