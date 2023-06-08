@@ -60,8 +60,6 @@ public abstract class MixinEntityPlayerSP extends AbstractClientPlayer {
         super(worldIn, playerProfile);
     }
 
-    @Shadow protected abstract boolean isCurrentViewEntity();
-
     @Inject(method = "onUpdate", at = @At(
             value = "INVOKE",
             target = "Lnet/minecraft/client/entity/AbstractClientPlayer;onUpdate()V",
@@ -104,7 +102,7 @@ public abstract class MixinEntityPlayerSP extends AbstractClientPlayer {
             serverSneakState = sneaking;
         }
 
-        if (isCurrentViewEntity()) {
+        if (mc.getRenderViewEntity() == (EntityPlayerSP) (Object) this) {
             double d0 = event.getX() - lastReportedPosX;
             double d1 = event.getY() - lastReportedPosY;
             double d2 = event.getZ() - lastReportedPosZ;

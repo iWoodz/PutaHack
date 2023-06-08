@@ -4,6 +4,7 @@ import dev.putahack.bind.BindManager;
 import dev.putahack.config.Config;
 import dev.putahack.config.ConfigManager;
 import dev.putahack.listener.bus.EventBus;
+import dev.putahack.management.InventoryManager;
 import dev.putahack.management.RotationManager;
 import dev.putahack.module.ModuleManager;
 import dev.putahack.util.io.FileUtils;
@@ -52,6 +53,7 @@ public class PutaHack {
     private final BindManager binds;
     private final ModuleManager modules;
     private final RotationManager rotations;
+    private final InventoryManager inventory;
 
     private PutaHack() {
         singleton = this;
@@ -74,9 +76,11 @@ public class PutaHack {
         binds = new BindManager();
         modules = new ModuleManager();
         rotations = new RotationManager();
+        inventory = new InventoryManager();
 
         bus.subscribe(binds);
         bus.subscribe(rotations);
+        bus.subscribe(inventory);
 
         logger.info("Loaded PutaHack.nn successfully in {}ms",
                 timer.getDurationMS());
@@ -120,6 +124,14 @@ public class PutaHack {
      */
     public RotationManager getRotations() {
         return rotations;
+    }
+
+    /**
+     * Gets the inventory manager instance
+     * @return the inventory manager instance
+     */
+    public InventoryManager getInventory() {
+        return inventory;
     }
 
     /**

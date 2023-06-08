@@ -1,8 +1,10 @@
 {
   "required": true,
   "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.7-SNAPSHOT",
   "package": "dev.putahack.mixin",
   "refmap": "mixins.putahack.refmap.json",
+  "verbose": true,
   "client": [
     "client.MixinMinecraft",
     "entity.IEntityLivingBase",

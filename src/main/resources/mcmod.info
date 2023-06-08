@@ -3,7 +3,7 @@
     "modid": "putahack.nn",
     "name": "PutaHack.nn",
     "description": "1.12.2 HvH client for winners",
-    "version": "0.1.5",
+    "version": "2.0.0",
     "mcversion": "1.12.2",
     "logoFile": "putahack.png",
     "url": "",

@@ -57,11 +57,15 @@ configurations {
 }
 
 dependencies {
-    compile('org.spongepowered:mixin:0.7.11-SNAPSHOT') {
+    dependency('org.spongepowered:mixin:0.7.11-SNAPSHOT') {
         exclude module: 'launchwrapper'
         exclude module: 'guava'
         exclude module: 'gson'
         exclude module: 'commons-io'
+    }
+
+    annotationProcessor('org.spongepowered:mixin:0.8.2:processor') {
+        exclude module: 'gson'
     }
 
     compile 'com.github.cabaletta:baritone:1.2.14'
@@ -95,7 +99,13 @@ mixin {
 }
 
 jar {
-    from(configurations.dependency.collect { it.isDirectory() ? it : zipTree(it) })
+    from(configurations.dependency.collect { it.isDirectory() ? it : zipTree(it) }) {
+        exclude 'dummyThing',
+                'LICENSE.txt',
+                'META-INF/MUMFREY.RSA',
+                'META-INF/maven/**',
+                'org/**/*.html'
+    }
 
     manifest {
         attributes(

@@ -9,6 +9,7 @@ import dev.putahack.module.combat.KillAura;
 import dev.putahack.module.movement.NoPush;
 import dev.putahack.module.movement.NoSlow;
 import dev.putahack.module.movement.Sprint;
+import dev.putahack.module.player.Scaffold;
 import dev.putahack.module.render.*;
 import dev.putahack.module.combat.Velocity;
 import dev.putahack.util.io.FileUtils;
@@ -55,6 +56,9 @@ public class ModuleManager {
                 new NoPush(),
                 new NoSlow(),
                 new Sprint(),
+
+                // Player
+                new Scaffold(),
 
                 // Render
                 new Ambience(),

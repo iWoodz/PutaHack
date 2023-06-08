@@ -1,5 +1,6 @@
 package dev.putahack.util.render;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.OpenGlHelper;
@@ -7,7 +8,6 @@ import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.util.ResourceLocation;
 
-import static baritone.api.utils.Helper.mc;
 import static org.lwjgl.opengl.GL11.*;
 
 /**
@@ -15,6 +15,11 @@ import static org.lwjgl.opengl.GL11.*;
  * @since 06/04/23
  */
 public class RenderUtils {
+
+    /**
+     * The minecraft game instance
+     */
+    private static final Minecraft mc = Minecraft.getMinecraft();
 
     public static void scissor(double x, double y, double width, double height) {
         final ScaledResolution sr = new ScaledResolution(mc);
