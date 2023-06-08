@@ -7,6 +7,7 @@ package dev.putahack.module;
 public enum ModuleCategory {
     COMBAT("Combat", null),
     MOVEMENT("Movement", null),
+    PLAYER("Player", null),
     RENDER("Render", null);
 
     private final String displayName, icon;
