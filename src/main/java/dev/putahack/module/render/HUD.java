@@ -24,6 +24,7 @@ public class HUD extends Module {
     private static final Setting<Double> speed = new Setting<>(5.0, 0.01, 1.0, 10.0, "Speed");
 
     private final Setting<Boolean> arraylist = new Setting<>(true, "ArrayList");
+    private final Setting<Boolean> potions = new Setting<>(true, "Potions");
 
     public HUD() {
         super("HUD", "what do u think this is retard", ModuleCategory.RENDER);
@@ -66,6 +67,10 @@ public class HUD extends Module {
 
                 y += (mc.fontRenderer.FONT_HEIGHT + 2) * factor;
             }
+        }
+
+        potionRender: {
+
         }
     }
 
