@@ -6,11 +6,8 @@ import dev.putahack.module.combat.KillAura;
 import dev.putahack.module.movement.NoPush;
 import dev.putahack.module.movement.NoSlow;
 import dev.putahack.module.movement.Sprint;
-import dev.putahack.module.render.ClickUI;
+import dev.putahack.module.render.*;
 import dev.putahack.module.combat.Velocity;
-import dev.putahack.module.render.Fullbright;
-import dev.putahack.module.render.HUD;
-import dev.putahack.module.render.ViewModel;
 import dev.putahack.util.timing.DateUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -51,6 +48,7 @@ public class ModuleManager {
                 new Sprint(),
 
                 // Render
+                new Ambience(),
                 new ClickUI(),
                 new Fullbright(),
                 new HUD(),
