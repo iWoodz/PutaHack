@@ -20,7 +20,8 @@ public class MixinPlayerControllerMP {
             value = "INVOKE",
             target = "Lnet/minecraft/client/entity/EntityPlayerSP;getHeldItem(Lnet/minecraft/util/EnumHand;)Lnet/minecraft/item/ItemStack;"))
     public ItemStack hookProcessRightClickBlock$getHeldItem(EntityPlayerSP player, EnumHand hand) {
-        if (hand == EnumHand.OFF_HAND) return player.getHeldItemOffhand();
+        if (!PutaHack.get().getInventory().isDesynced()
+                || hand == EnumHand.OFF_HAND) return player.getHeldItem(hand);
         return PutaHack.get().getInventory().getStack(player);
     }
 }

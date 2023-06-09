@@ -20,7 +20,8 @@ public class MixinItemBlock {
             value = "INVOKE",
             target = "Lnet/minecraft/entity/player/EntityPlayer;getHeldItem(Lnet/minecraft/util/EnumHand;)Lnet/minecraft/item/ItemStack;"))
     public ItemStack hookOnItemUse$getHeldItem(EntityPlayer player, EnumHand hand) {
-        if (hand == EnumHand.OFF_HAND) return player.getHeldItemOffhand();
+        if (!PutaHack.get().getInventory().isDesynced()
+                || hand == EnumHand.OFF_HAND) return player.getHeldItem(hand);
         return PutaHack.get().getInventory().getStack(player);
     }
 }

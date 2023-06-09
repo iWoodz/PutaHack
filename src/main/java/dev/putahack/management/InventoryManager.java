@@ -44,10 +44,18 @@ public class InventoryManager {
      * Syncs the client slot with the server slot
      */
     public void sync() {
-        if (serverSlot != mc.player.inventory.currentItem) {
+        if (isDesynced()) {
             mc.player.connection.sendPacket(new CPacketHeldItemChange(
                     mc.player.inventory.currentItem));
         }
+    }
+
+    /**
+     * Checks if we are desynced with the server
+     * @return if the client and server slots are not the same
+     */
+    public boolean isDesynced() {
+        return serverSlot != mc.player.inventory.currentItem;
     }
 
     public int getServerSlot() {
