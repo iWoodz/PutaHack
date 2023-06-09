@@ -8,6 +8,8 @@ public interface IEntityLivingBase {
 
     float getRenderYaw();
     float getRenderPitch();
+    float getPrevRenderYaw();
+    float getPrevRenderPitch();
 
     void setRenderYaw(float yaw);
     void setRenderPitch(float pitch);

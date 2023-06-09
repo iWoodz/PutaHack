@@ -26,7 +26,7 @@ public abstract class MixinEntityLivingBase extends Entity implements IEntityLiv
         super(worldIn);
     }
 
-    @Inject(method = "<init>", at = @At("TAIL"))
+    @Inject(method = "<init>", at = @At("RETURN"))
     public void hookConstructor(World world, CallbackInfo info) {
         renderYaw = rotationYaw;
         renderPitch = rotationPitch;
@@ -57,10 +57,12 @@ public abstract class MixinEntityLivingBase extends Entity implements IEntityLiv
         return renderPitch;
     }
 
+    @Override
     public float getPrevRenderYaw() {
         return prevRenderYaw;
     }
 
+    @Override
     public float getPrevRenderPitch() {
         return prevRenderPitch;
     }
