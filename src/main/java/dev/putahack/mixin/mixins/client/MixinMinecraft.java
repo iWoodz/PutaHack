@@ -2,6 +2,7 @@ package dev.putahack.mixin.mixins.client;
 
 import dev.putahack.PutaHack;
 import dev.putahack.listener.event.input.EventKeyInput;
+import dev.putahack.listener.event.render.EventLimitFramerate;
 import net.minecraft.client.Minecraft;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
@@ -10,6 +11,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.At.Shift;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 /**
  * @author aesthetical
@@ -53,4 +55,9 @@ public class MixinMinecraft {
                 new EventKeyInput(Mouse.getEventButton()));
     }
 
+    @Inject(method = "getLimitFramerate", at = @At(value = "RETURN"), cancellable = true)
+    public void hookGetLimitFramerate(CallbackInfoReturnable<Integer> info) {
+        EventLimitFramerate event = new EventLimitFramerate(info.getReturnValueI());
+        if (PutaHack.getBus().dispatch(event)) info.setReturnValue(event.getFps());
+    }
 }

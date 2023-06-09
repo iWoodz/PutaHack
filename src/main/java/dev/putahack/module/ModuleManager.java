@@ -66,6 +66,7 @@ public class ModuleManager {
                 new Fullbright(),
                 new HUD(),
                 new NoRender(),
+                new UnfocusedCPU(),
                 new ViewModel()
         );
 
