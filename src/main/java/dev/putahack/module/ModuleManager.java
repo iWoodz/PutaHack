@@ -7,6 +7,7 @@ import dev.putahack.module.combat.*;
 import dev.putahack.module.movement.NoPush;
 import dev.putahack.module.movement.NoSlow;
 import dev.putahack.module.movement.Sprint;
+import dev.putahack.module.player.FastPlace;
 import dev.putahack.module.player.Scaffold;
 import dev.putahack.module.render.*;
 import dev.putahack.util.io.FileUtils;
@@ -56,6 +57,7 @@ public class ModuleManager {
                 new Sprint(),
 
                 // Player
+                new FastPlace(),
                 new Scaffold(),
 
                 // Render
