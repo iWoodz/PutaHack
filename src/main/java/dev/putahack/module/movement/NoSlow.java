@@ -22,22 +22,15 @@ public class NoSlow extends Module {
                 ModuleCategory.MOVEMENT);
     }
 
-    @Listener(receiveCanceled = true)
-    public void onWalkingUpdate(EventWalkingUpdate event) {
-        if (event.getStage() == EventStage.PRE
-                && mode.getValue() == Mode.NEW_NCP
-                && mc.player.isHandActive()
-                && !mc.player.isRiding()) {
-
-            mc.player.connection.sendPacket(
-                    new CPacketHeldItemChange(mc.player.inventory.currentItem));
-        }
-    }
-
     @Listener
     public void onItemSlowdown(EventItemSlowdown event) {
         event.getInput().moveForward *= 5.0f;
         event.getInput().moveStrafe *= 5.0f;
+
+        if (mode.getValue() == Mode.NEW_NCP) {
+            mc.player.connection.sendPacket(new CPacketHeldItemChange(
+                    mc.player.inventory.currentItem));
+        }
     }
 
     public enum Mode {

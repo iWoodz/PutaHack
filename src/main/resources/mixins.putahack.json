@@ -20,7 +20,6 @@
     "render.entity.MixinRenderLivingBase",
     "render.gui.MixinFontRenderer",
     "render.gui.MixinGuiIngame",
-    "render.gui.MixinGuiIngameForge",
     "render.item.MixinItemRenderer",
     "world.MixinWorld"
   ]
