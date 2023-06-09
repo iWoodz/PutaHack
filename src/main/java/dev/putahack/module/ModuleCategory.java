@@ -6,6 +6,7 @@ package dev.putahack.module;
  */
 public enum ModuleCategory {
     COMBAT("Combat", null),
+    EXPLOIT("Exploit", null),
     MOVEMENT("Movement", null),
     PLAYER("Player", null),
     RENDER("Render", null);

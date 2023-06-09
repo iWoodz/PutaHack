@@ -37,7 +37,7 @@ public class AutoArmor extends Module {
     private final int[] bestArmorSlots = new int[4];
 
     public AutoArmor() {
-        super("Auto Armor",
+        super("AutoArmor",
                 "Automatically swaps to the best piece of armor available",
                 ModuleCategory.COMBAT);
     }

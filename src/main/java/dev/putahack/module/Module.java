@@ -10,6 +10,7 @@ import dev.putahack.setting.IJsonSerializable;
 import dev.putahack.setting.Setting;
 import dev.putahack.setting.SettingContainer;
 import dev.putahack.util.trait.Nameable;
+import dev.putahack.util.trait.Printable;
 import dev.putahack.util.trait.Toggleable;
 import net.minecraft.client.Minecraft;
 
@@ -21,7 +22,12 @@ import static org.lwjgl.input.Keyboard.KEY_NONE;
  * @author aesthetical
  * @since 06/04/23
  */
-public class Module extends SettingContainer implements Nameable, Toggleable, IJsonSerializable {
+public class Module extends SettingContainer
+        implements Nameable,
+        Toggleable,
+        Printable,
+        IJsonSerializable {
+
     /**
      * The minecraft game instance
      */

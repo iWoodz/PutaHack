@@ -4,6 +4,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import dev.putahack.PutaHack;
 import dev.putahack.module.combat.*;
+import dev.putahack.module.exploit.AntiPopLag;
 import dev.putahack.module.movement.NoPush;
 import dev.putahack.module.movement.NoSlow;
 import dev.putahack.module.movement.Sprint;
@@ -50,6 +51,9 @@ public class ModuleManager {
                 new Criticals(),
                 new KillAura(),
                 new Velocity(),
+
+                // Exploit
+                new AntiPopLag(),
 
                 // Movement
                 new NoPush(),
