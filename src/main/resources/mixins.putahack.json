@@ -11,6 +11,8 @@
     "entity.MixinEntity",
     "entity.MixinEntityLivingBase",
     "entity.MixinEntityPlayerSP",
+    "input.MixinPlayerControllerMP",
+    "item.MixinItemBlock",
     "network.MixinNetworkManager",
     "network.packet.client.ICPacketPlayer",
     "network.packet.server.ISPacketEntityVelocity",

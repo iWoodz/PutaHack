@@ -10,6 +10,7 @@ import dev.putahack.util.math.rotate.RotationUtils;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.play.client.CPacketAnimation;
+import net.minecraft.network.play.client.CPacketHeldItemChange;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -29,8 +30,6 @@ public class Scaffold extends Module {
     private BlockPos blockPos;
     private EnumFacing enumFacing;
 
-    private int oldSlot = -1;
-
     public Scaffold() {
         super("Scaffold", "Places blocks rapidly at your feet", ModuleCategory.PLAYER);
     }
@@ -43,11 +42,8 @@ public class Scaffold extends Module {
         blockPos = null;
         enumFacing = null;
 
-        // PutaHack.get().getInventory().sync();
-
-        if (oldSlot != -1) {
-            mc.player.inventory.currentItem = oldSlot;
-            oldSlot = -1;
+        if (mc.player != null) {
+            PutaHack.get().getInventory().sync();
         }
     }
 
@@ -77,6 +73,10 @@ public class Scaffold extends Module {
 
         if (slot == -1) return;
 
+        if (PutaHack.get().getInventory().getServerSlot() != slot) {
+            mc.player.connection.sendPacket(new CPacketHeldItemChange(slot));
+        }
+
         EnumActionResult result = mc.playerController.processRightClickBlock(mc.player,
                 mc.world,
                 blockPos,
@@ -84,15 +84,6 @@ public class Scaffold extends Module {
                 getHitVec(),
                 EnumHand.MAIN_HAND);
         if (result == EnumActionResult.SUCCESS) {
-//            if (PutaHack.get().getInventory().getServerSlot() != slot) {
-//                mc.player.connection.sendPacket(new CPacketHeldItemChange(slot));
-//            }
-
-            if (oldSlot == -1) {
-                oldSlot = mc.player.inventory.currentItem;
-            }
-            mc.player.inventory.currentItem = slot;
-
             if (swing.getValue()) {
                 mc.player.swingArm(EnumHand.MAIN_HAND);
             } else {

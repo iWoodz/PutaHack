@@ -3,6 +3,7 @@ package dev.putahack.management;
 import dev.putahack.listener.bus.Listener;
 import dev.putahack.listener.event.network.EventPacket;
 import net.minecraft.client.Minecraft;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.play.client.CPacketHeldItemChange;
 import net.minecraft.network.play.server.SPacketHeldItemChange;
@@ -53,9 +54,9 @@ public class InventoryManager {
         return serverSlot;
     }
 
-    public ItemStack getStack() {
+    public ItemStack getStack(EntityPlayer player) {
         return serverSlot == -1
-                ? mc.player.getHeldItemMainhand()
-                : mc.player.inventory.getStackInSlot(serverSlot);
+                ? player.getHeldItemMainhand()
+                : player.inventory.mainInventory.get(serverSlot);
     }
 }
