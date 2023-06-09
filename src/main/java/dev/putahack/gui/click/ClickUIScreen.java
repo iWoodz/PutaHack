@@ -86,5 +86,7 @@ public class ClickUIScreen extends GuiScreen {
     public void onGuiClosed() {
         super.onGuiClosed();
         CLICK_UI.setState(false);
+        PutaHack.getLogger().info(PutaHack.get().getModules()
+                .save("default"));
     }
 }
