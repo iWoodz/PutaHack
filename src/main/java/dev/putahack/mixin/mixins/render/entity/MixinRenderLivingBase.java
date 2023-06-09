@@ -38,7 +38,7 @@ public class MixinRenderLivingBase {
         }
     }
 
-    @Inject(method = "doRender(Lnet/minecraft/entity/EntityLivingBase;DDDFF)V", at = @At("TAIL"))
+    @Inject(method = "doRender(Lnet/minecraft/entity/EntityLivingBase;DDDFF)V", at = @At("RETURN"))
     public void hookDoRender$TAIL(EntityLivingBase entity, double x, double y, double z, float entityYaw, float partialTicks, CallbackInfo info) {
         if (entity.equals(Minecraft.getMinecraft().player)) {
 
