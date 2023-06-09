@@ -2,7 +2,7 @@ package dev.putahack.setting;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import dev.putahack.util.trait.INameable;
+import dev.putahack.util.trait.Nameable;
 
 import java.awt.*;
 import java.util.function.Supplier;
@@ -12,7 +12,7 @@ import java.util.function.Supplier;
  * @since 04/27/23
  * @param <T> the setting type
  */
-public class Setting<T> implements INameable, IJsonSerializable {
+public class Setting<T> implements Nameable, IJsonSerializable {
     private T value;
     private final String tag;
 

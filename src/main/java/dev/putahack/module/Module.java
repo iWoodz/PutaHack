@@ -9,8 +9,8 @@ import dev.putahack.gui.animation.Easing;
 import dev.putahack.setting.IJsonSerializable;
 import dev.putahack.setting.Setting;
 import dev.putahack.setting.SettingContainer;
-import dev.putahack.util.trait.INameable;
-import dev.putahack.util.trait.IToggleable;
+import dev.putahack.util.trait.Nameable;
+import dev.putahack.util.trait.Toggleable;
 import net.minecraft.client.Minecraft;
 
 import java.lang.reflect.Field;
@@ -21,7 +21,7 @@ import static org.lwjgl.input.Keyboard.KEY_NONE;
  * @author aesthetical
  * @since 06/04/23
  */
-public class Module extends SettingContainer implements INameable, IToggleable, IJsonSerializable {
+public class Module extends SettingContainer implements Nameable, Toggleable, IJsonSerializable {
     /**
      * The minecraft game instance
      */

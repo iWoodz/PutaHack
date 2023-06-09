@@ -4,7 +4,7 @@ package dev.putahack.util.trait;
  * @author aesthetical
  * @since 06/04/23
  */
-public interface INameable {
+public interface Nameable {
     String getName();
 
     default String[] getAliases() {

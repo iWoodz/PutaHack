@@ -2,8 +2,8 @@ package dev.putahack.bind;
 
 import com.google.gson.JsonObject;
 import dev.putahack.setting.IJsonSerializable;
-import dev.putahack.util.trait.INameable;
-import dev.putahack.util.trait.IToggleable;
+import dev.putahack.util.trait.Nameable;
+import dev.putahack.util.trait.Toggleable;
 
 import java.util.function.Consumer;
 
@@ -11,7 +11,7 @@ import java.util.function.Consumer;
  * @author aesthetical
  * @since 04/27/23
  */
-public class Bind implements IToggleable, INameable, IJsonSerializable {
+public class Bind implements Toggleable, Nameable, IJsonSerializable {
 
     private final String name;
 
