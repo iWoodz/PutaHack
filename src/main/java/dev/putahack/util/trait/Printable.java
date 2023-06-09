@@ -1,5 +1,6 @@
 package dev.putahack.util.trait;
 
+import dev.putahack.PutaHack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.text.Style;
 import net.minecraft.util.text.TextComponentString;
@@ -10,7 +11,7 @@ import net.minecraft.util.text.TextFormatting;
  * @since 06/09/23
  */
 public interface Printable {
-    String CHAT_PREFIX = TextFormatting.DARK_PURPLE + "putahack";
+    String CHAT_PREFIX = TextFormatting.DARK_PURPLE + PutaHack.getName();
 
     /**
      * Prints to chat client-side
