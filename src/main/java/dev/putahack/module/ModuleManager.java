@@ -3,15 +3,12 @@ package dev.putahack.module;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import dev.putahack.PutaHack;
-import dev.putahack.module.combat.AutoArmor;
-import dev.putahack.module.combat.Criticals;
-import dev.putahack.module.combat.KillAura;
+import dev.putahack.module.combat.*;
 import dev.putahack.module.movement.NoPush;
 import dev.putahack.module.movement.NoSlow;
 import dev.putahack.module.movement.Sprint;
 import dev.putahack.module.player.Scaffold;
 import dev.putahack.module.render.*;
-import dev.putahack.module.combat.Velocity;
 import dev.putahack.util.io.FileUtils;
 import dev.putahack.util.timing.DateUtil;
 import org.apache.logging.log4j.LogManager;
@@ -48,6 +45,7 @@ public class ModuleManager {
         register(
                 // Combat
                 new AutoArmor(),
+                new AutoEXP(),
                 new Criticals(),
                 new KillAura(),
                 new Velocity(),

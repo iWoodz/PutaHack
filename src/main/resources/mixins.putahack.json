@@ -6,6 +6,7 @@
   "refmap": "mixins.putahack.refmap.json",
   "verbose": true,
   "client": [
+    "client.IMinecraft",
     "client.MixinMinecraft",
     "entity.IEntityLivingBase",
     "entity.MixinEntity",
