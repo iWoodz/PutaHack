@@ -1,4 +1,4 @@
-package dev.putahack.mixin.item;
+package dev.putahack.mixin.mixins.item;
 
 import dev.putahack.PutaHack;
 import net.minecraft.entity.player.EntityPlayer;

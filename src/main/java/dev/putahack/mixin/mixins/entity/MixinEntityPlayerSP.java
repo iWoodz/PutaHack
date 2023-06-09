@@ -1,4 +1,4 @@
-package dev.putahack.mixin.entity;
+package dev.putahack.mixin.mixins.entity;
 
 import com.mojang.authlib.GameProfile;
 import dev.putahack.PutaHack;

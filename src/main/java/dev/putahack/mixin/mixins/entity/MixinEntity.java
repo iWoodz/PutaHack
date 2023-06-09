@@ -1,9 +1,8 @@
-package dev.putahack.mixin.entity;
+package dev.putahack.mixin.mixins.entity;
 
 import dev.putahack.PutaHack;
 import dev.putahack.listener.event.player.EventEntityCollide;
 import dev.putahack.listener.event.player.EventPushOutOfBlocks;
-import dev.putahack.listener.event.player.EventWaterPush;
 import net.minecraft.entity.Entity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

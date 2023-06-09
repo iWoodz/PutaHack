@@ -4,7 +4,7 @@ import dev.putahack.listener.bus.Listener;
 import dev.putahack.listener.event.EventStage;
 import dev.putahack.listener.event.network.EventPacket;
 import dev.putahack.listener.event.player.EventWalkingUpdate;
-import dev.putahack.mixin.network.packet.client.ICPacketPlayer;
+import dev.putahack.mixin.mixins.network.packet.client.ICPacketPlayer;
 import dev.putahack.util.timing.Timer;
 import net.minecraft.network.play.client.CPacketPlayer;
 

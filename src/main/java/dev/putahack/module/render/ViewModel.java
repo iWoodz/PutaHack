@@ -11,7 +11,7 @@ import net.minecraft.entity.EntityLivingBase;
  * @author aesthetical
  * @since 06/05/23
  *
- * @see dev.putahack.mixin.render.item.MixinItemRenderer
+ * @see dev.putahack.mixin.mixins.render.item.MixinItemRenderer
  * @see EntityLivingBase#getArmSwingAnimationEnd()
  */
 public class ViewModel extends Module {

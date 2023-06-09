@@ -4,7 +4,7 @@ import dev.putahack.PutaHack;
 import dev.putahack.listener.bus.Listener;
 import dev.putahack.listener.event.EventStage;
 import dev.putahack.listener.event.player.EventWalkingUpdate;
-import dev.putahack.mixin.entity.IEntityLivingBase;
+import dev.putahack.mixin.mixins.entity.IEntityLivingBase;
 import dev.putahack.module.Module;
 import dev.putahack.module.ModuleCategory;
 import dev.putahack.setting.Setting;

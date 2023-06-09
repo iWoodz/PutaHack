@@ -1,4 +1,4 @@
-package dev.putahack.mixin.world;
+package dev.putahack.mixin.mixins.world;
 
 import dev.putahack.PutaHack;
 import dev.putahack.listener.event.player.EventWaterPush;

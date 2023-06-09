@@ -2,8 +2,8 @@ package dev.putahack.module.combat;
 
 import dev.putahack.listener.bus.Listener;
 import dev.putahack.listener.event.network.EventPacket;
-import dev.putahack.mixin.network.packet.server.ISPacketEntityVelocity;
-import dev.putahack.mixin.network.packet.server.ISPacketExplosion;
+import dev.putahack.mixin.mixins.network.packet.server.ISPacketEntityVelocity;
+import dev.putahack.mixin.mixins.network.packet.server.ISPacketExplosion;
 import dev.putahack.module.Module;
 import dev.putahack.module.ModuleCategory;
 import dev.putahack.setting.Setting;

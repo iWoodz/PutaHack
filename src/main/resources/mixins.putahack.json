@@ -2,7 +2,7 @@
   "required": true,
   "compatibilityLevel": "JAVA_8",
   "minVersion": "0.7-SNAPSHOT",
-  "package": "dev.putahack.mixin",
+  "package": "dev.putahack.mixin.mixins",
   "refmap": "mixins.putahack.refmap.json",
   "verbose": true,
   "client": [

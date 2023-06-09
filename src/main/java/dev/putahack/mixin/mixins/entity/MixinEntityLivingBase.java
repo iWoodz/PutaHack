@@ -1,4 +1,4 @@
-package dev.putahack.mixin.entity;
+package dev.putahack.mixin.mixins.entity;
 
 import dev.putahack.PutaHack;
 import dev.putahack.listener.event.render.EventArmAnimationSpeed;

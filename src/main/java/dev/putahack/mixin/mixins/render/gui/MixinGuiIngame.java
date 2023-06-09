@@ -1,4 +1,4 @@
-package dev.putahack.mixin.render.gui;
+package dev.putahack.mixin.mixins.render.gui;
 
 import dev.putahack.PutaHack;
 import net.minecraft.client.gui.GuiIngame;

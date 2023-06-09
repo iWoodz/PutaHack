@@ -1,4 +1,4 @@
-package dev.putahack.mixin.client;
+package dev.putahack.mixin.mixins.client;
 
 import dev.putahack.PutaHack;
 import dev.putahack.listener.event.input.EventKeyInput;

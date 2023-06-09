@@ -1,4 +1,4 @@
-package dev.putahack.mixin.network.packet.server;
+package dev.putahack.mixin.mixins.network.packet.server;
 
 import net.minecraft.network.play.server.SPacketEntityVelocity;
 import org.spongepowered.asm.mixin.Mixin;

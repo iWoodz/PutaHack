@@ -1,4 +1,4 @@
-package dev.putahack.mixin.entity;
+package dev.putahack.mixin.mixins.entity;
 
 import net.minecraft.entity.EntityLivingBase;
 import org.spongepowered.asm.mixin.Mixin;

@@ -1,4 +1,4 @@
-package dev.putahack.mixin.network;
+package dev.putahack.mixin.mixins.network;
 
 import dev.putahack.PutaHack;
 import dev.putahack.listener.event.network.EventPacket.In;

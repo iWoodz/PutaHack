@@ -1,4 +1,4 @@
-package dev.putahack.mixin.network.packet.client;
+package dev.putahack.mixin.mixins.network.packet.client;
 
 import net.minecraft.network.play.client.CPacketPlayer;
 import org.spongepowered.asm.mixin.Mixin;

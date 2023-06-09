@@ -1,4 +1,4 @@
-package dev.putahack.mixin.render.item;
+package dev.putahack.mixin.mixins.render.item;
 
 import dev.putahack.PutaHack;
 import dev.putahack.module.render.ViewModel;
