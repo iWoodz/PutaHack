@@ -15,6 +15,7 @@
     "network.packet.client.ICPacketPlayer",
     "network.packet.server.ISPacketEntityVelocity",
     "network.packet.server.ISPacketExplosion",
+    "render.gui.MixinGuiIngame",
     "render.gui.MixinGuiIngameForge",
     "render.item.MixinItemRenderer",
     "world.MixinWorld"
