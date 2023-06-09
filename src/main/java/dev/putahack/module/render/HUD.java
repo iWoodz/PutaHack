@@ -13,6 +13,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static dev.putahack.mixin.MixinPluginLoader.futureClient;
+
 /**
  * @author aesthetical
  * @since 06/04/23
@@ -37,7 +39,7 @@ public class HUD extends Module {
     public void onRender2D(EventRender2D event) {
         mc.fontRenderer.drawStringWithShadow(
                 PutaHack.getName() + " " + PutaHack.getVersion(),
-                3.0f, 3.0f, color(50));
+                3.0f + (futureClient ? mc.fontRenderer.FONT_HEIGHT + 2.0f : 0.0f), 3.0f, color(50));
 
         arrayListRender: {
             if (!arraylist.getValue()) break arrayListRender;
