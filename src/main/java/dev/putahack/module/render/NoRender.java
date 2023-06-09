@@ -4,6 +4,7 @@ import dev.putahack.listener.bus.Listener;
 import dev.putahack.listener.event.render.EventFOV;
 import dev.putahack.listener.event.render.EventRenderHurt;
 import dev.putahack.listener.event.render.EventRenderPortal;
+import dev.putahack.listener.event.render.EventRenderToast;
 import dev.putahack.module.Module;
 import dev.putahack.module.ModuleCategory;
 import dev.putahack.setting.Setting;
@@ -16,6 +17,7 @@ public class NoRender extends Module {
     private final Setting<Boolean> hurt = new Setting<>(true, "Hurt");
     private final Setting<Boolean> portal = new Setting<>(true, "Portal");
     private final Setting<Boolean> dynamicFoV = new Setting<>(true, "DynamicFoV");
+    private final Setting<Boolean> toasts = new Setting<>(true, "Toasts");
 
     public NoRender() {
         super("NoRender",
@@ -41,5 +43,10 @@ public class NoRender extends Module {
                     : 70.0f);
             event.cancel();
         }
+    }
+
+    @Listener
+    public void onRenderToast(EventRenderToast event) {
+        if (toasts.getValue()) event.cancel();
     }
 }
