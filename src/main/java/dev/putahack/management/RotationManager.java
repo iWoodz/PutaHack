@@ -4,8 +4,10 @@ import dev.putahack.listener.bus.Listener;
 import dev.putahack.listener.event.EventStage;
 import dev.putahack.listener.event.network.EventPacket;
 import dev.putahack.listener.event.player.EventWalkingUpdate;
+import dev.putahack.mixin.duck.IEntityLivingBase;
 import dev.putahack.mixin.mixins.network.packet.client.ICPacketPlayer;
 import dev.putahack.util.timing.Timer;
+import net.minecraft.client.Minecraft;
 import net.minecraft.network.play.client.CPacketPlayer;
 
 /**
@@ -49,6 +51,11 @@ public class RotationManager {
             clientRotations = null;
             return;
         }
+
+        ((IEntityLivingBase) Minecraft.getMinecraft().player)
+                .setRenderYaw(serverRotations[0]);
+        ((IEntityLivingBase) Minecraft.getMinecraft().player)
+                .setRenderPitch(serverRotations[1]);
 
         event.setYaw(clientRotations[0]);
         event.setPitch(clientRotations[1]);
