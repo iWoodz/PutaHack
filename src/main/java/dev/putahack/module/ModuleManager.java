@@ -65,6 +65,7 @@ public class ModuleManager {
                 new ClickUI(),
                 new Fullbright(),
                 new HUD(),
+                new NoRender(),
                 new ViewModel()
         );
 

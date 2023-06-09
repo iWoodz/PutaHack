@@ -1,11 +1,15 @@
 package dev.putahack.mixin.mixins.render.gui;
 
 import dev.putahack.PutaHack;
+import dev.putahack.listener.event.render.EventRenderPortal;
 import net.minecraft.client.gui.GuiIngame;
+import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.entity.player.InventoryPlayer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
  * @author aesthetical
@@ -13,6 +17,11 @@ import org.spongepowered.asm.mixin.injection.Redirect;
  */
 @Mixin(GuiIngame.class)
 public class MixinGuiIngame {
+
+    @Inject(method = "renderPortal", at = @At("HEAD"), cancellable = true)
+    public void hookRenderPortal(float timeInPortal, ScaledResolution scaledRes, CallbackInfo info) {
+        if (PutaHack.getBus().dispatch(new EventRenderPortal())) info.cancel();
+    }
 
     @Redirect(method = "renderHotbar", at = @At(
             value = "FIELD",
