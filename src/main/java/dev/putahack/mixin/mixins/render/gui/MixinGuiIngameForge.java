@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  * @author aesthetical
  * @since 06/04/23
  */
-@Mixin(value = GuiIngameForge.class, remap = false)
+@Mixin(GuiIngameForge.class)
 public class MixinGuiIngameForge {
 
     @Shadow private ScaledResolution res;
@@ -23,8 +23,7 @@ public class MixinGuiIngameForge {
     @Inject(method = "renderGameOverlay", at = @At(
             value = "INVOKE",
             target = "Lnet/minecraftforge/client/GuiIngameForge;renderPlayerList(II)V",
-            shift = Shift.AFTER,
-            remap = false), remap = false)
+            shift = Shift.AFTER))
     public void hookRenderGameOverlay(float partialTicks, CallbackInfo info) {
         PutaHack.getBus().dispatch(new EventRender2D(res, partialTicks));
     }
