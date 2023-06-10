@@ -38,6 +38,8 @@ public class PopManager {
 
     @Listener(receiveCanceled = true)
     public void onPacketIn(EventPacket.In event) {
+        if (mc.player == null || mc.world == null) return;
+
         if (event.getPacket() instanceof SPacketEntityMetadata) {
             SPacketEntityMetadata packet = event.getPacket();
             Entity entity = mc.world.getEntityByID(packet.getEntityId());
