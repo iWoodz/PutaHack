@@ -75,6 +75,7 @@ public class ModuleManager {
                 new Fullbright(),
                 new HUD(),
                 new NoRender(),
+                new TimeChanger(),
                 new UnfocusedCPU(),
                 new ViewModel()
         );
