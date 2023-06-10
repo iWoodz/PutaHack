@@ -1,7 +1,7 @@
 package dev.starstruck.bind;
 
 import com.google.gson.JsonObject;
-import dev.starstruck.setting.IJsonSerializable;
+import dev.starstruck.setting.JsonSerializable;
 import dev.starstruck.util.trait.Nameable;
 import dev.starstruck.util.trait.Toggleable;
 
@@ -11,7 +11,7 @@ import java.util.function.Consumer;
  * @author aesthetical
  * @since 04/27/23
  */
-public class Bind implements Toggleable, Nameable, IJsonSerializable {
+public class Bind implements Toggleable, Nameable, JsonSerializable {
 
     private final String name;
 

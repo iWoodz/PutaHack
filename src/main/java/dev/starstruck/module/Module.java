@@ -6,7 +6,7 @@ import dev.starstruck.bind.Bind;
 import dev.starstruck.bind.BindDevice;
 import dev.starstruck.gui.animation.Animation;
 import dev.starstruck.gui.animation.Easing;
-import dev.starstruck.setting.IJsonSerializable;
+import dev.starstruck.setting.JsonSerializable;
 import dev.starstruck.setting.Setting;
 import dev.starstruck.setting.SettingContainer;
 import dev.starstruck.util.trait.Nameable;
@@ -26,7 +26,7 @@ public class Module extends SettingContainer
         implements Nameable,
         Toggleable,
         Printable,
-        IJsonSerializable {
+        JsonSerializable {
 
     /**
      * The minecraft game instance

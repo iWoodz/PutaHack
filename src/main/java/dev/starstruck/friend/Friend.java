@@ -1,13 +1,13 @@
 package dev.starstruck.friend;
 
 import com.google.gson.JsonObject;
-import dev.starstruck.setting.IJsonSerializable;
+import dev.starstruck.setting.JsonSerializable;
 
 /**
  * @author aesthetical
  * @since 06/10/23
  */
-public class Friend implements IJsonSerializable {
+public class Friend implements JsonSerializable {
     private String name, alias;
 
     public Friend() {

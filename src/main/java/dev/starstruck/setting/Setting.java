@@ -12,7 +12,7 @@ import java.util.function.Supplier;
  * @since 04/27/23
  * @param <T> the setting type
  */
-public class Setting<T> implements Nameable, IJsonSerializable {
+public class Setting<T> implements Nameable, JsonSerializable {
     private T value;
     private final String tag;
 

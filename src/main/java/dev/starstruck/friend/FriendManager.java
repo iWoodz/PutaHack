@@ -2,7 +2,7 @@ package dev.starstruck.friend;
 
 import dev.starstruck.Starstruck;
 import dev.starstruck.friend.sync.FutureClientFriendSyncer;
-import dev.starstruck.friend.sync.IClientFriendSyncer;
+import dev.starstruck.friend.sync.ClientFriendSyncer;
 import io.netty.util.internal.ConcurrentSet;
 
 import java.util.HashMap;
@@ -18,7 +18,7 @@ public class FriendManager {
     /**
      * A map for each client's friend syncer
      */
-    private final Map<String, IClientFriendSyncer> syncers = new HashMap<>();
+    private final Map<String, ClientFriendSyncer> syncers = new HashMap<>();
 
     /**
      * A list of friends as a set
@@ -38,7 +38,7 @@ public class FriendManager {
      * @return a plaintext result
      */
     public String sync(String name) {
-        IClientFriendSyncer syncer = syncers.getOrDefault(name, null);
+        ClientFriendSyncer syncer = syncers.getOrDefault(name, null);
         if (syncer == null) return "Invalid syncer";
         return syncer.sync();
     }

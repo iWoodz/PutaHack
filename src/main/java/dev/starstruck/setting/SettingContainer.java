@@ -12,7 +12,7 @@ import java.util.Map;
  * @author aesthetical
  * @since 04/27/23
  */
-public class SettingContainer implements IJsonSerializable {
+public class SettingContainer implements JsonSerializable {
 
     private final Map<String, Setting<?>> settingNameMap = new LinkedHashMap<>();
 

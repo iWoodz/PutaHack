@@ -15,7 +15,7 @@ import java.io.IOException;
  * @author aesthetical
  * @since 06/10/23
  */
-public class FutureClientFriendSyncer implements IClientFriendSyncer {
+public class FutureClientFriendSyncer implements ClientFriendSyncer {
     @Override
     public String sync() {
         File file = getFileLocation();

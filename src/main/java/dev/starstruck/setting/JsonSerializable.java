@@ -6,7 +6,7 @@ import com.google.gson.JsonObject;
  * @author aesthetical
  * @since 04/27/23
  */
-public interface IJsonSerializable {
+public interface JsonSerializable {
 
     /**
      * Loads data from a parsed json object

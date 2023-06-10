@@ -6,7 +6,7 @@ import java.io.File;
  * @author aesthetical
  * @since 06/10/23
  */
-public interface IClientFriendSyncer {
+public interface ClientFriendSyncer {
 
     /**
      * Called to sync Starstruck's friends with another clients friends, and
