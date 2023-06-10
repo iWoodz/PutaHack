@@ -5,6 +5,7 @@ import dev.starstruck.config.Config;
 import dev.starstruck.config.ConfigManager;
 import dev.starstruck.listener.bus.EventBus;
 import dev.starstruck.management.InventoryManager;
+import dev.starstruck.management.PopManager;
 import dev.starstruck.management.RotationManager;
 import dev.starstruck.module.ModuleManager;
 import dev.starstruck.util.io.FileUtils;
@@ -59,6 +60,7 @@ public class Starstruck {
     private final ModuleManager modules;
     private final RotationManager rotations;
     private final InventoryManager inventory;
+    private final PopManager pops;
 
     public Starstruck() {
         if (singleton != null) {
@@ -87,10 +89,12 @@ public class Starstruck {
         modules = new ModuleManager();
         rotations = new RotationManager();
         inventory = new InventoryManager();
+        pops = new PopManager();
 
         bus.subscribe(binds);
         bus.subscribe(rotations);
         bus.subscribe(inventory);
+        bus.subscribe(pops);
 
         logger.info("Loaded starstruck.dev successfully in {}ms",
                 timer.getDurationMS());
@@ -142,6 +146,14 @@ public class Starstruck {
      */
     public InventoryManager getInventory() {
         return inventory;
+    }
+
+    /**
+     * Gets the totem pop manager instance
+     * @return the totem pop manager instance
+     */
+    public PopManager getPops() {
+        return pops;
     }
 
     /**

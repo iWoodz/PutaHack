@@ -24,4 +24,17 @@ public interface Printable {
                         .appendText(" > ")
                         .appendText(content));
     }
+
+    /**
+     * Prints to chat client-side
+     * @param id the message line id for the chat GUI
+     * @param content the content to print to chat
+     */
+    default void print(int id, String content) {
+        Minecraft.getMinecraft().ingameGUI.getChatGUI()
+                .printChatMessageWithOptionalDeletion(new TextComponentString(CHAT_PREFIX)
+                        .setStyle(new Style().setColor(TextFormatting.GRAY))
+                        .appendText(" > ")
+                        .appendText(content), id);
+    }
 }

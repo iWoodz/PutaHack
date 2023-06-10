@@ -9,6 +9,7 @@ import dev.starstruck.module.movement.NoPush;
 import dev.starstruck.module.movement.NoSlow;
 import dev.starstruck.module.movement.Sprint;
 import dev.starstruck.module.player.FastPlace;
+import dev.starstruck.module.player.Notifier;
 import dev.starstruck.module.player.Scaffold;
 import dev.starstruck.module.render.*;
 import dev.starstruck.util.io.FileUtils;
@@ -62,6 +63,7 @@ public class ModuleManager {
 
                 // Player
                 new FastPlace(),
+                new Notifier(),
                 new Scaffold(),
 
                 // Render
