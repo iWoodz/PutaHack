@@ -37,7 +37,7 @@ public class Module extends SettingContainer
     private final ModuleCategory category;
 
     private final Setting<Bind> bind;
-    private boolean drawn = false;
+    private boolean drawn = true;
 
     private final Animation animation = new Animation(
             Easing.CUBIC_IN_OUT, 250, false);
