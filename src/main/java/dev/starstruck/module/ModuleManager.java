@@ -5,6 +5,7 @@ import com.google.gson.JsonObject;
 import dev.starstruck.Starstruck;
 import dev.starstruck.module.combat.*;
 import dev.starstruck.module.exploit.AntiPopLag;
+import dev.starstruck.module.exploit.NoRotateSet;
 import dev.starstruck.module.movement.NoPush;
 import dev.starstruck.module.movement.NoSlow;
 import dev.starstruck.module.movement.Sprint;
@@ -56,6 +57,7 @@ public class ModuleManager {
 
                 // Exploit
                 new AntiPopLag(),
+                new NoRotateSet(),
 
                 // Movement
                 new NoPush(),

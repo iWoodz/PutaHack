@@ -18,6 +18,7 @@
     "network.packet.client.ICPacketPlayer",
     "network.packet.server.ISPacketEntityVelocity",
     "network.packet.server.ISPacketExplosion",
+    "network.packet.server.ISPacketPlayerPosLook",
     "render.entity.MixinEntityRenderer",
     "render.entity.MixinRenderLivingBase",
     "render.gui.MixinFontRenderer",
