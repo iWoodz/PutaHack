@@ -2,6 +2,7 @@ package dev.starstruck.mixin.mixins.client;
 
 import dev.starstruck.Starstruck;
 import dev.starstruck.listener.event.input.EventKeyInput;
+import dev.starstruck.listener.event.input.EventMouseInput;
 import dev.starstruck.listener.event.render.EventLimitFramerate;
 import net.minecraft.client.Minecraft;
 import org.lwjgl.input.Keyboard;
@@ -52,7 +53,7 @@ public class MixinMinecraft {
             remap = false))
     public void hookRunTickMouse(CallbackInfo info) {
         if (Mouse.getEventButtonState()) Starstruck.getBus().dispatch(
-                new EventKeyInput(Mouse.getEventButton()));
+                new EventMouseInput(Mouse.getEventButton()));
     }
 
     @Inject(method = "getLimitFramerate", at = @At(value = "RETURN"), cancellable = true)
