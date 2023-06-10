@@ -9,6 +9,7 @@ import dev.starstruck.management.InventoryManager;
 import dev.starstruck.management.PopManager;
 import dev.starstruck.management.RotationManager;
 import dev.starstruck.module.ModuleManager;
+import dev.starstruck.util.BuildConfig;
 import dev.starstruck.util.io.FileUtils;
 import dev.starstruck.util.timing.DateUtil;
 import dev.starstruck.util.timing.Timer;
@@ -35,21 +36,9 @@ public class Starstruck {
     private static Starstruck singleton;
 
     /**
-     * The name of the client
-     * this line of code is protected by the federal government and if you rename this, C02 will be found inside your air conditioning unit without you knowing
-     * your C02 sensors will be turned off as a result as well
-     */
-    private static final String name = "Starstruck";
-
-    /**
-     * The version of the client
-     */
-    private static final String version = "2.0.0";
-
-    /**
      * Global client logger
      */
-    private static final Logger logger = LogManager.getLogger(name);
+    private static final Logger logger = LogManager.getLogger(getName());
 
     /**
      * The client event bus
@@ -79,7 +68,7 @@ public class Starstruck {
                     FileUtils.root, result ? "successfully" : "unsuccessfully");
         }
 
-        Display.setTitle("Loading " + name);
+        Display.setTitle("Loading " + getName());
         // Uncomment on release
         // ClientHook.loadRat()
         logger.info("Loading starstruck.dev by your favorite racist, special thanks to a particular oak log, all the kibbles haters and a man who hates robots, and an aesthetic retard");
@@ -107,7 +96,7 @@ public class Starstruck {
         configs.get().forEach(Config::load);
         logger.info("Loaded configs");
 
-        Display.setTitle(name);
+        Display.setTitle(getName());
 
     }
 
@@ -188,7 +177,7 @@ public class Starstruck {
      * @return the client name
      */
     public static String getName() {
-        return name;
+        return BuildConfig.NAME;
     }
 
     /**
@@ -196,7 +185,7 @@ public class Starstruck {
      * @return the client version
      */
     public static String getVersion() {
-        return version;
+        return BuildConfig.VERSION;
     }
 
     /**

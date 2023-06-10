@@ -16,11 +16,49 @@ buildscript {
     }
 }
 
+plugins {
+    id 'java'
+    id 'de.fuerstenau.buildconfig' version '1.1.4'
+}
+
 apply plugin: 'net.minecraftforge.gradle.forge'
 apply plugin: 'org.spongepowered.mixin'
+apply plugin: 'de.fuerstenau.buildconfig'
 
 version project.modVersion
 group project.modGroup //http://maven.apache.org/guides/mini/guide-naming-conventions.html
+
+def execute(String cmd) {
+    try {
+        def stdout = new ByteArrayOutputStream()
+
+        exec {
+            commandLine cmd.split(" ")
+            standardOutput = stdout
+        }
+
+        return stdout.toString().trim()
+    } catch (ignored) {
+        return null
+    }
+}
+
+buildConfig {
+    /*
+     * The name of the client
+     * this line of code is protected by the federal government and if you rename this, C02 will be found inside your air conditioning unit without you knowing
+     * your C02 sensors will be turned off as a result as well
+     */
+    buildConfigField "String", "NAME", "Starstruck"
+    buildConfigField "String", "HASH", "${execute("git rev-parse --short HEAD")}"
+    buildConfigField "String", "BRANCH", "${execute("git branch").replace("* ", "")}"
+    buildConfigField "String", "VERSION", "${project.modVersion}"
+    buildConfigField "int", "BUILD_NUMBER", "${project.build_number}"
+
+    packageName "dev.starstruck.util"
+}
+
+sourceSets.main.java.srcDirs += "build/gen/buildconfig/src/main"
 
 sourceCompatibility = targetCompatibility = '1.8'
 compileJava {

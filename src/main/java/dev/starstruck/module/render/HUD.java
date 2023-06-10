@@ -6,6 +6,7 @@ import dev.starstruck.listener.event.render.EventRender2D;
 import dev.starstruck.module.Module;
 import dev.starstruck.module.ModuleCategory;
 import dev.starstruck.setting.Setting;
+import dev.starstruck.util.BuildConfig;
 import dev.starstruck.util.render.ColorUtils;
 
 import java.awt.*;
@@ -38,7 +39,11 @@ public class HUD extends Module {
     @Listener
     public void onRender2D(EventRender2D event) {
         mc.fontRenderer.drawStringWithShadow(
-                Starstruck.getName() + " " + Starstruck.getVersion(),
+                Starstruck.getName() + " "
+                        + Starstruck.getVersion()
+                        + "." + BuildConfig.BUILD_NUMBER
+                        + "-" + BuildConfig.HASH
+                        + "/" + BuildConfig.BRANCH,
                 3.0f, 3.0f + (futureClient ? mc.fontRenderer.FONT_HEIGHT + 2.0f : 0.0f), color(50));
 
         arrayListRender: {
