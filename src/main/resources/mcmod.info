@@ -1,7 +1,7 @@
 [
   {
-    "modid": "starstuck.dev",
-    "name": "starstuck.dev",
+    "modid": "starstruck.dev",
+    "name": "starstruck.dev",
     "description": "1.12.2 HvH client for winners",
     "version": "2.0.0",
     "mcversion": "1.12.2",
