@@ -44,7 +44,7 @@ public class HUD extends Module {
                         + "." + BuildConfig.BUILD_NUMBER
                         + "-" + BuildConfig.HASH
                         + "/" + BuildConfig.BRANCH,
-                3.0f, 3.0f + (futureClient ? mc.fontRenderer.FONT_HEIGHT + 2.0f : 0.0f), color(50));
+                2.0f, 2.0f + (futureClient ? mc.fontRenderer.FONT_HEIGHT + 1.5f : 0.0f), color(50));
 
         arrayListRender: {
             if (!arraylist.getValue()) break arrayListRender;
@@ -59,7 +59,7 @@ public class HUD extends Module {
             enabledModules.sort(Comparator.comparingInt(
                     (module) -> -mc.fontRenderer.getStringWidth(module.getName())));
 
-            double y = 4.0;
+            double y = 2.0;
 
             for (int i = 0; i < enabledModules.size(); ++i) {
                 Module module = enabledModules.get(i);
@@ -69,7 +69,7 @@ public class HUD extends Module {
 
                 mc.fontRenderer.drawStringWithShadow(module.getName(),
                         (float) (event.getResolution().getScaledWidth_double()
-                                - ((mc.fontRenderer.getStringWidth(module.getName()) + 4.0f) * factor)),
+                                - ((mc.fontRenderer.getStringWidth(module.getName()) + 2.0f) * factor)),
                         (float) y, color);
 
                 y += (mc.fontRenderer.FONT_HEIGHT + 2) * factor;
