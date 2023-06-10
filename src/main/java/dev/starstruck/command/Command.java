@@ -2,12 +2,19 @@ package dev.starstruck.command;
 
 import dev.starstruck.util.trait.Nameable;
 import dev.starstruck.util.trait.Printable;
+import net.minecraft.client.Minecraft;
 
 /**
  * @author aesthetical
  * @since 06/10/23
  */
 public abstract class Command implements Nameable, Printable {
+
+    /**
+     * The minecraft game instance
+     */
+    protected static final Minecraft mc = Minecraft.getMinecraft();
+
     private final String[] aliases;
     private final String description, syntax;
 

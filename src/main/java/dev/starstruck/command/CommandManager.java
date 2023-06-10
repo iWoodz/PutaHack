@@ -5,6 +5,7 @@ import dev.starstruck.command.exceptions.InvalidSyntaxException;
 import dev.starstruck.command.impl.Drawn;
 import dev.starstruck.command.impl.Help;
 import dev.starstruck.command.impl.Toggle;
+import dev.starstruck.command.impl.Watermark;
 import dev.starstruck.listener.bus.Listener;
 import dev.starstruck.listener.event.network.EventPacket;
 import dev.starstruck.util.trait.Printable;
@@ -48,7 +49,7 @@ public class CommandManager implements Printable {
         Starstruck.get().getConfigs().add(
                 new CommandPrefixConfig(this));
 
-        register(new Drawn(), new Help(), new Toggle());
+        register(new Drawn(), new Help(), new Toggle(), new Watermark());
     }
 
     private void register(Command... commands) {

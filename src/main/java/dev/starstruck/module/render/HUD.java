@@ -21,6 +21,12 @@ import static dev.starstruck.mixin.MixinPluginLoader.futureClient;
  * @since 06/04/23
  */
 public class HUD extends Module {
+    public static String WATERMARK = Starstruck.getName() + " "
+            + Starstruck.getVersion()
+            + "." + BuildConfig.BUILD_NUMBER
+            + "-" + BuildConfig.HASH
+            + "/" + BuildConfig.BRANCH;
+
     public static final Setting<Color> primaryColor = new Setting<>(new Color(120, 105, 225), "PrimaryColor");
     public static final Setting<Color> secondaryColor = new Setting<>(new Color(95, 145, 255), "SecondaryColor");
     private static final Setting<Colors> colors = new Setting<>(Colors.STATIC, "Colors");
@@ -40,12 +46,7 @@ public class HUD extends Module {
     @Listener
     public void onRender2D(EventRender2D event) {
         if (watermark.getValue()) {
-            mc.fontRenderer.drawStringWithShadow(
-                    Starstruck.getName() + " "
-                            + Starstruck.getVersion()
-                            + "." + BuildConfig.BUILD_NUMBER
-                            + "-" + BuildConfig.HASH
-                            + "/" + BuildConfig.BRANCH,
+            mc.fontRenderer.drawStringWithShadow(WATERMARK,
                     2.0f, 2.0f, color(50));
         }
 
