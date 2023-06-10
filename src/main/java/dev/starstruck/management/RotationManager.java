@@ -10,6 +10,7 @@ import dev.starstruck.util.timing.Timer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.network.play.client.CPacketPlayer;
+import net.minecraft.network.play.client.CPacketPlayer.Rotation;
 import net.minecraft.util.math.MathHelper;
 
 /**
@@ -17,6 +18,11 @@ import net.minecraft.util.math.MathHelper;
  * @since 06/05/23
  */
 public class RotationManager {
+
+    /**
+     * The minecraft game instance
+     */
+    private static final Minecraft mc = Minecraft.getMinecraft();
 
     /**
      * A timer to keep track with how long we should spoof rotations to the server for
@@ -118,6 +124,17 @@ public class RotationManager {
     public void spoof(float[] rotations) {
         spoofTimer.resetTime();
         clientRotations = rotations;
+    }
+
+    /**
+     * Spoofs rotations to the server instantly
+     * @param rotations the server rotations
+     */
+    public void spoofInstant(float[] rotations) {
+        spoofTimer.resetTime();
+        clientRotations = rotations;
+        mc.player.connection.sendPacket(new Rotation(
+                rotations[0], rotations[1], mc.player.onGround));
     }
 
     /**

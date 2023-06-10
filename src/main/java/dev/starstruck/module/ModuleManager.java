@@ -49,6 +49,7 @@ public class ModuleManager {
                 // Combat
                 new AutoArmor(),
                 new AutoEXP(),
+                new Burrow(),
                 new Criticals(),
                 new KillAura(),
                 new Velocity(),
