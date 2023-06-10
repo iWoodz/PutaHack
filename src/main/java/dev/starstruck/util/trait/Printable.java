@@ -1,6 +1,5 @@
 package dev.starstruck.util.trait;
 
-import dev.starstruck.Starstruck;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.text.Style;
 import net.minecraft.util.text.TextComponentString;
@@ -11,7 +10,7 @@ import net.minecraft.util.text.TextFormatting;
  * @since 06/09/23
  */
 public interface Printable {
-    String CHAT_PREFIX = TextFormatting.DARK_PURPLE + Starstruck.getName();
+    String CHAT_PREFIX = TextFormatting.YELLOW + "\u269D ";
 
     /**
      * Prints to chat client-side
@@ -21,7 +20,6 @@ public interface Printable {
         Minecraft.getMinecraft().ingameGUI.getChatGUI()
                 .printChatMessage(new TextComponentString(CHAT_PREFIX)
                         .setStyle(new Style().setColor(TextFormatting.GRAY))
-                        .appendText(" > ")
                         .appendText(content));
     }
 
@@ -34,7 +32,6 @@ public interface Printable {
         Minecraft.getMinecraft().ingameGUI.getChatGUI()
                 .printChatMessageWithOptionalDeletion(new TextComponentString(CHAT_PREFIX)
                         .setStyle(new Style().setColor(TextFormatting.GRAY))
-                        .appendText(" > ")
                         .appendText(content), id);
     }
 }
