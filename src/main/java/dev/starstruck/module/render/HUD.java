@@ -54,8 +54,8 @@ public class HUD extends Module {
 
             List<Module> enabledModules = Starstruck.get().getModules().get()
                     .stream()
-                    .filter((module) -> module.isToggled()
-                            || module.getAnimation().getFactor() > 0.0)
+                    .filter((module) -> module.isDrawn() && (module.isToggled()
+                            || module.getAnimation().getFactor() > 0.0))
                     .collect(Collectors.toList());
             if (enabledModules.isEmpty()) break arrayListRender;
 
