@@ -3,6 +3,7 @@ package dev.starstruck;
 import dev.starstruck.bind.BindManager;
 import dev.starstruck.config.Config;
 import dev.starstruck.config.ConfigManager;
+import dev.starstruck.friend.FriendManager;
 import dev.starstruck.listener.bus.EventBus;
 import dev.starstruck.management.InventoryManager;
 import dev.starstruck.management.PopManager;
@@ -58,6 +59,7 @@ public class Starstruck {
     private final ConfigManager configs;
     private final BindManager binds;
     private final ModuleManager modules;
+    private final FriendManager friends;
     private final RotationManager rotations;
     private final InventoryManager inventory;
     private final PopManager pops;
@@ -87,6 +89,7 @@ public class Starstruck {
         configs = new ConfigManager();
         binds = new BindManager();
         modules = new ModuleManager();
+        friends = new FriendManager();
         rotations = new RotationManager();
         inventory = new InventoryManager();
         pops = new PopManager();
@@ -130,6 +133,14 @@ public class Starstruck {
      */
     public ModuleManager getModules() {
         return modules;
+    }
+
+    /**
+     * Gets the friend manager instance
+     * @return the friend manager instance
+     */
+    public FriendManager getFriends() {
+        return friends;
     }
 
     /**
