@@ -51,7 +51,12 @@ public class Criticals extends Module {
                     break;
 
                 case NEW_NCP:
-                    // TODO: find offsets
+                    mc.player.connection.sendPacket(new Position(
+                            mc.player.posX, mc.player.posY + 0.11, mc.player.posZ, false));
+                    mc.player.connection.sendPacket(new Position(
+                            mc.player.posX, mc.player.posY + 0.1100013579, mc.player.posZ, false));
+                    mc.player.connection.sendPacket(new Position(
+                            mc.player.posX, mc.player.posY + 0.0000013579, mc.player.posZ, false));
                     break;
 
                 case MOTION:
