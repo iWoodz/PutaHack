@@ -8,15 +8,15 @@ import dev.starstruck.module.ModuleCategory;
 import dev.starstruck.setting.Setting;
 import dev.starstruck.util.math.rotate.RotationUtils;
 import dev.starstruck.util.timing.Timer;
+import dev.starstruck.util.world.PlaceUtils;
+import dev.starstruck.util.world.holder.Placement;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.play.client.CPacketAnimation;
 import net.minecraft.network.play.client.CPacketHeldItemChange;
 import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
 
 /**
  * @author aesthetical
@@ -31,9 +31,6 @@ public class Scaffold extends Module {
 
     private final Timer placeTimer = new Timer();
     private float[] rotations;
-    private BlockPos blockPos;
-    private EnumFacing enumFacing;
-
     private int oldSlot = -1;
 
     public Scaffold() {
@@ -45,8 +42,6 @@ public class Scaffold extends Module {
         super.onDisable();
 
         rotations = null;
-        blockPos = null;
-        enumFacing = null;
 
         if (mc.player != null) {
             if (swap.getValue() == Swap.HOLD) {
@@ -65,17 +60,17 @@ public class Scaffold extends Module {
     @Listener
     public void onWalkingUpdate(EventWalkingUpdate event) {
 
-        next();
+        Placement placement = PlaceUtils.getPlacementAt(
+                new BlockPos(mc.player.getPositionVector()).down());
 
         if (rotate.getValue() && rotations != null) {
             Starstruck.get().getRotations().spoof(rotations);
         }
 
-        if (blockPos == null || enumFacing == null) {
-            return;
-        }
+        if (placement == null) return;
 
-        rotations = RotationUtils.blocK(blockPos, enumFacing);
+        rotations = RotationUtils.blocK(
+                placement.getPos(), placement.getFacing());
 
         int slot = -1;
         for (int i = 0; i < 9; ++i) {
@@ -111,9 +106,9 @@ public class Scaffold extends Module {
 
             EnumActionResult result = mc.playerController.processRightClickBlock(mc.player,
                     mc.world,
-                    blockPos,
-                    enumFacing,
-                    getHitVec(),
+                    placement.getPos(),
+                    placement.getFacing(),
+                    PlaceUtils.getBasicHitVec(placement),
                     EnumHand.MAIN_HAND);
             if (result == EnumActionResult.SUCCESS) {
                 placeTimer.resetTime();
@@ -138,45 +133,6 @@ public class Scaffold extends Module {
                 }
             }
         }
-    }
-
-    private Vec3d getHitVec() {
-        return new Vec3d(blockPos)
-                .add(new Vec3d(enumFacing.getDirectionVec()).scale(0.5));
-    }
-
-    private void next() {
-        BlockPos pos = new BlockPos(mc.player.getPositionVector()).down();
-
-        for (EnumFacing facing : EnumFacing.values()) {
-            BlockPos n = pos.offset(facing);
-            if (!isReplaceable(n)) {
-                blockPos = n;
-                enumFacing = facing.getOpposite();
-                return;
-            }
-        }
-
-        for (EnumFacing facing : EnumFacing.values()) {
-            BlockPos n = pos.offset(facing);
-            if (isReplaceable(n)) {
-                for (EnumFacing f : EnumFacing.values()) {
-                    BlockPos nn = n.offset(f);
-                    if (!isReplaceable(nn)) {
-                        blockPos = nn;
-                        enumFacing = f.getOpposite();
-                        return;
-                    }
-                }
-            }
-        }
-
-        blockPos = null;
-        enumFacing = null;
-    }
-
-    private boolean isReplaceable(BlockPos pos) {
-        return mc.world.getBlockState(pos).getMaterial().isReplaceable();
     }
 
     public enum Swap {
