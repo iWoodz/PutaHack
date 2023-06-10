@@ -153,7 +153,7 @@ public class Burrow extends Module {
         if (placement == null) return;
 
         if (rotate.getValue()) {
-            float[] rotations = RotationUtils.blocK(
+            float[] rotations = RotationUtils.block(
                     placement.getPos(), placement.getFacing());
             Starstruck.get().getRotations().spoofInstant(rotations);
         }

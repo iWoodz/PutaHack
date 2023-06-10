@@ -46,7 +46,7 @@ public class RotationUtils {
      * @param facing the face of this block position
      * @return the calculated rotations
      */
-    public static float[] blocK(BlockPos pos, EnumFacing facing) {
+    public static float[] block(BlockPos pos, EnumFacing facing) {
         Vec3d eyeVec = mc.player.getPositionEyes(1.0f);
         Vec3d vec = new Vec3d(
                 pos.getX() + 0.5 + (facing.getXOffset() / 2.0),

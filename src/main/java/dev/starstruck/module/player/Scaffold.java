@@ -69,7 +69,7 @@ public class Scaffold extends Module {
 
         if (placement == null) return;
 
-        rotations = RotationUtils.blocK(
+        rotations = RotationUtils.block(
                 placement.getPos(), placement.getFacing());
 
         int slot = -1;
