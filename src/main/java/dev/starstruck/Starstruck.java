@@ -10,6 +10,9 @@ import dev.starstruck.module.ModuleManager;
 import dev.starstruck.util.io.FileUtils;
 import dev.starstruck.util.timing.DateUtil;
 import dev.starstruck.util.timing.Timer;
+import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.Instance;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.opengl.Display;
@@ -20,11 +23,13 @@ import org.lwjgl.opengl.Display;
  *
  * Entry point for starstuck.dev - previously putahack.nn
  */
+@Mod(modid = "starstruck.dev", useMetadata = true)
 public class Starstruck {
 
     /**
      * Starstruck singleton (instance)
      */
+    @Instance
     private static Starstruck singleton;
 
     /**
@@ -55,7 +60,12 @@ public class Starstruck {
     private final RotationManager rotations;
     private final InventoryManager inventory;
 
-    private Starstruck() {
+    public Starstruck() {
+        if (singleton != null) {
+            logger.info("go fuck yourself");
+            FMLCommonHandler.instance().exitJava(69420, true);
+        }
+
         singleton = this;
 
         // create putahack.nn save directory
