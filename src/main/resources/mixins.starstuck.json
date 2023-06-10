@@ -1,0 +1,30 @@
+{
+  "required": true,
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.7-SNAPSHOT",
+  "package": "dev.starstruck.mixin.mixins",
+  "refmap": "mixins.starstruck.refmap.json",
+  "verbose": true,
+  "client": [
+    "client.IMinecraft",
+    "client.MixinMinecraft",
+    "entity.IEntityLivingBase",
+    "entity.MixinEntity",
+    "entity.MixinEntityLivingBase",
+    "entity.MixinEntityPlayerSP",
+    "input.MixinPlayerControllerMP",
+    "item.MixinItemBlock",
+    "network.MixinNetworkManager",
+    "network.packet.client.ICPacketPlayer",
+    "network.packet.server.ISPacketEntityVelocity",
+    "network.packet.server.ISPacketExplosion",
+    "render.entity.MixinEntityRenderer",
+    "render.entity.MixinRenderLivingBase",
+    "render.gui.MixinFontRenderer",
+    "render.gui.MixinGuiIngame",
+    "render.gui.MixinGuiIngameForge",
+    "render.gui.MixinGuiToast",
+    "render.item.MixinItemRenderer",
+    "world.MixinWorld"
+  ]
+}

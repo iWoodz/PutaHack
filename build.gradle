@@ -31,7 +31,7 @@ minecraft {
     version = project.forgeVersion
     runDir = 'run'
     mappings = project.mcpVersion
-    coreMod = 'dev.putahack.mixin.MixinPluginLoader'
+    coreMod = 'dev.starstruck.mixin.MixinPluginLoader'
     makeObfSourceJar = false
 }
 
@@ -95,7 +95,7 @@ processResources {
 
 mixin {
     defaultObfuscationEnv searge
-    add sourceSets.main, 'mixins.putahack.refmap.json'
+    add sourceSets.main, 'mixins.starstruck.refmap.json'
 }
 
 jar {
@@ -109,11 +109,11 @@ jar {
 
     manifest {
         attributes(
-                'MixinConfigs': 'mixins.putahack.json',
+                'MixinConfigs': 'mixins.starstruck.json',
                 'tweakClass': 'org.spongepowered.asm.launch.MixinTweaker',
                 'TweakOrder': 0,
                 'FMLCorePluginContainsFMLMod': 'true',
-                'FMLCorePlugin': 'dev.putahack.mixin.MixinPluginLoader',
+                'FMLCorePlugin': 'dev.starstruck.mixin.MixinPluginLoader',
                 //'ForceLoadAsMod': 'true'
         )
     }
