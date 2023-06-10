@@ -26,6 +26,7 @@ public class HUD extends Module {
     private static final Setting<Colors> colors = new Setting<>(Colors.STATIC, "Colors");
     private static final Setting<Double> speed = new Setting<>(5.0, 0.01, 1.0, 10.0, "Speed");
 
+    private final Setting<Boolean> watermark = new Setting<>(true, "Watermark");
     private final Setting<Boolean> arraylist = new Setting<>(true, "ArrayList");
     private final Setting<Boolean> potions = new Setting<>(true, "Potions");
 
@@ -38,13 +39,15 @@ public class HUD extends Module {
 
     @Listener
     public void onRender2D(EventRender2D event) {
-        mc.fontRenderer.drawStringWithShadow(
-                Starstruck.getName() + " "
-                        + Starstruck.getVersion()
-                        + "." + BuildConfig.BUILD_NUMBER
-                        + "-" + BuildConfig.HASH
-                        + "/" + BuildConfig.BRANCH,
-                2.0f, 2.0f + (futureClient ? mc.fontRenderer.FONT_HEIGHT + 1.5f : 0.0f), color(50));
+        if (watermark.getValue()) {
+            mc.fontRenderer.drawStringWithShadow(
+                    Starstruck.getName() + " "
+                            + Starstruck.getVersion()
+                            + "." + BuildConfig.BUILD_NUMBER
+                            + "-" + BuildConfig.HASH
+                            + "/" + BuildConfig.BRANCH,
+                    2.0f, 2.0f, color(50));
+        }
 
         arrayListRender: {
             if (!arraylist.getValue()) break arrayListRender;
