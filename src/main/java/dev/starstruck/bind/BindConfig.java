@@ -39,6 +39,19 @@ public class BindConfig extends Config {
 
     @Override
     public void load() {
+        if (!getFile().exists()) {
+            try {
+                boolean result = getFile().createNewFile();
+                Starstruck.getLogger().info("Created {} file {}",
+                        getFile(), result ? "successfully" : "unsuccessfully");
+            } catch (IOException e) {
+                Starstruck.getLogger().error("Failed to create {}", getFile());
+                e.printStackTrace();
+            }
+
+            return;
+        }
+
         String content;
         try {
             content = FileUtils.readFile(getFile());
