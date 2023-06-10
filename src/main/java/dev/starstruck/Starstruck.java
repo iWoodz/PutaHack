@@ -39,7 +39,7 @@ public class Starstruck {
      * this line of code is protected by the federal government and if you rename this, C02 will be found inside your air conditioning unit without you knowing
      * your C02 sensors will be turned off as a result as well
      */
-    private static final String name = "starstruck.dev";
+    private static final String name = "Starstruck";
 
     /**
      * The version of the client
