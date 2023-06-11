@@ -18,13 +18,15 @@ public class SettingContainer implements JsonSerializable {
 
     @Override
     public void fromJson(JsonObject object) {
-        for (String id : settingNameMap.keySet()) {
-            if (object.has(id)) {
-                JsonElement element = object.get(id);
-                if (!element.isJsonObject()) continue;
+        if (!object.has("settings")) return;
 
-                settingNameMap.get(id).fromJson(element.getAsJsonObject());
-            }
+        JsonArray array = object.get("settings").getAsJsonArray();
+        for (JsonElement element : array) {
+            if (!element.isJsonObject()) continue;
+
+            JsonObject obj = element.getAsJsonObject();
+            Setting<?> setting = getSetting(obj.get("id").getAsString());
+            if (setting != null) setting.fromJson(obj);
         }
     }
 
