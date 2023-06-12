@@ -64,6 +64,9 @@ public class HUD extends Module {
                     (module) -> -mc.fontRenderer.getStringWidth(module.getName())));
 
             double y = 2.0;
+            if (!mc.player.getActivePotionEffects().isEmpty()) {
+                y += 26.0;
+            }
 
             for (int i = 0; i < enabledModules.size(); ++i) {
                 Module module = enabledModules.get(i);
