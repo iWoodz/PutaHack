@@ -26,15 +26,15 @@ public class TargetHud extends Module {
         super("TargetHud", "does your mother", Category.CLIENT, true, false, false);
     }
 
-    public final Setting<Integer> x = this.register(new Setting("X", 573, 0, 1000));
-    public final Setting<Integer> y = this.register(new Setting("Y", 506, 0, 600));
+    public final Setting<Integer> x = this.register(new Setting("X", 406.5, 0, 1000));
+    public final Setting<Integer> y = this.register(new Setting("Y", 410, 0, 600));
     public final Setting<Boolean> defaults = this.register(new Setting("Default", false));
     public final Setting<Integer> red = this.register(new Setting("Red", 145, 0, 255));
-    public final Setting<Integer> green = this.register(new Setting("Green", 120, 0, 255));
-    public final Setting<Integer> blue = this.register(new Setting("Blue", 225, 0, 255));
+    public final Setting<Integer> green = this.register(new Setting("Green", 145, 0, 255));
+    public final Setting<Integer> blue = this.register(new Setting("Blue", 235, 0, 255));
     public final Setting<Integer> alpha = this.register(new Setting("Alpha", 40, 0, 255));
     public final Setting<Integer> rainbowSpeed = this.register(new Setting("Rainbow Speed", 15, 1, 15));
-    public final Setting<Float> enemyRange = this.register(new Setting("Enemy Range", 24.0f, 0.0f, 1000.0f));
+    public final Setting<Float> enemyRange = this.register(new Setting("Enemy Range", 24.0f, 0.0f, 50.0f));
     public Timer timer = new Timer();
     public float maxHealth = 36.0f;
 

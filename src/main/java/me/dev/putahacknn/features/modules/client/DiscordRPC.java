@@ -61,7 +61,7 @@ public class DiscordRPC extends Module {
     private void start() {
         DiscordEventHandlers handlers = new DiscordEventHandlers();
 
-        rpc.Discord_Initialize("1096441962980200631", handlers, true, "");
+        rpc.Discord_Initialize("1069828695373643787", handlers, true, "");
 
         presence.startTimestamp = System.currentTimeMillis() / 1000L;
 
@@ -69,7 +69,7 @@ public class DiscordRPC extends Module {
 
         presence.state = state[new Random().nextInt(state.length)];
 
-        presence.largeImageKey = "big";
+        presence.largeImageKey = "putahack";
         presence.largeImageText = "PutaHack " + PutaHacknn.MODVER;
 
         presence.largeImageKey = ((mc.currentScreen instanceof GuiMainMenu ? "idling" :
