@@ -26,7 +26,7 @@ public class TargetHud extends Module {
         super("TargetHud", "does your mother", Category.CLIENT, true, false, false);
     }
 
-    public final Setting<Integer> x = this.register(new Setting("X", 406.5, 0, 1000));
+    public final Setting<Integer> x = this.register(new Setting("X", 406, 0, 1000));
     public final Setting<Integer> y = this.register(new Setting("Y", 410, 0, 600));
     public final Setting<Boolean> defaults = this.register(new Setting("Default", false));
     public final Setting<Integer> red = this.register(new Setting("Red", 145, 0, 255));

@@ -69,7 +69,7 @@ public class DiscordRPC extends Module {
 
         presence.state = state[new Random().nextInt(state.length)];
 
-        presence.largeImageKey = "putahack";
+        presence.largeImageKey = "big";
         presence.largeImageText = "PutaHack " + PutaHacknn.MODVER;
 
         presence.largeImageKey = ((mc.currentScreen instanceof GuiMainMenu ? "idling" :
