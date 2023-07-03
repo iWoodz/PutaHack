@@ -57,6 +57,7 @@ public class ModuleManager
         this.modules.add(new HoleCampFix());
         this.modules.add(new AutoCenter());
         this.modules.add(new PvpInfo());
+        this.modules.add(new SexHud());
         this.modules.add(new DotGodSpammer());
         this.modules.add(new FPSFucker3000());
         this.modules.add(new AutoCrystalRewrite());
@@ -90,6 +91,7 @@ public class ModuleManager
         this.modules.add(new Companion());
         this.modules.add(new DBearDetector());
         this.modules.add(new AntiDBear());
+        this.modules.add(new AntiPop());
         this.modules.add(new ChatSuffix());
         this.modules.add(new Announcer());
         this.modules.add(new HoleSnap());

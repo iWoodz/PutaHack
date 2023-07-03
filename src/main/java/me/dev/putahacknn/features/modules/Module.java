@@ -6,6 +6,8 @@ import me.dev.putahacknn.event.events.Render2DEvent;
 import me.dev.putahacknn.event.events.Render3DEvent;
 import me.dev.putahacknn.features.Feature;
 import me.dev.putahacknn.features.command.Command;
+import me.dev.putahacknn.features.gui.animation.Animation;
+import me.dev.putahacknn.features.gui.animation.Easing;
 import me.dev.putahacknn.features.modules.client.Management;
 import me.dev.putahacknn.features.setting.Bind;
 import me.dev.putahacknn.features.setting.Setting;
@@ -29,6 +31,9 @@ public class Module
     public float offset;
     public float vOffset;
     public boolean sliding;
+
+    public final Animation animation = new Animation(
+            Easing.CUBIC_IN_OUT, 250, false);
 
     public Module(String name, String description, Category category, boolean hasListener, boolean hidden, boolean alwaysListening) {
         super(name);
@@ -103,6 +108,7 @@ public class Module
 
     public void enable(boolean message) {
         this.enabled.setValue(Boolean.TRUE);
+        animation.setState(true);
         this.onToggle();
         this.onEnable();
         if (Management.INSTANCE.notifyToggles.getValue() && message) {
@@ -119,6 +125,7 @@ public class Module
     }
 
     public void disable(boolean message) {
+        animation.setState(false);
         if (this.hasListener && !this.alwaysListening) {
             MinecraftForge.EVENT_BUS.unregister(this);
         }
