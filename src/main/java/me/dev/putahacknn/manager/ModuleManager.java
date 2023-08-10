@@ -36,20 +36,16 @@ public class ModuleManager
         this.modules.add(new AutoBait());
         this.modules.add(new RectTest());
         this.modules.add(new SkyColor());
-        this.modules.add(new NickHider());
         this.modules.add(new PotionAlert());
         this.modules.add(new VisualRange());
         this.modules.add(new ViewModel());
         this.modules.add(new StrictLimbs());
         this.modules.add(new AutoDickSuck());
-        this.modules.add(new HUD());
         this.modules.add(new NameTags());
         this.modules.add(new BurrowESP());
         this.modules.add(new KillEffects());
         this.modules.add(new PortalESP());
         this.modules.add(new Ink());
-        this.modules.add(new Colors());
-        this.modules.add(new CsgoWatermark());
         this.modules.add(new Hud());
         this.modules.add(new Management());
         this.modules.add(new Black());
@@ -100,17 +96,13 @@ public class ModuleManager
         this.modules.add(new AutoDupe());
         this.modules.add(new Woodz());
         this.modules.add(new SilentEXP());
-        this.modules.add(new Strafe());
         this.modules.add(new ClickGui());
         this.modules.add(new FontMod());
         this.modules.add(new HoleESP());
         this.modules.add(new Replenish());
         this.modules.add(new SmallShield());
         this.modules.add(new HandChams());
-        this.modules.add(new Trajectories());
         this.modules.add(new FakePlayer());
-        this.modules.add(new ReverseStep());
-        this.modules.add(new ChatModifier());
         this.modules.add(new MCF());
         this.modules.add(new PearlNotify());
         this.modules.add(new Tracker());
@@ -120,20 +112,15 @@ public class ModuleManager
         this.modules.add(new AutoTrap());
         this.modules.add(new AutoWeb());
         this.modules.add(new AutoCrystal());
-        this.modules.add(new Criticals());
         this.modules.add(new HoleFiller());
-        this.modules.add(new AutoArmor());
         this.modules.add(new InstantSpeed());
         this.modules.add(new Step());
-        this.modules.add(new Flight());
         this.modules.add(new Scaffold());
         this.modules.add(new PacketFly());
         this.modules.add(new FastPlace());
-        this.modules.add(new ESP());
         this.modules.add(new Selftrap());
         this.modules.add(new AutoMinecart());
         this.modules.add(new SelfFill());
-        this.modules.add(new ArrowESP());
     }
 
     public String getInfo() {

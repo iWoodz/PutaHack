@@ -29,7 +29,7 @@ public class SelfFill
             BlockUtil.placeBlock(pos.down(), EnumHand.MAIN_HAND, false, this.packet.getValue(), false);
         }
         if (SelfFill.mc.world.getBlockState(pos.down()).getBlock() == Blocks.OBSIDIAN) {
-            SelfFill.mc.player.connection.sendPacket(new CPacketPlayer.Position(SelfFill.mc.player.posX, SelfFill.mc.player.posY - 1.3, SelfFill.mc.player.posZ, false));
+            SelfFill.mc.player.connection.sendPacket(new CPacketPlayer.Position(SelfFill.mc.player.posX, SelfFill.mc.player.posX - 1.3, SelfFill.mc.player.posZ, false));
             SelfFill.mc.player.setPosition(SelfFill.mc.player.posX, SelfFill.mc.player.posY - 1.3, SelfFill.mc.player.posZ);
             this.toggle();
         }
