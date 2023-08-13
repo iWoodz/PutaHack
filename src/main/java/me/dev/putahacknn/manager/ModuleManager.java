@@ -32,6 +32,10 @@ public class ModuleManager
     public List<String> sortedModulesABC = new ArrayList<String>();
 
     public void init() {
+        this.modules.add(new PhaseWalk());
+        this.modules.add(new Strafe());
+        this.modules.add(new Speedmine());
+        this.modules.add(new Gradient());
         this.modules.add(new MyCode());
         this.modules.add(new AutoBait());
         this.modules.add(new SkyColor());
@@ -73,7 +77,6 @@ public class ModuleManager
         this.modules.add(new AntiLog());
         this.modules.add(new RealPlayer());
         this.modules.add(new DiscordRPC());
-        this.modules.add(new LogAura());
         this.modules.add(new Ambience());
         this.modules.add(new Spawns());
         this.modules.add(new HideTheKids());

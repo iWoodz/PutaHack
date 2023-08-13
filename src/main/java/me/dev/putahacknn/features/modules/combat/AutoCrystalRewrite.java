@@ -2,10 +2,7 @@ package me.dev.putahacknn.features.modules.combat;
 
 import me.dev.putahacknn.PutaHacknn;
 import me.dev.putahacknn.event.events.PacketEvent;
-import me.dev.putahacknn.event.events.Render3DEvent;
-import me.dev.putahacknn.features.command.Command;
 import me.dev.putahacknn.features.modules.Module;
-import me.dev.putahacknn.features.modules.woodz.LogAura;
 import me.dev.putahacknn.features.setting.Setting;
 import me.dev.putahacknn.util.*;
 import net.minecraft.client.renderer.GlStateManager;
@@ -26,7 +23,6 @@ import net.minecraft.network.play.server.SPacketSpawnObject;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;

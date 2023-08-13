@@ -6,7 +6,7 @@ import me.dev.putahacknn.features.setting.Setting;
 public class Animations extends Module {
 
     public Animations() {
-        super("AntiSwing", "you used confusion! it was very effective! detective_bear1 - 130hp, you - 1hp", Category.WOODZ, true, false, false);
+        super("Animations", "you used confusion! it was very effective! detective_bear1 - 130hp, you - 1hp", Category.WOODZ, true, false, false);
         INSTANCE = this;
     }
 
