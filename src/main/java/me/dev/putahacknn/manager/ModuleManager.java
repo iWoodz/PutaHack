@@ -34,11 +34,9 @@ public class ModuleManager
     public void init() {
         this.modules.add(new MyCode());
         this.modules.add(new AutoBait());
-        this.modules.add(new RectTest());
         this.modules.add(new SkyColor());
         this.modules.add(new PotionAlert());
         this.modules.add(new VisualRange());
-        this.modules.add(new ViewModel());
         this.modules.add(new StrictLimbs());
         this.modules.add(new AutoDickSuck());
         this.modules.add(new NameTags());
@@ -53,7 +51,6 @@ public class ModuleManager
         this.modules.add(new HoleCampFix());
         this.modules.add(new AutoCenter());
         this.modules.add(new PvpInfo());
-        this.modules.add(new SexHud());
         this.modules.add(new DotGodSpammer());
         this.modules.add(new FPSFucker3000());
         this.modules.add(new AutoCrystalRewrite());
@@ -99,11 +96,8 @@ public class ModuleManager
         this.modules.add(new ClickGui());
         this.modules.add(new FontMod());
         this.modules.add(new HoleESP());
-        this.modules.add(new Replenish());
         this.modules.add(new SmallShield());
         this.modules.add(new HandChams());
-        this.modules.add(new FakePlayer());
-        this.modules.add(new MCF());
         this.modules.add(new PearlNotify());
         this.modules.add(new Tracker());
         this.modules.add(new PopCounter());
@@ -112,15 +106,10 @@ public class ModuleManager
         this.modules.add(new AutoTrap());
         this.modules.add(new AutoWeb());
         this.modules.add(new AutoCrystal());
-        this.modules.add(new HoleFiller());
         this.modules.add(new InstantSpeed());
         this.modules.add(new Step());
-        this.modules.add(new Scaffold());
-        this.modules.add(new PacketFly());
         this.modules.add(new FastPlace());
         this.modules.add(new Selftrap());
-        this.modules.add(new AutoMinecart());
-        this.modules.add(new SelfFill());
     }
 
     public String getInfo() {
