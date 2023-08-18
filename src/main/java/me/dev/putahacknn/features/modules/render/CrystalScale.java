@@ -6,7 +6,7 @@ import me.dev.putahacknn.features.setting.Setting;
 public class CrystalScale extends Module {
 
     public CrystalScale() {
-        super("CrystalScale", "chams but crystal", Category.RENDER, true, false, false);
+        super("CrystalModifier", "Modifies the rendering of end crystals", Category.RENDER, true, false, false);
         INSTANCE = this;
     }
 

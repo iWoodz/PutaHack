@@ -51,7 +51,7 @@ public class Strafe extends Module
     private boolean forceGround;
 
     public Strafe() {
-        super("StrafeRewrite", "vrooooom", Category.MOVEMENT, true, false, false);
+        super("Strafe", "vrooooom", Category.MOVEMENT, true, false, false);
         this.mode = (Setting<Mode>)this.register(new Setting("Mode", Mode.STRAFE));
         this.useTimer = (Setting<Boolean>)this.register(new Setting("UseTimer", true));
         this.timerFactor = (Setting<Float>)this.register(new Setting("Factor", 1.0f, 0.1f, 10.0f));

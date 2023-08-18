@@ -32,6 +32,12 @@ public class ModuleManager
     public List<String> sortedModulesABC = new ArrayList<String>();
 
     public void init() {
+        this.modules.add(new NoLag());
+        this.modules.add(new Model());
+        this.modules.add(new EntityCircle());
+        this.modules.add(new ChinaHat());
+        this.modules.add(new CoordLeaker());
+        this.modules.add(new ChatColors());
         this.modules.add(new PhaseWalk());
         this.modules.add(new Strafe());
         this.modules.add(new Speedmine());
@@ -43,7 +49,6 @@ public class ModuleManager
         this.modules.add(new VisualRange());
         this.modules.add(new StrictLimbs());
         this.modules.add(new AutoDickSuck());
-        this.modules.add(new NameTags());
         this.modules.add(new BurrowESP());
         this.modules.add(new KillEffects());
         this.modules.add(new PortalESP());
@@ -59,7 +64,6 @@ public class ModuleManager
         this.modules.add(new FPSFucker3000());
         this.modules.add(new AutoCrystalRewrite());
         this.modules.add(new TimeChanger());
-        this.modules.add(new HealthBar());
         this.modules.add(new CrystalScale());
         this.modules.add(new AutoCompare());
         this.modules.add(new PopLag());
