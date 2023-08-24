@@ -6,6 +6,7 @@ import me.dev.putahacknn.util.RotationUtil;
 import me.dev.putahacknn.util.Util;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 
 public class RotationManager
@@ -26,6 +27,19 @@ public class RotationManager
 
         return deg;
     }
+    public boolean isInFov(BlockPos blockPos) {
+        int n = this.getYaw4D();
+        if (n == 0 && (double)blockPos.getZ() - RotationManager.mc.player.getPositionVector().z < 0.0) {
+            return false;
+        }
+        if (n == 1 && (double)blockPos.getX() - RotationManager.mc.player.getPositionVector().x > 0.0) {
+            return false;
+        }
+        if (n == 2 && (double)blockPos.getZ() - RotationManager.mc.player.getPositionVector().z > 0.0) {
+            return false;
+        }
+        return n != 3 || (double)blockPos.getX() - RotationManager.mc.player.getPositionVector().x >= 0.0;
+    }
 
     public float getSpoofedYaw() {
         return wrapDegrees(yaw);
@@ -37,6 +51,9 @@ public class RotationManager
         RotationManager.mc.player.rotationPitch = this.pitch;
     }
 
+    public int getYaw4D() {
+        return MathHelper.floor((double)(RotationManager.mc.player.rotationYaw * 4.0f / 360.0f) + 0.5) & 3;
+    }
     public void setPlayerRotations(float yaw, float pitch) {
         RotationManager.mc.player.rotationYaw = yaw;
         RotationManager.mc.player.rotationYawHead = yaw;

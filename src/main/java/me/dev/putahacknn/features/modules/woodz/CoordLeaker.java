@@ -13,6 +13,6 @@ public class CoordLeaker extends Module
 
     @Override
     public void onEnable() {
-        Util.mc.player.connection.sendPacket((Packet)new CPacketChatMessage("lol my coords are: " + Math.floor(Util.mc.player.posX) + ", " + Math.floor(Util.mc.player.posY) + ", " + Math.floor(Util.mc.player.posZ) + "! come and kill me."));
+        Util.mc.player.connection.sendPacket((Packet)new CPacketChatMessage("MY COORDS ARE  " + Math.floor(Util.mc.player.posX) + ", " + Math.floor(Util.mc.player.posY) + ", " + Math.floor(Util.mc.player.posZ) + "! COME AND KILL ME LOL"));
     }
 }

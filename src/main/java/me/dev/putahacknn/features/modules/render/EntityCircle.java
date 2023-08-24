@@ -3,7 +3,6 @@ package me.dev.putahacknn.features.modules.render;
 import me.dev.putahacknn.PutaHacknn;
 import me.dev.putahacknn.event.events.Render3DEvent;
 import me.dev.putahacknn.features.modules.Module;
-import me.dev.putahacknn.features.modules.client.ClickGui;
 import me.dev.putahacknn.features.setting.Setting;
 import me.dev.putahacknn.util.ColorUtill;
 import net.minecraft.entity.Entity;

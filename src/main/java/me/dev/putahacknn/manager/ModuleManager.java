@@ -32,6 +32,7 @@ public class ModuleManager
     public List<String> sortedModulesABC = new ArrayList<String>();
 
     public void init() {
+        this.modules.add(new Burrow());
         this.modules.add(new NoLag());
         this.modules.add(new Model());
         this.modules.add(new EntityCircle());

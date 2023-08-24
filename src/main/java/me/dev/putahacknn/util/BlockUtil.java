@@ -144,6 +144,10 @@ public class BlockUtil
         return 2;
     }
 
+    public static boolean isReplaceable(BlockPos blockPos) {
+        return BlockUtil.getState(blockPos).getMaterial().isReplaceable();
+    }
+
     public static boolean canPlaceBlock(BlockPos pos) {
         return mc.world.getBlockState(pos).getBlock() == Blocks.AIR || mc.world.getBlockState(pos).getBlock() == Blocks.WATER || mc.world.getBlockState(pos).getBlock() == Blocks.LAVA;
     }

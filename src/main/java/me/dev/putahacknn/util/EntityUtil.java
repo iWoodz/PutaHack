@@ -564,7 +564,11 @@ public class EntityUtil
         }
         return maxModifier;
     }
-
+    public static Vec3d[] getVarOffsets(int n, int n2, int n3) {
+        List<Vec3d> list = EntityUtil.getVarOffsetList(n, n2, n3);
+        Vec3d[] vec3dArray = new Vec3d[list.size()];
+        return list.toArray(vec3dArray);
+    }
     public static void mutliplyEntitySpeed(Entity entity, double multiplier) {
         if (entity != null) {
             entity.motionX *= multiplier;
@@ -665,7 +669,11 @@ public class EntityUtil
         }
         return EntityUtil.mc.player.fallDistance < 3.0f;
     }
-
+    public static List<Vec3d> getVarOffsetList(int n, int n2, int n3) {
+        ArrayList<Vec3d> arrayList = new ArrayList<>();
+        arrayList.add(new Vec3d(n, n2, n3));
+        return arrayList;
+    }
     public static BlockPos getPlayerPosWithEntity() {
         return new BlockPos(EntityUtil.mc.player.getRidingEntity() != null ? EntityUtil.mc.player.getRidingEntity().posX : EntityUtil.mc.player.posX, EntityUtil.mc.player.getRidingEntity() != null ? EntityUtil.mc.player.getRidingEntity().posY : EntityUtil.mc.player.posY, EntityUtil.mc.player.getRidingEntity() != null ? EntityUtil.mc.player.getRidingEntity().posZ : EntityUtil.mc.player.posZ);
     }
